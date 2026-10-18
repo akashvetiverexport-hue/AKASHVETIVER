@@ -1,0 +1,24 @@
+const assert = require('node:assert/strict');
+const { chromium } = require(process.env.PLAYWRIGHT_PATH || 'playwright');
+(async () => {
+  const browser = await chromium.launch();
+  const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
+  await page.goto('http://127.0.0.1:4178', { waitUntil: 'networkidle' });
+  await page.waitForFunction(() => document.querySelector('#hero-video').currentTime > .5);
+  console.log(await page.locator('#hero-video').evaluate(v => ({ width: v.videoWidth, height: v.videoHeight, duration: v.duration, muted: v.muted, loop: v.loop })));
+  assert.equal(await page.getByRole('button', { name: /play|pause/i }).count(), 0);
+  assert.ok(await page.locator('#hero-video').evaluate(v => !v.paused));
+  await page.screenshot({ path: '.impeccable/review/react-sections/hero-video-desktop.png' });
+  await page.locator('#reviews').scrollIntoViewIfNeeded();
+  await page.waitForFunction(() => document.querySelector('#hero-video').paused);
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.locator('#home').scrollIntoViewIfNeeded();
+  await page.waitForTimeout(500);
+  await page.locator('#home').screenshot({ path: '.impeccable/review/react-sections/hero-video-mobile.png' });
+  assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
+  const reduced = await browser.newPage({ reducedMotion: 'reduce' });
+  await reduced.goto('http://127.0.0.1:4178', { waitUntil: 'networkidle' });
+  assert.ok(await reduced.locator('#hero-video').evaluate(v => v.paused && !v.hasAttribute('src')));
+  console.log('PASS: automatic video playback, no motion controls, offscreen suspension, mobile layout and reduced motion');
+  await browser.close();
+})().catch(e => { console.error(e); process.exit(1); });

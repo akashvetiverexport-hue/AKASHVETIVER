@@ -1,0 +1,16 @@
+node_modules/
+.vite/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.agents/
+.aider-desk/
+.backups/
+.impeccable/
+ref images/
+vetiver collection/
+*.log
+Thumbs.db
+.DS_Store

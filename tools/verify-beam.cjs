@@ -1,0 +1,30 @@
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const vm = require('node:vm');
+const ts = require('typescript');
+const compiled = ts.transpileModule(fs.readFileSync('lib/beam.ts', 'utf8'), {
+  compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 }
+}).outputText;
+const context = { exports: {} };
+vm.runInNewContext(compiled, context);
+const b = context.exports;
+assert.equal(b.clamp(-1, 0, 1), 0);
+assert.equal(b.clamp(4, 0, 1), 1);
+assert.equal(b.hexToRgb('#abc'), '170, 187, 204');
+assert.equal(b.hexToRgb('#023616'), '2, 54, 22');
+assert.equal(b.hexToRgb('bad-value', 'fallback'), 'fallback');
+assert.equal(b.fitSize(400, 800, 300), 200);
+assert.equal(b.fitSize(0, 800, 300), 0);
+assert.equal(b.beamTarget(-1), 30);
+assert.equal(b.beamTarget(2), 82);
+assert.equal(b.beamTarget(NaN), 56);
+assert.equal(b.approach(0, 10, 0, .1), 0);
+assert.equal(b.approach(0, 10, 1, .1), 10);
+assert.equal(b.baselineAt(0, 0), .8);
+assert.ok(b.wordHeight(100, .8, .1) > 89);
+for (let t = 0; t < 100; t++) assert.ok(b.drift(t) >= 49 && b.drift(t) <= 67);
+const before = fs.readFileSync('.backups/before-react-sections/index.html', 'utf8');
+const after = fs.readFileSync('index.html', 'utf8');
+const area = text => text.slice(text.indexOf('<header'), text.indexOf('<section class="collection'));
+assert.equal(area(before), area(after), 'Existing header and hero markup must remain unchanged');
+console.log('PASS: footer math helpers and unchanged header/hero markup.');
