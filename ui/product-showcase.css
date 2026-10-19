@@ -13,8 +13,8 @@
 .showcase-viewport{overflow:hidden;touch-action:pan-y pinch-zoom;min-width:0}
 .showcase-main{grid-column:span 2}.showcase-track{display:flex;backface-visibility:hidden;margin-left:-16px}
 .showcase-slide{padding-left:16px;flex:0 0 100%;min-width:0;display:flex;align-items:center;justify-content:center}
-.showcase-image-frame{width:min(100%,clamp(280px,42svh,380px));aspect-ratio:1;flex:none;overflow:hidden;border-radius:16px;background:var(--surface)}
-.showcase-image-frame>img{width:100%;height:100%;object-fit:contain}
+.showcase-image-frame{width:min(100%,clamp(280px,42svh,380px));aspect-ratio:1;flex:none;overflow:hidden;border-radius:16px;background:var(--canvas)}
+.showcase-image-frame>img{display:block;width:100%;height:100%;object-fit:contain;border-radius:inherit}
 .showcase-bottom{margin-top:24px;column-gap:24px;row-gap:24px;align-items:center}
 .showcase-thumbnails{min-width:0;grid-column:span 3}.showcase-details{grid-column:span 2;width:100%;max-width:380px;justify-self:center}
 .showcase-thumb-viewport{position:relative;mask-image:linear-gradient(to right,transparent,#000 85px,#000 calc(100% - 85px),transparent)}
