@@ -1,16 +1,16 @@
 .bulk-order-section{scroll-margin-top:104px;background:#e4eedf}
-.bulk-marquee{position:relative;overflow:hidden;text-align:center;padding:clamp(48px,4.445vw,64px) 0 clamp(32px,2.778vw,40px);color:#023616}
+.bulk-marquee{position:relative;overflow:hidden;text-align:center;padding:clamp(32px,5svh,48px) 0 24px;color:#023616}
 .bulk-copy{position:relative;z-index:1;margin-inline:auto;padding-inline:24px;max-width:850px}
 .bulk-copy h2{font:400 clamp(38px,4.8vw,68px)/1.08 var(--font-display);letter-spacing:-.035em;margin:0 0 20px}
 .bulk-copy>p{max-width:560px;margin:0 auto;font-size:16px;line-height:1.8;color:#414e41}
 .bulk-cta{display:inline-flex;align-items:center;gap:28px;margin-top:24px;min-height:54px;padding:15px 26px;background:#023616;color:#fff;border:0;border-radius:30px;font-weight:600;cursor:pointer}
 .bulk-cta:hover{background:#1e4d2b}
 .bulk-note{display:block;margin-top:12px;font-size:12px;color:#414e41}
-.bulk-image-window{margin-top:24px;padding:16px 0;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.bulk-image-window{margin-top:16px;padding:16px 0;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
 .bulk-image-track{display:flex;width:max-content;animation:bulk-drift 40s linear infinite}
 .bulk-image-group{display:flex;gap:24px;padding-right:24px;flex-shrink:0}
-.bulk-image{width:190px;aspect-ratio:3/4;flex-shrink:0;overflow:hidden;border-radius:12px;background:#173321}
-.bulk-image img{width:100%;height:100%;object-fit:cover}
+.bulk-image{width:clamp(144px,23svh,208px);aspect-ratio:1;flex-shrink:0;overflow:hidden;border-radius:12px;background:#173321}
+.bulk-image img{width:100%;height:100%;object-fit:contain}
 @keyframes bulk-drift{from{transform:translateX(-50%)}to{transform:translateX(0)}}
 .bulk-enquiry-dialog{width:min(620px,calc(100% - 32px));max-height:calc(100dvh - 32px);margin:auto;padding:0;border:0;border-radius:14px;overflow:auto;background:#f6fbf3;color:#023616;overscroll-behavior:contain}
 .bulk-enquiry-dialog::backdrop{background:#08170faa}

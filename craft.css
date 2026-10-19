@@ -1,15 +1,15 @@
 /* Five image-led stages share one continuous craft journey.
    Keep headings and descriptions semantic, selectable and responsive. */
 .craft-journey{background:#eef4e9;overflow:hidden;scroll-margin-top:104px;padding-bottom:var(--section-half)}
-.craft-intro{display:grid;grid-template-columns:1.4fr 1fr;gap:80px;align-items:end;margin-bottom:var(--content-gap)}
+.craft-intro{display:grid;grid-template-columns:1.4fr 1fr;gap:64px;align-items:end;margin-bottom:clamp(32px,3.4vw,48px)}
 .craft-intro h2{font-size:clamp(42px,5.3vw,76px);line-height:1.06;letter-spacing:-.035em;font-weight:400}
 .craft-intro h2 span{color:#52682e}
 .craft-intro>p{max-width:400px;font-size:15px;line-height:1.9;padding-bottom:6px}
 .craft-flow{position:relative;isolation:isolate;max-width:1200px;margin-inline:auto}
 .craft-stages{list-style:none;padding:0;margin:0;position:relative}
-.craft-stage{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(60px,9vw,140px);align-items:center;position:relative;padding-bottom:clamp(64px,7.778vw,112px)}
-.craft-stage:last-child{padding-bottom:48px}
-.craft-photo{width:115%;margin-left:-7.5%;aspect-ratio:1.5;position:relative;z-index:0;background-repeat:no-repeat;background-size:contain;background-position:center}
+.craft-stage{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(48px,6.667vw,96px);align-items:center;position:relative;padding-bottom:clamp(40px,4.445vw,64px)}
+.craft-stage:last-child{padding-bottom:0}
+.craft-photo{width:100%;margin-left:0;aspect-ratio:1.5;position:relative;z-index:0;background-repeat:no-repeat;background-size:contain;background-position:center}
 .craft-photo-land{background-image:url('images/craft-land-v2.png')}
 .craft-photo-harvest{background-image:url('images/craft-harvest-v2.png')}
 .craft-photo-finish{background-image:url('images/craft-quality-v2.png')}
@@ -24,7 +24,8 @@
 .craft-stage:nth-child(even){grid-template-columns:.9fr 1.1fr}
 .craft-stage:nth-child(even) .craft-photo{grid-column:2;grid-row:1}
 .craft-stage:nth-child(even) .craft-stage-copy{grid-column:1;grid-row:1;justify-self:center}
-.craft-ribbon{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none;overflow:visible}
+.craft-ribbon{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none;overflow:visible;visibility:hidden}
+.craft-ribbon[data-ready=true]{visibility:visible}
 .craft-ribbon use{fill:none;stroke-linecap:round}
 .craft-ribbon-edge{stroke:#879575;stroke-width:1;stroke-dasharray:3 4;vector-effect:non-scaling-stroke}
 .craft-ribbon-paper{display:none}
@@ -34,8 +35,9 @@
 .craft-ribbon-words span:nth-child(2){left:52%;top:65.1%;transform:translate(-50%,-50%) rotate(7deg)}
 .craft-ribbon-words span:nth-child(3){left:37%;top:96.9%;transform:translate(-50%,-50%) rotate(-5deg)}
 @media(max-width:700px){.craft-ribbon-words{display:none}}
-.craft-closing{display:flex;align-items:center;justify-content:space-between;gap:25px;border-top:1px solid #cbd8c5;padding-top:32px;margin-top:24px}
+.craft-closing{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:24px;margin-top:32px}
 .craft-closing>p{font:400 25px/1.3 var(--font-display);color:#023616}
-@media(max-width:900px){.craft-intro{gap:35px}.craft-stage{gap:50px;padding-bottom:80px}.craft-stage-copy p{font-size:14px}.craft-ribbon text{font-size:21px}.craft-stage-copy h3{font-size:34px}}
+@media(max-width:900px){.craft-intro{gap:32px}.craft-stage{gap:40px;padding-bottom:48px}.craft-stage-copy p{font-size:14px}.craft-ribbon text{font-size:21px}.craft-stage-copy h3{font-size:34px}}
 @media(max-width:700px){.craft-journey{scroll-margin-top:92px}.craft-intro{display:block;margin-bottom:40px}.craft-intro h2{font-size:clamp(40px,9vw,58px)}.craft-intro>p{margin-top:24px;font-size:14px;max-width:420px}.craft-stages{padding-left:24px;border-left:1px solid #bccbb0}.craft-stage,.craft-harvest{display:flex;flex-direction:column;align-items:stretch;gap:0;padding-bottom:48px}.craft-stage:last-child{padding-bottom:0}.craft-stage-copy,.craft-harvest .craft-stage-copy{padding:24px 0 0;max-width:none}.craft-photo{aspect-ratio:1.5}.craft-stage-copy h3{font-size:33px;margin:13px 0 16px}.craft-quality{margin-top:16px}.craft-step{position:relative}.craft-step::before{content:'';position:absolute;width:9px;height:9px;border-radius:50%;background:#52682e;left:-29px}.craft-ribbon{display:none}.craft-closing{margin-top:40px;align-items:flex-start;flex-direction:column;gap:14px}.craft-closing>p{font-size:23px}}
 @media print{.craft-ribbon{display:none}.craft-stage{break-inside:avoid;padding-bottom:35px}}
+@media(max-width:700px){.craft-intro{margin-bottom:32px}.craft-stage{padding-bottom:40px}.craft-stage-copy,.craft-harvest .craft-stage-copy{padding-top:16px}.craft-closing{margin-top:24px}}

@@ -55,7 +55,7 @@ export function ProductShowcase() {
         <div className="showcase-actions"><Button asChild size="lg" className="showcase-cta"><a href="products.html">View all pieces <ArrowRight size={20} aria-hidden="true" /></a></Button></div>
       </div>
       <Carousel setApi={setMain} plugins={[autoplay]} opts={{ loop: true, duration: reduced ? 0 : 25 }} className="showcase-main showcase-viewport" aria-roledescription="carousel" aria-label="Featured vetiver products" onKeyDownCapture={event => { if (event.key === "ArrowRight" || event.key === "ArrowLeft") { event.preventDefault(); select(current + (event.key === "ArrowRight" ? 1 : -1)) } }} tabIndex={0}>
-        <CarouselContent className="showcase-track">{featured.map((product, index) => <CarouselItem className="showcase-slide" key={product.id} aria-hidden={current !== index}><img src={product.image} alt={product.alt} width={1024} height={1024} loading="lazy" draggable={false} /></CarouselItem>)}</CarouselContent>
+        <CarouselContent className="showcase-track">{featured.map((product, index) => <CarouselItem className="showcase-slide" key={product.id} aria-hidden={current !== index}><div className="showcase-image-frame"><img src={product.image} alt={product.alt} width={1024} height={1024} loading="lazy" draggable={false} /></div></CarouselItem>)}</CarouselContent>
       </Carousel>
     </div>
     <div className="showcase-bottom">

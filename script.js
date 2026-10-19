@@ -243,6 +243,55 @@
   if ($('.hero-copy')) headerObserver.observe($('.hero-copy'));
   else $('#navbar').classList.add('is-scrolled');
 
+  // Route the decorative trail through actual row gaps, never through copy.
+  // offset measurements ignore the temporary GSAP reveal translations.
+  const craftFlow = $('.craft-flow');
+  if (craftFlow) {
+    const ribbon = $('.craft-ribbon', craftFlow);
+    const trail = $('#craft-trail', craftFlow);
+    const stages = $$('.craft-stage', craftFlow);
+    let craftFrame = 0;
+    const drawTrail = () => {
+      if (window.innerWidth <= 700) { ribbon.removeAttribute('data-ready'); return; }
+      const width = craftFlow.clientWidth;
+      const height = craftFlow.clientHeight;
+      if (!width || !height || !stages.length) return;
+      const rows = stages.map(stage => ({
+        top: stage.offsetTop,
+        bottom: stage.offsetTop + stage.offsetHeight - parseFloat(getComputedStyle(stage).paddingBottom)
+      }));
+      // Broad alternating Bezier sweeps preserve the original ribbon character.
+      // Row gaps provide the crossing points; no straight vertical segments.
+      const centre = width * .5;
+      const side = index => index % 2 === 0 ? width + 28 : -28;
+      let d = `M ${width * .98} ${rows[0].top + 16}`;
+      rows.forEach((row, index) => {
+        const next = rows[index + 1];
+        const start = index ? (rows[index - 1].bottom + row.top) / 2 : row.top;
+        const end = next ? (row.bottom + next.top) / 2 : row.bottom - 4;
+        const middle = (start + end) / 2;
+        const shoulder = (end - start) * .36;
+        d += ` C ${side(index)} ${start}, ${side(index)} ${middle - shoulder}, ${side(index)} ${middle}`;
+        d += ` C ${side(index)} ${middle + shoulder}, ${side(index)} ${end}, ${next ? centre : width * .15} ${end}`;
+      });
+      ribbon.setAttribute('viewBox', `0 0 ${width} ${height}`);
+      trail.setAttribute('d', d);
+      ribbon.setAttribute('data-ready', 'true');
+    };
+    const scheduleTrail = () => { cancelAnimationFrame(craftFrame); craftFrame = requestAnimationFrame(drawTrail); };
+    const craftObserver = new ResizeObserver(scheduleTrail);
+    craftObserver.observe(craftFlow);
+    stages.forEach(stage => craftObserver.observe(stage));
+    window.addEventListener('resize', scheduleTrail);
+    document.fonts.ready.then(scheduleTrail);
+    scheduleTrail();
+    window.addEventListener('pagehide', event => {
+      if (event.persisted) return;
+      craftObserver.disconnect(); cancelAnimationFrame(craftFrame);
+      window.removeEventListener('resize', scheduleTrail);
+    });
+  }
+
   // Progressive enhancement: content remains visible when animation scripts cannot load.
   if (gsap && ScrollTrigger) {
     const media = gsap.matchMedia();

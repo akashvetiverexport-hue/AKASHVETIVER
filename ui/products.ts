@@ -3,7 +3,7 @@ export const products = [
     "id": "product-malai-pair",
     "category": "garland",
     "name": "Wedding Garland Pair",
-    "image": "images/products/malai-pair.png",
+    "image": "images/products/studio-v1/malai-pair.png",
     "alt": "Vetiver wedding garland pair with purple and orange thread",
     "description": "Matching vetiver malai set with purple, orange & gold thread work. Perfect for weddings."
   },
@@ -11,7 +11,7 @@ export const products = [
     "id": "product-malai-royal",
     "category": "garland",
     "name": "Royal Vetiver Garland",
-    "image": "images/products/malai-royal.png",
+    "image": "images/products/studio-v1/malai-royal.png",
     "alt": "Vetiver garland with maroon thread and gold ornaments",
     "description": "Elegant malai with deep maroon thread, gold spiral ornaments & beaded tassel pendant."
   },
@@ -19,7 +19,7 @@ export const products = [
     "id": "product-malai-green",
     "category": "garland",
     "name": "Green & Gold Garland",
-    "image": "images/products/malai-green.png",
+    "image": "images/products/studio-v1/malai-green.png",
     "alt": "Vetiver garland with green thread and gold roses",
     "description": "Classic vetiver malai with emerald green thread bands and golden rose ornaments."
   },
@@ -27,7 +27,7 @@ export const products = [
     "id": "product-malai-neon",
     "category": "garland",
     "name": "Neon Vetiver Garland",
-    "image": "images/products/malai-neon.png",
+    "image": "images/products/studio-v1/malai-neon.png",
     "alt": "Vetiver garland with neon green and pink thread",
     "description": "Vibrant vetiver malai with bright neon green and hot pink thread accents."
   },
@@ -35,7 +35,7 @@ export const products = [
     "id": "product-malai-flowers",
     "category": "garland",
     "name": "Flower Vetiver Garland",
-    "image": "images/products/malai-flowers.png",
+    "image": "images/products/studio-v1/malai-flowers.png",
     "alt": "Vetiver garland with flower decorations",
     "description": "Beautiful vetiver malai adorned with red & yellow flowers and pink tassels."
   },
@@ -43,7 +43,7 @@ export const products = [
     "id": "product-peacock",
     "category": "decor",
     "name": "Vetiver Peacock (Mayil)",
-    "image": "images/products/peacock.png",
+    "image": "images/products/studio-v1/peacock.png",
     "alt": "Vetiver root peacock sculpture",
     "description": "Stunning peacock sculpture crafted entirely from vetiver roots with colorful feather details."
   },
@@ -51,7 +51,7 @@ export const products = [
     "id": "product-toran-fringe",
     "category": "toran",
     "name": "Vetiver Door Curtain",
-    "image": "images/products/toran-fringe.png",
+    "image": "images/products/studio-v1/toran-fringe.png",
     "alt": "Vetiver root door hanging with natural fringe",
     "description": "Natural vetiver root door hanging with woven top band and flowing fringe. Cooling fragrance."
   },
@@ -59,7 +59,7 @@ export const products = [
     "id": "product-toran-flowers",
     "category": "toran",
     "name": "Flower Toran",
-    "image": "images/products/toran-flowers.png",
+    "image": "images/products/studio-v1/toran-flowers.png",
     "alt": "Vetiver door hanging with flower decorations",
     "description": "Vetiver door hanging with red ribbon border and colorful flower embellishments."
   },
@@ -75,7 +75,7 @@ export const products = [
     "id": "product-vel",
     "category": "ceremony",
     "name": "Vetiver Vel (Spear)",
-    "image": "images/products/vel.png",
+    "image": "images/products/studio-v1/vel.png",
     "alt": "Vetiver root vel - Lord Murugan's spear",
     "description": "Sacred vel of Lord Murugan crafted from vetiver roots with blue and gold fabric wrapping."
   },
@@ -83,7 +83,7 @@ export const products = [
     "id": "product-flag",
     "category": "ceremony",
     "name": "Vetiver Kodi (Flag)",
-    "image": "images/products/flag.png",
+    "image": "images/products/studio-v1/flag.png",
     "alt": "Vetiver root ceremonial flag",
     "description": "Ceremonial temple flag handcrafted from vetiver roots with crochet border and palm motif."
   },
@@ -91,7 +91,7 @@ export const products = [
     "id": "product-toran-auspicious",
     "category": "toran",
     "name": "Auspicious Toran",
-    "image": "images/products/toran-auspicious.png",
+    "image": "images/products/studio-v1/toran-auspicious.png",
     "alt": "Vetiver door hanging with auspicious symbols",
     "description": "Vetiver door hanging with sacred symbols, maroon border, and golden zigzag trim."
   }
