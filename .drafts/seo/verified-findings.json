@@ -1,0 +1,127 @@
+{
+  "findings": [
+    {
+      "area": "Canonical URLs",
+      "severity": "Warning",
+      "confidence": "Confirmed",
+      "finding": "Public pages omit canonical URLs.",
+      "evidence": "parse-home.txt and parse-products.txt: canonical=null; routes.json: /products.html -> 307 /products; /index.html -> 307 /.",
+      "impact": "Preferred URL signals are incomplete and links incur redirects.",
+      "fix": "Use final HTTPS URLs / and /products consistently in canonical tags, sitemap, schema and internal links, or explicitly configure an alternate stable routing policy.",
+      "sources": []
+    },
+    {
+      "area": "Discovery",
+      "severity": "Warning",
+      "confidence": "Confirmed",
+      "finding": "No sitemap discovered; robots contains only comments.",
+      "evidence": "sitemap.txt: /sitemap.xml and two standard index filenames return 404; robots-raw.txt contains comment preamble only, no Sitemap directive.",
+      "impact": "A sitemap would provide an explicit discovery and canonical URL list. Its absence does not block indexing of this linked two-page site.",
+      "fix": "Publish valid XML with only the two public canonical URLs and advertise it in robots.txt. Keep admin out.",
+      "sources": []
+    },
+    {
+      "area": "Metadata",
+      "severity": "Warning",
+      "confidence": "Confirmed",
+      "finding": "The homepage and collection reuse the same description.",
+      "evidence": "parse-home.txt and parse-products.txt: identical description beginning Discover family-made vetiver garlands.",
+      "impact": "Search snippets lack page-specific differentiation.",
+      "fix": "Retain distinct titles and give the collection its own accurate product-focused description.",
+      "sources": []
+    },
+    {
+      "area": "Social previews",
+      "severity": "Warning",
+      "confidence": "Confirmed",
+      "finding": "Social metadata is incomplete and shared between pages.",
+      "evidence": "social-home.txt and social-products.txt: relative og:image; missing og:url and twitter:card; collection shares homepage OG title.",
+      "impact": "Shared links may have incomplete or misleading previews; this is not an indexing blocker.",
+      "fix": "Use page-specific OG title/description/url, absolute image URLs and Twitter summary_large_image metadata.",
+      "sources": []
+    },
+    {
+      "area": "Structured data",
+      "severity": "Warning",
+      "confidence": "Confirmed",
+      "finding": "Public pages contain no JSON-LD.",
+      "evidence": "parse-home.txt and parse-products.txt: schema=[].",
+      "impact": "Explicit machine-readable business and page identity is absent; no ranking or rich-result gain is guaranteed.",
+      "fix": "Add truthful Organization, WebSite and WebPage/CollectionPage JSON-LD matching visible content. Do not invent prices, ratings, registration or addresses.",
+      "sources": []
+    },
+    {
+      "area": "Security headers",
+      "severity": "Info",
+      "confidence": "Confirmed",
+      "finding": "HSTS was absent from the sampled HTTPS response.",
+      "evidence": "headers.txt: HTTPS and CSP, X-Frame-Options, nosniff, Referrer-Policy and Permissions-Policy present; HSTS missing.",
+      "impact": "Security hardening opportunity; no SEO penalty demonstrated.",
+      "fix": "Review HSTS during security work after confirming host and subdomain HTTPS readiness; do not blindly add includeSubDomains or preload.",
+      "sources": []
+    },
+    {
+      "area": "Performance",
+      "severity": "Info",
+      "confidence": "Hypothesis",
+      "finding": "Core Web Vitals and performance scores remain unknown.",
+      "evidence": "pagespeed-mobile.txt: rate limited by Google API; performance_score=null, metrics={}.",
+      "impact": "There is no measurement supporting a pass or failure for LCP, INP or CLS.",
+      "fix": "Use a later authorized PageSpeed/Lighthouse run and Search Console/CrUX field data when available; no quota retry loop.",
+      "sources": []
+    },
+    {
+      "area": "AI discovery",
+      "severity": "Info",
+      "confidence": "Confirmed",
+      "finding": "No llms.txt is present.",
+      "evidence": "llms.txt and routes.json: /llms.txt 404; robots has no explicit AI-agent rules.",
+      "impact": "Optional publishing choice; not a confirmed Google SEO issue or AI-citation blocker.",
+      "fix": "Prioritize crawlable accurate content and valid identity metadata. Choose crawler policy explicitly if the owner wants restrictions; llms.txt is optional.",
+      "sources": []
+    },
+    {
+      "area": "Indexability",
+      "severity": "Pass",
+      "confidence": "Confirmed",
+      "finding": "Public pages are fetchable and admin has noindex.",
+      "evidence": "routes.json: final pages HTTP 200; parse-home/products meta_robots=null; parse-admin meta_robots=noindex,nofollow.",
+      "impact": "Public content can be fetched; admin communicates exclusion to supporting crawlers. Actual Google indexing is unverified.",
+      "fix": "Preserve admin noindex and exclude it from sitemap. Do not block crawling of admin solely with robots if relying on meta noindex; authentication is separate.",
+      "sources": []
+    },
+    {
+      "area": "Content and headings",
+      "severity": "Pass",
+      "confidence": "Confirmed",
+      "finding": "Both pages have unique titles, one H1 and meaningful static content.",
+      "evidence": "parse-home: 590 raw text words, H1 Rooted in nature; parse-products: 502 raw text words, H1 Our vetiver collection, 12 product headings.",
+      "impact": "Core content is present in source HTML. Raw parser counts include UI and are not quality scores.",
+      "fix": "Keep accurate product content in HTML; consider a more descriptive homepage heading while preserving design.",
+      "sources": []
+    },
+    {
+      "area": "Images",
+      "severity": "Pass",
+      "confidence": "Confirmed",
+      "finding": "Hero and product images use WebP, explicit dimensions and descriptive alt text.",
+      "evidence": "parse-home hero: 1806x871; parse-products: 12 product WebP images with descriptive alt and 1200x1200 dimensions; later products lazy loaded.",
+      "impact": "These support accessible product descriptions and layout stability, though actual CLS is unmeasured.",
+      "fix": "Preserve these attributes. Review decorative versus informative craft images in rendered context before changing empty alt text.",
+      "sources": []
+    },
+    {
+      "area": "Internal links",
+      "severity": "Pass",
+      "confidence": "Confirmed",
+      "finding": "The sampled public pages link together without a broken link.",
+      "evidence": "links.txt: one unique internal target checked, final status 200; internal-links.txt: two pages at depth 1.",
+      "impact": "The collection is discoverable from homepage links. This is not proof that every dynamic or external link works.",
+      "fix": "Normalize links to final URLs and recheck after deployment. Suppress script orphan heuristics: one incoming link is not an orphan.",
+      "sources": []
+    }
+  ],
+  "dropped": [],
+  "raw_count": 12,
+  "verified_count": 12
+}

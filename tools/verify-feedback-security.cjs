@@ -17,7 +17,7 @@ function setup({ endpoint = '/api/feedback', overrides = {}, fetchImpl, timeout 
     return [values[index], value => { values[index] = value }]
   } }
   vm.runInNewContext(compiled, {
-    exports, URL, AbortController,
+    exports, URL, AbortController, crypto: require('node:crypto').webcrypto,
     require: name => name === 'react' ? react : name === 'lucide-react' ? { Star: 'star', X: 'close', ArrowUpRight: 'arrow' } : require(name),
     window: { location: { href: 'https://example.com/', origin: 'https://example.com' }, setTimeout: fn => timeout ? setTimeout(fn, 0) : setTimeout(fn, 15000), clearTimeout },
     localStorage: { setItem: (key, value) => { saved = JSON.parse(value) } },

@@ -1,0 +1,82 @@
+[
+  {
+    "width": 320,
+    "route": "/#products",
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "unnamed": [],
+    "broken": [],
+    "headingCount": 1
+  },
+  {
+    "width": 320,
+    "route": "/products.html",
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "unnamed": [],
+    "broken": [],
+    "headingCount": 1
+  },
+  {
+    "width": 390,
+    "route": "/#products",
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "unnamed": [],
+    "broken": [],
+    "headingCount": 1
+  },
+  {
+    "width": 390,
+    "route": "/products.html",
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "unnamed": [],
+    "broken": [],
+    "headingCount": 1
+  },
+  {
+    "width": 768,
+    "route": "/#products",
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "unnamed": [],
+    "broken": [],
+    "headingCount": 1
+  },
+  {
+    "width": 768,
+    "route": "/products.html",
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "unnamed": [],
+    "broken": [],
+    "headingCount": 1
+  },
+  {
+    "width": 1440,
+    "route": "/#products",
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "unnamed": [],
+    "broken": [],
+    "headingCount": 1
+  },
+  {
+    "width": 1440,
+    "route": "/products.html",
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "unnamed": [],
+    "broken": [],
+    "headingCount": 1
+  }
+]

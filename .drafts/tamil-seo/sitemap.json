@@ -1,0 +1,95 @@
+﻿{
+  "site": "https://akashvetiver.akashvetiverexport.workers.dev/",
+  "sitemaps_checked": [
+    {
+      "url": "https://akashvetiver.akashvetiverexport.workers.dev/sitemap.xml",
+      "status": 200,
+      "final_url": "https://akashvetiver.akashvetiverexport.workers.dev/sitemap.xml",
+      "redirects": [],
+      "type": "urlset",
+      "url_count": 2,
+      "sitemap_count": 0,
+      "error": null
+    },
+    {
+      "url": "https://akashvetiver.akashvetiverexport.workers.dev/sitemap_index.xml",
+      "status": 404,
+      "final_url": "https://akashvetiver.akashvetiverexport.workers.dev/sitemap_index.xml",
+      "redirects": [],
+      "type": null,
+      "url_count": 0,
+      "sitemap_count": 0,
+      "error": null
+    },
+    {
+      "url": "https://akashvetiver.akashvetiverexport.workers.dev/sitemap-index.xml",
+      "status": null,
+      "final_url": "https://akashvetiver.akashvetiverexport.workers.dev/sitemap-index.xml",
+      "redirects": [],
+      "type": null,
+      "url_count": 0,
+      "sitemap_count": 0,
+      "error": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    }
+  ],
+  "urls": [
+    {
+      "url": "https://akashvetiver.akashvetiverexport.workers.dev/",
+      "lastmod": null,
+      "changefreq": null,
+      "priority": null,
+      "checks": {
+        "status": 200,
+        "final_url": "https://akashvetiver.akashvetiverexport.workers.dev/",
+        "redirects": [],
+        "meta_robots": null,
+        "canonical": "https://akashvetiver.akashvetiverexport.workers.dev/"
+      }
+    },
+    {
+      "url": "https://akashvetiver.akashvetiverexport.workers.dev/products",
+      "lastmod": null,
+      "changefreq": null,
+      "priority": null,
+      "checks": {
+        "status": 200,
+        "final_url": "https://akashvetiver.akashvetiverexport.workers.dev/products",
+        "redirects": [],
+        "meta_robots": null,
+        "canonical": "https://akashvetiver.akashvetiverexport.workers.dev/products"
+      }
+    }
+  ],
+  "summary": {
+    "sitemaps": 3,
+    "urls": 2,
+    "indexes": 0,
+    "issues": 4
+  },
+  "issues": [
+    {
+      "severity": "info",
+      "message": "Sitemap URL missing lastmod",
+      "url": "https://akashvetiver.akashvetiverexport.workers.dev/",
+      "evidence": null
+    },
+    {
+      "severity": "info",
+      "message": "Sitemap URL missing lastmod",
+      "url": "https://akashvetiver.akashvetiverexport.workers.dev/products",
+      "evidence": null
+    },
+    {
+      "severity": "error",
+      "message": "Sitemap returned HTTP 404",
+      "url": "https://akashvetiver.akashvetiverexport.workers.dev/sitemap_index.xml",
+      "evidence": null
+    },
+    {
+      "severity": "error",
+      "message": "Sitemap returned HTTP None",
+      "url": "https://akashvetiver.akashvetiverexport.workers.dev/sitemap-index.xml",
+      "evidence": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    }
+  ]
+}

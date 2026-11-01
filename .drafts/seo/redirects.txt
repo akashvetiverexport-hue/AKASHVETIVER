@@ -1,0 +1,21 @@
+{
+  "url": "https://akashvetiver.akashvetiverexport.workers.dev",
+  "final_url": "https://akashvetiver.akashvetiverexport.workers.dev",
+  "chain": [
+    {
+      "step": 1,
+      "url": "https://akashvetiver.akashvetiverexport.workers.dev",
+      "status": 200,
+      "time_ms": 1237,
+      "final": true
+    }
+  ],
+  "total_hops": 0,
+  "total_time_ms": 1237,
+  "has_loop": false,
+  "has_mixed_protocol": false,
+  "issues": [],
+  "error": null
+}
+
+STDERR:

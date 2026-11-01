@@ -1,48 +1,70 @@
+import Footer from '@/components/ui/beam-wordmark-footer'
+import { flushSync } from 'react-dom'
 import { createRoot } from "react-dom/client"
-import { AnimatedTestimonials } from "@/components/ui/animated-testimonials"
-import { FeedbackForm } from "@/components/ui/feedback-form"
-import BeamWordmarkFooter from "@/components/ui/beam-wordmark-footer"
-import { approvedTestimonials } from "./testimonials"
 import "./styles.css"
-import { ProductShowcase } from "@/components/ui/product-showcase"
-import { AnimatedMarqueeHero } from "@/components/ui/hero-3"
-import { products } from "./products"
+import { products as localProducts, type Product } from "./products"
+
 declare global {
-  interface Window { VETTIVER_CONFIG?: { whatsappNumber?: string; feedbackEndpoint?: string; requestsEndpoint?: string; businessEmail?: string }; ScrollTrigger?: { refresh: () => void } }
+  interface Window { VETTIVER_COMMERCE?: { active:(p:Product)=>boolean; money:(value:number)=>string }; VETTIVER_CONFIG?: { whatsappNumber?: string; feedbackEndpoint?: string; requestsEndpoint?: string; reviewsEndpoint?: string; businessEmail?: string; supabaseUrl?: string; supabasePublishableKey?: string; catalogSource?: string }; VETTIVER_CATALOG?: { products: Product[]; ready: Promise<void>; error: string }; ScrollTrigger?: { refresh: (safe?: boolean) => void; update?: () => void } }
 }
 function mountSections() {
-const showcase = document.getElementById("product-showcase-root")
-if (showcase) createRoot(showcase).render(<ProductShowcase />)
-const bulk = document.getElementById("bulk-order-root")
-if (bulk) createRoot(bulk).render(<AnimatedMarqueeHero title={<>More pieces.<br />One thoughtful gesture.</>} description="For celebrations, gifting and larger orders, bring a little vetiver into every detail. Tell us what you have in mind and we’ll discuss the options with you." ctaText="Request a bulk quote" images={products.slice(0,8).map(product => product.image)} />)
-const feedbackEndpoint = window.VETTIVER_CONFIG?.feedbackEndpoint || ""
-// Only same-origin endpoints are accepted: customer feedback is not sent to
-// an arbitrary third party configured by a copied template.
-const endpoint = feedbackEndpoint.startsWith("/") && !feedbackEndpoint.startsWith("//") ? feedbackEndpoint : ""
-const reviews = document.getElementById("testimonials-root")
-if (reviews) {
-  const root = createRoot(reviews)
-  const content = <><AnimatedTestimonials testimonials={approvedTestimonials} /><FeedbackForm endpoint={endpoint} /></>
-  if (new URLSearchParams(location.search).get("ui-demo") === "testimonials") {
-    import("@/components/ui/demo").then(({ AnimatedTestimonialsBasic }) => root.render(<><AnimatedTestimonialsBasic /><FeedbackForm endpoint="" /></>))
-  } else root.render(content)
+  let frame = 0
+  const resize = new ResizeObserver(() => { cancelAnimationFrame(frame); frame = requestAnimationFrame(() => window.VETTIVER_REFRESH?.()) })
+  const jobs = new Map<Element, () => Promise<void>>()
+  const observer = new IntersectionObserver(entries => {
+    for (const entry of entries) if (entry.isIntersecting) {
+      observer.unobserve(entry.target)
+      const job = jobs.get(entry.target); jobs.delete(entry.target)
+      const footerFallback=entry.target.id==='footer-root'?[...entry.target.childNodes].map(node=>node.cloneNode(true)):null
+      entry.target.setAttribute('aria-busy', 'true')
+      job?.().then(() => { resize.observe(entry.target); entry.target.setAttribute('aria-busy', 'false') }).catch(() => {
+        entry.target.setAttribute('aria-busy', 'false')
+        if(footerFallback){entry.target.replaceChildren(...footerFallback);return}
+        entry.target.querySelectorAll('.section-placeholder').forEach(skeleton => skeleton.remove())
+        const message = document.createElement('div'); message.className = 'section-load-error'; message.textContent = 'This section couldn’t load. Your connection may be slow.'; message.setAttribute('role','status'); const retry = document.createElement('button'); retry.type = 'button'; retry.textContent = 'Reload page'; retry.onclick = () => location.reload(); message.append(retry); entry.target.append(message)
+      })
+    }
+  }, { rootMargin: '600px' })
+  const near = (id: string, job: (element: HTMLElement) => Promise<void>) => {
+    const element = document.getElementById(id)
+    if (element) { jobs.set(element, () => job(element)); observer.observe(element) }
+  }
+  const catalogue = async () => {
+    // Module chunks can arrive before deferred catalogue scripts on a warm cache.
+    // Never render the local seed while the connected catalogue is still starting.
+    if (!window.VETTIVER_CATALOG) await new Promise<void>((resolve,reject) => {
+      const ready=()=>{clearTimeout(timer);resolve()}
+      const timer=setTimeout(()=>{window.removeEventListener('vettiver:catalog-initialized',ready);reject(new Error('Catalogue did not initialize'))},12000)
+      window.addEventListener('vettiver:catalog-initialized',ready,{once:true})
+    })
+    await window.VETTIVER_CATALOG?.ready
+    return window.VETTIVER_CATALOG?.products ?? localProducts
+  }
+  near('product-showcase-root', async element => {
+    const [{ ProductShowcase }, products] = await Promise.all([import('@/components/ui/product-showcase'), catalogue()])
+    flushSync(() => createRoot(element).render(<ProductShowcase products={products} />))
+  })
+  near('bulk-order-root', async element => {
+    const [{ AnimatedMarqueeHero }, products] = await Promise.all([import('@/components/ui/hero-3'), catalogue()])
+    flushSync(() => createRoot(element).render(<AnimatedMarqueeHero title={<>More pieces.<br />One thoughtful gesture.</>} description="Handcrafted vetiver for weddings, events and gifting." ctaText="Bulk orders" images={products.map(product => product.thumbnail)} />))
+  })
+  near('testimonials-root', async element => {
+    const [{ LiveReviews }, { FeedbackForm }, { approvedTestimonials }] = await Promise.all([import('./live-reviews'), import('@/components/ui/feedback-form'), import('./testimonials')])
+    const configured = window.VETTIVER_CONFIG?.feedbackEndpoint || ''
+    const endpoint = configured.startsWith('/') && !configured.startsWith('//') ? configured : ''
+    const root = createRoot(element)
+    if (new URLSearchParams(location.search).get('ui-demo') === 'testimonials') {
+      const { AnimatedTestimonialsBasic } = await import('@/components/ui/demo')
+      flushSync(() => root.render(<><AnimatedTestimonialsBasic /><FeedbackForm endpoint="" /></>))
+    } else flushSync(() => root.render(<><LiveReviews endpoint={window.VETTIVER_CONFIG?.reviewsEndpoint} fallback={approvedTestimonials} /><FeedbackForm endpoint={endpoint} /></>))
+  })
+  near('footer-root', async element => {
+    flushSync(() => createRoot(element).render(<Footer columns={document.body.classList.contains('catalog-page') ? [
+      { title: 'Explore', links: [{ label: 'Our collection', href: '#products' }, { label: 'Our roots', href: 'index.html#about' }, { label: 'Customer stories', href: 'index.html#reviews' }] },
+      { title: "Let's talk", links: [{ label: 'Reserve a piece', href: '#contact' }, { label: 'Share feedback', href: 'index.html#reviews' }, { label: 'Back home', href: 'index.html' }] }
+    ] : undefined} />))
+  })
+  window.addEventListener('pagehide', event => { if (!event.persisted) { observer.disconnect(); resize.disconnect(); cancelAnimationFrame(frame) } })
 }
-const footer = document.getElementById("footer-root")
-if (footer) createRoot(footer).render(<BeamWordmarkFooter columns={document.body.classList.contains("catalog-page") ? [
-  { title: "Explore", links: [{ label: "Our collection", href: "#products" }, { label: "Our roots", href: "index.html#about" }, { label: "Customer stories", href: "index.html#reviews" }] },
-  { title: "Let's talk", links: [{ label: "Make an enquiry", href: "#contact" }, { label: "Share feedback", href: "index.html#reviews" }, { label: "Back home", href: "index.html" }] }
-] : undefined} />)
-// Keep the host site's scroll measurements current when React mounts or when
-// the feedback acknowledgement/validation changes section height.
-let refreshFrame = 0
-const observer = new ResizeObserver(() => { cancelAnimationFrame(refreshFrame); refreshFrame = requestAnimationFrame(() => window.ScrollTrigger?.refresh()) })
-if (reviews) observer.observe(reviews)
-if (footer) observer.observe(footer)
-if (showcase) observer.observe(showcase)
-if (bulk) observer.observe(bulk)
-window.addEventListener("pagehide", event => { if (!event.persisted) { observer.disconnect(); cancelAnimationFrame(refreshFrame) } })
-}
-// DOMContentLoaded follows the host page's deferred site-config.js. A module
-// fetched from cache must not read configuration before that script executes.
-if (document.readyState === "complete") mountSections()
-else document.addEventListener("DOMContentLoaded", mountSections, { once: true })
+if (document.readyState !== 'loading') mountSections()
+else document.addEventListener('DOMContentLoaded', mountSections, { once: true })

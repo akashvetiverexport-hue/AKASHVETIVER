@@ -6,6 +6,9 @@
 // Never put Resend keys, database credentials or admin secrets in this public file.
 window.VETTIVER_CONFIG = Object.freeze({
   whatsappNumber: '',
+  supabaseUrl: 'https://lgkkjubwdxdfpmoxkrmd.supabase.co',
+  supabasePublishableKey: '', // Public key only; never a secret or service-role key.
+  catalogSource: 'local', // Switch to supabase after migrations, seed and access checks pass.
   feedbackEndpoint: '',
   requestsEndpoint: '',
   businessEmail: 'akashvetiverexport@gmail.com'

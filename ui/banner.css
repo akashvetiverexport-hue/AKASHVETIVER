@@ -1,0 +1,8 @@
+.studio-banner{position:relative;isolation:isolate;display:flex;align-items:center;justify-content:center;padding:10px 46px 10px 20px;text-align:center;font-size:12px;font-weight:500;background:#e4eedf;color:#183e22;overflow:hidden;border-radius:8px}
+.studio-banner-rainbow{background:#eff3e8}
+.studio-banner-close{position:absolute;right:5px;top:50%;transform:translateY(-50%);color:#345338;min-height:36px!important}
+.rainbow-banner-gradient-1,.rainbow-banner-gradient-2{position:absolute;inset:0;z-index:-1;opacity:.3;mask-image:linear-gradient(to bottom,white,transparent),radial-gradient(circle at top center,white,transparent);mask-composite:intersect;background-size:200% 100%}
+@keyframes moving-banner{from{background-position:0% 0}to{background-position:100% 0}}
+.rainbow-banner-gradient-1{animation:moving-banner 16s linear infinite reverse;background-image:repeating-linear-gradient(60deg,rgba(255,77,0,.4),rgba(0,87,255,.5) 2%,rgba(0,87,255,.5) 5%,transparent 8%,transparent 14%,rgba(164,255,68,.4) 18%,rgba(164,255,68,.4) 22%,rgba(255,0,166,.77) 28%,rgba(255,0,166,.77) 30%,rgba(164,255,68,.4) 34%,rgba(164,255,68,.4) 36%,transparent,rgba(255,77,0,.4) calc(50% - 12px));mix-blend-mode:difference}
+.rainbow-banner-gradient-2{animation:moving-banner 20s linear infinite;background-image:repeating-linear-gradient(45deg,rgba(64,0,255,.51),rgba(255,120,120,.5) 4%,rgba(255,120,120,.5) 8%,transparent 9%,transparent 14%,rgba(36,188,255,.4) 16%,rgba(36,188,255,.4) 20%,transparent,rgba(255,89,0,.56) 36%,rgba(255,89,0,.56) 40%,transparent 42%,rgba(64,0,255,.51) 46%,rgba(64,0,255,.51) calc(50% - 16.8px));mix-blend-mode:color-dodge}
+@media(prefers-reduced-motion:reduce){.rainbow-banner-gradient-1,.rainbow-banner-gradient-2{animation:none}}

@@ -1,0 +1,42 @@
+{
+  "url": "https://akashvetiver.akashvetiverexport.workers.dev/products.html",
+  "score": 31,
+  "og_tags": {
+    "og:title": "Akash Vetiver Export | Handcrafted Vetiver",
+    "og:description": "Natural roots. Thoughtful hands. Explore handcrafted vetiver garlands, home d\u00c3\u00a9cor and ceremonial pieces.",
+    "og:type": "website",
+    "og:image": "images/optimized/products/studio-v1/malai-pair.webp"
+  },
+  "twitter_tags": {},
+  "og_present": [
+    "og:title",
+    "og:description",
+    "og:image",
+    "og:type"
+  ],
+  "og_missing": [
+    "og:url"
+  ],
+  "twitter_present": [],
+  "twitter_missing": [
+    "twitter:card"
+  ],
+  "issues": [
+    "\u26a0\ufe0f og:image should be an absolute URL",
+    "\ud83d\udd34 Missing required: og:url",
+    "\u26a0\ufe0f Missing: twitter:card"
+  ],
+  "recommendations": [
+    "Add Twitter Card tags for rich previews on X (Twitter)",
+    "Add og:image:width and og:image:height for optimal rendering (1200\u00d7630 recommended)"
+  ],
+  "preview": {
+    "title": "Akash Vetiver Export | Handcrafted Vetiver",
+    "description": "Natural roots. Thoughtful hands. Explore handcrafted vetiver garlands, home d\u00c3\u00a9cor and ceremonial pieces.",
+    "image": "images/optimized/products/studio-v1/malai-pair.webp",
+    "site_name": ""
+  },
+  "error": null
+}
+
+STDERR:

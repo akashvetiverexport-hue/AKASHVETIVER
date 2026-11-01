@@ -8,4 +8,4 @@ export function AnimatedTestimonialsBasic() {
     { id: 3, name: "Sample customer C", content: "A third example for testing the carousel controls and keyboard navigation.", rating: 3 }
   ]} /></>
 }
-export default function FooterDemo() { return <BeamWordmarkFooter brand="Vettiver" company="Akash Vetiver Export" socials={[]} /> }
+export default function FooterDemo() { return <BeamWordmarkFooter brand="Akash Vetiver Export" wordmark="AKASH VETIVER" company="Akash Vetiver Export" socials={[]} /> }

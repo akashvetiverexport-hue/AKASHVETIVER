@@ -1,0 +1,49 @@
+{
+  "start_url": "https://akashvetiver.akashvetiverexport.workers.dev",
+  "domain": "akashvetiver.akashvetiverexport.workers.dev",
+  "pages_crawled": 2,
+  "total_internal_links": 2,
+  "unique_pages_found": 2,
+  "max_depth_reached": 1,
+  "pages": {
+    "https://akashvetiver.akashvetiverexport.workers.dev": {
+      "outgoing_links": 1,
+      "incoming_links": 0
+    },
+    "https://akashvetiver.akashvetiverexport.workers.dev/products.html": {
+      "outgoing_links": 1,
+      "incoming_links": 1
+    }
+  },
+  "anchor_texts": {
+    "Explore the collection": 1,
+    "AKASH VETIVEREXPORT": 1
+  },
+  "link_distribution": {
+    "min": 1,
+    "max": 1,
+    "avg": 1.0
+  },
+  "orphan_candidates": [
+    {
+      "url": "https://akashvetiver.akashvetiverexport.workers.dev/products.html",
+      "incoming_links": 1
+    },
+    {
+      "url": "https://akashvetiver.akashvetiverexport.workers.dev/index.html",
+      "incoming_links": 1
+    }
+  ],
+  "nofollow_links": [],
+  "issues": [
+    "\u26a0\ufe0f 2 potential orphan page(s) (\u22641 internal link pointing to them)",
+    "\u26a0\ufe0f 2 page(s) have fewer than 3 internal links"
+  ],
+  "recommendations": [
+    "Add internal links pointing to orphan pages from related content",
+    "Increase internal linking \u2014 aim for 3-5 relevant links per 1000 words"
+  ],
+  "error": null
+}
+
+STDERR:

@@ -1,95 +1,369 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f6fbf3">
-  <meta name="description" content="Discover family-made vetiver garlands, door hangings and sacred crafts from Tamil Nadu. Explore the Vettiver collection and enquire about delivery across India.">
-  <meta property="og:title" content="Vettiver | Pure Vetiver, Pure Wellness">
-  <meta property="og:description" content="Natural roots. Thoughtful hands. Explore handcrafted vetiver garlands, home décor and ceremonial pieces.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="images/products/studio-v1/malai-pair.png">
-  <title>Vettiver | Pure Vetiver, Pure Wellness</title>
+  <link rel="manifest" href="/manifest.json">
   <link rel="icon" type="image/svg+xml" href="assets/icons/plant.svg">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="application-name" content="Akash Vetiver Export">
+  <meta name="author" content="Avinash, Mathivanan">
+  <meta name="geo.region" content="IN-TN">
+  <meta name="geo.placename" content="Cuddalore, Tamil Nadu, India">
+  <meta name="geo.position" content="11.748;79.768">
+  <meta name="ICBM" content="11.748, 79.768">
   <link rel="preload" href="assets/fonts/outfit-regular.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="assets/fonts/outfit-semibold.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="preload" href="images/hero/vetiver-dawn.png" as="image" fetchpriority="high">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="preload" href="images/optimized/hero/vetiver-dawn.webp" as="image" media="(min-width: 701px)" fetchpriority="high">
+  <link rel="preload" as="image" href="images/optimized/hero/vetiver-golden-hour-mobile-940.webp" imagesrcset="images/optimized/hero/vetiver-golden-hour-mobile-480.webp 480w, images/optimized/hero/vetiver-golden-hour-mobile-940.webp 940w" imagesizes="100vw" media="(max-width: 700px)" fetchpriority="high">
+  <style id="intro-critical">
+.brand-intro{position:fixed;inset:0;width:100vw;z-index:10000;display:grid;place-items:center;background:#f6fbf3;color:#023616;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .85s cubic-bezier(.16,1,.3,1),visibility .85s;contain:layout paint}
+html.intro-pending .brand-intro{opacity:1;visibility:visible;pointer-events:auto}
+html.intro-pending{overflow:hidden;scrollbar-gutter:auto}
+.brand-intro-copy{padding:24px;text-align:center}.brand-intro-logo{width:60px;height:72px;object-fit:contain;margin:0 auto 22px;filter:brightness(0) saturate(100%) invert(16%) sepia(39%) saturate(1238%) hue-rotate(97deg) brightness(87%);display:block}
+.brand-intro-name{display:block;font:400 clamp(32px,6vw,58px)/1.1 Outfit,sans-serif;letter-spacing:-.025em}.brand-intro-export{display:block;font:400 11px/1.5 'Plus Jakarta Sans',sans-serif;letter-spacing:.32em;margin-top:12px;color:#52682e}
+.brand-intro-line{display:block;width:96px;height:2px;background:#dce5d3;margin:32px auto 0;overflow:hidden}.brand-intro-line::after{content:'';display:block;width:100%;height:100%;background:#52682e;transform-origin:left;animation:intro-fill 1.8s cubic-bezier(.4,0,.2,1) both}
+.intro-pending .brand-intro-logo{animation:intro-rise .65s cubic-bezier(.16,1,.3,1) both}.intro-pending .brand-intro-name{animation:intro-rise .7s .1s cubic-bezier(.16,1,.3,1) both}.intro-pending .brand-intro-export{animation:intro-rise .7s .2s cubic-bezier(.16,1,.3,1) both}
+.brand-intro-skip{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);border:0;background:transparent;color:#52682e;font:400 12px/1.5 'Plus Jakarta Sans',sans-serif;padding:12px 20px;min-height:44px;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
+.intro-reveal .headline-line>span{animation:hero-arrive .85s .12s cubic-bezier(.16,1,.3,1) both}.intro-reveal .hero-description{animation:hero-arrive .8s .22s cubic-bezier(.16,1,.3,1) both}.intro-reveal .hero-actions{animation:hero-arrive .8s .32s cubic-bezier(.16,1,.3,1) both}
+@keyframes intro-rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}@keyframes intro-fill{from{transform:scaleX(0)}to{transform:scaleX(1)}}@keyframes hero-arrive{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){html.intro-pending{overflow:auto}.brand-intro{display:none}.intro-reveal .headline-line>span,.intro-reveal .hero-description,.intro-reveal .hero-actions{animation:none}}
+</style>
+  <script data-intro-bootstrap>(()=>{
+ const root=document.documentElement,reduced=matchMedia('(prefers-reduced-motion: reduce)');
+ if(location.hash||reduced.matches||performance.getEntriesByType('navigation')[0]?.type==='back_forward')return;
+ root.classList.add('intro-pending');
+ let timer=0;const locked=[];
+ const gate=window.VETTIVER_INTRO={startedAt:performance.now(),finished:false,finish:()=>{
+  if(gate.finished)return;gate.finished=true;clearTimeout(timer);root.classList.remove('intro-pending');
+  locked.forEach(el=>el.inert=false);document.removeEventListener('keydown',key);
+  if(scrollY<80&&!reduced.matches)root.classList.add('intro-reveal');
+  window.dispatchEvent(new Event('vettiver:intro-ready'));
+  setTimeout(()=>{document.querySelector('.brand-intro')?.remove();root.classList.remove('intro-reveal')},1150);
+ }};
+ const key=e=>{if(e.key==='Escape')gate.finish()};document.addEventListener('keydown',key);
+ const begin=()=>{
+  if(gate.finished)return;
+  const intro=document.querySelector('.brand-intro');if(!intro){requestAnimationFrame(begin);return}
+  gate.startedAt=performance.now();intro.addEventListener('click',e=>{if(e.target.closest('.amr-skip'))gate.finish()});
+  for(const el of document.body.children)if(el instanceof HTMLElement&&el!==intro&&!el.inert&&!['SCRIPT','STYLE','LINK'].includes(el.tagName)){el.inert=true;locked.push(el)}
+  const failOpen=()=>{intro.style.transition='none';gate.finish()};
+  window.addEventListener('error',event=>{const target=event.target;if(target instanceof HTMLScriptElement && /\/assets\/react\/intro\.js(?:[?#]|$)/.test(target.src))failOpen()},{capture:true});
+  const phase=()=>{if(gate.finished)return;const elapsed=performance.now()-gate.startedAt,poster=intro.querySelector('.amr-root');if(elapsed>=1200&&!intro.hasAttribute('data-intro-hydrated')){failOpen();return}if(elapsed>=5150){gate.finish();return}if(!intro.hasAttribute('data-intro-hydrated')){if(elapsed>=3900)poster?.setAttribute('data-phase','lift');else if(elapsed>=2200)poster?.setAttribute('data-phase','bloom');}timer=setTimeout(phase,50)};
+  phase();
+ };
+ requestAnimationFrame(begin);setTimeout(gate.finish,5900);
+ reduced.addEventListener('change',e=>{if(e.matches)gate.finish()});
+ window.addEventListener('pageshow',e=>{if(e.persisted)gate.finish()});
+})();</script>
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="commerce.css">
   <link rel="stylesheet" href="hero.css">
   <link rel="stylesheet" href="craft.css">
   <link rel="stylesheet" href="assets/react/sections.css">
+  <script src="intro-loading.js" defer></script>
+  <script type="module" src="assets/react/intro.js"></script>
   <script type="module" src="assets/react/sections.js"></script>
+  <script src="site-config.js" defer></script>
+  <script src="catalog-data.js" defer></script>
+  <script src="commerce.js" defer></script>
+  <script src="catalog.js" defer></script>
+  
   <script src="assets/vendor/gsap.min.js" defer></script>
   <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
   <script src="assets/vendor/Flip.min.js" defer></script>
-  <script src="site-config.js" defer></script>
   <script src="script.js" defer></script>
+  
+  
+  
+  
   <script src="request-flow.js" defer></script>
   <link rel="stylesheet" href="request-flow.css">
+<!-- SEO:START -->
+  <title>Vetiver Garlands &amp; Crafts | Akash Vetiver Cuddalore</title>
+  <meta name="description" content="Discover vetiver garlands (vettiver malai), door hangings and ceremonial crafts from our family business in Cuddalore, Tamil Nadu.">
+  <link rel="canonical" href="https://akashvetiver.akashvetiverexport.workers.dev/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Akash Vetiver Export">
+  <meta property="og:title" content="Vetiver Garlands &amp; Crafts | Akash Vetiver Cuddalore">
+  <meta property="og:description" content="Discover vetiver garlands (vettiver malai), door hangings and ceremonial crafts from our family business in Cuddalore, Tamil Nadu.">
+  <meta property="og:url" content="https://akashvetiver.akashvetiverexport.workers.dev/">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:image" content="https://akashvetiver.akashvetiverexport.workers.dev/images/optimized/products/studio-v1/malai-pair.webp">
+  <meta property="og:image:alt" content="Handcrafted vetiver wedding garland pair with decorative thread">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Vetiver Garlands &amp; Crafts | Akash Vetiver Cuddalore">
+  <meta name="twitter:description" content="Discover vetiver garlands (vettiver malai), door hangings and ceremonial crafts from our family business in Cuddalore, Tamil Nadu.">
+  <meta name="twitter:image" content="https://akashvetiver.akashvetiverexport.workers.dev/images/optimized/products/studio-v1/malai-pair.webp">
+  <meta name="twitter:image:alt" content="Handcrafted vetiver wedding garland pair">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","LocalBusiness"],"@id":"https://akashvetiver.akashvetiverexport.workers.dev/#organization","name":"Akash Vetiver Export","url":"https://akashvetiver.akashvetiverexport.workers.dev/","logo":"https://akashvetiver.akashvetiverexport.workers.dev/logo.png","email":"akashvetiverexport@gmail.com","priceRange":"₹₹","founder":[{"@type":"Person","name":"Avinash"},{"@type":"Person","name":"Mathivanan"}],"address":{"@type":"PostalAddress","streetAddress":"Cuddalore","addressLocality":"Cuddalore","addressRegion":"Tamil Nadu","postalCode":"608801","addressCountry":"IN"},"geo":{"@type":"GeoCoordinates","latitude":11.748,"longitude":79.768},"areaServed":["Cuddalore","Chennai","Madurai","Coimbatore","Salem","Tiruchirappalli","Tirunelveli","Erode","Vellore","Thanjavur","Tamil Nadu","India"],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"09:00","closes":"18:00"}]},{"@type":"WebSite","@id":"https://akashvetiver.akashvetiverexport.workers.dev/#website","name":"Akash Vetiver Export","url":"https://akashvetiver.akashvetiverexport.workers.dev/","publisher":{"@id":"https://akashvetiver.akashvetiverexport.workers.dev/#organization"},"inLanguage":"en-IN","potentialAction":{"@type":"SearchAction","target":"https://akashvetiver.akashvetiverexport.workers.dev/products?q={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://akashvetiver.akashvetiverexport.workers.dev/#webpage","url":"https://akashvetiver.akashvetiverexport.workers.dev/","name":"Vetiver Garlands & Crafts | Akash Vetiver Cuddalore","description":"Discover vetiver garlands (vettiver malai), door hangings and ceremonial crafts from our family business in Cuddalore, Tamil Nadu.","isPartOf":{"@id":"https://akashvetiver.akashvetiverexport.workers.dev/#website"},"about":{"@id":"https://akashvetiver.akashvetiverexport.workers.dev/#organization"},"inLanguage":"en-IN"},{"@type":"FAQPage","@id":"https://akashvetiver.akashvetiverexport.workers.dev/#faq","mainEntity":[{"@type":"Question","name":"What are vetiver garlands made from?","acceptedAnswer":{"@type":"Answer","text":"Our vetiver garlands (vettiver malai) are handcrafted from 100% pure, natural vetiver roots (vilamichai / khus) freshly harvested in Cuddalore, Tamil Nadu. We never mix coir, artificial fillers, or synthetic fragrances."}},{"@type":"Question","name":"How do I place an order?","acceptedAnswer":{"@type":"Answer","text":"Browse our collection, select your desired piece or garland, and submit your reservation details. We will directly contact you via WhatsApp to confirm dimensions, personalization, availability, and delivery schedule."}},{"@type":"Question","name":"Can I place a bulk order?","acceptedAnswer":{"@type":"Answer","text":"Yes. We specialize in bulk orders for weddings, temple festivals, corporate gifts, and spiritual ceremonies with tiered source pricing direct from our Cuddalore craft studio."}},{"@type":"Question","name":"When do I pay?","acceptedAnswer":{"@type":"Answer","text":"No payment is taken on this website. Payment is only arranged directly via WhatsApp or bank transfer after your order specifics and delivery timeline have been personally verified."}},{"@type":"Question","name":"Do you deliver outside Cuddalore?","acceptedAnswer":{"@type":"Answer","text":"Yes. We deliver across all Tamil Nadu districts (including Chennai, Madurai, Coimbatore, Cuddalore, Trichy, Salem) as well as pan-India shipping with protective craft packaging."}},{"@type":"Question","name":"What makes your vetiver different from others?","acceptedAnswer":{"@type":"Answer","text":"We are the primary grower and artisan family in Cuddalore. You get authentic, unadulterated pure root craftsmanship without middleman markups or synthetic adulteration."}}]}]}</script>
+  <!-- SEO:END -->
 </head>
 <body class="hero-editorial">
+  <!-- INTRO:START --><div class="brand-intro" id="brand-intro-react" aria-label="Welcome to Akash Vetiver"><div class="amr-root " data-phase="load" style="height:100svh;--amr-rise:0;--amr-r:480.0px;--amr-cover:2.236;--amr-paper:#f6fbf3;--amr-ink:#023616;--amr-glow:#f6fbf3;--amr-serif:&quot;Fraunces&quot;, &quot;Playfair Display&quot;, &quot;Iowan Old Style&quot;, Georgia, &quot;Times New Roman&quot;, serif;--amr-mono:&quot;JetBrains Mono&quot;, &quot;SF Mono&quot;, ui-monospace, Menlo, Consolas, monospace"><style>
+.amr-root {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: var(--amr-paper);
+  color: var(--amr-ink);
+  -webkit-tap-highlight-color: transparent;
+}
+.amr-gate *, .amr-gate *::before, .amr-gate *::after { box-sizing: border-box; }
+.amr-dest {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.7s ease 0.1s;
+}
+.amr-dest[data-active="true"] { opacity: 1; pointer-events: auto; }
+
+.amr-gate {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  background: var(--amr-paper);
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: opacity 0.4s ease 1.05s;
+}
+.amr-gate:focus-visible .amr-frame { box-shadow: inset 0 0 0 2px var(--amr-ink); }
+.amr-root[data-phase="lift"] .amr-gate { opacity: 0; pointer-events: none; }
+.amr-frame { position: absolute; inset: 0; pointer-events: none; }
+
+.amr-stage, .amr-grain {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  display: block;
+  overflow: visible;
+}
+.amr-grain {
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  opacity: 0.32;
+}
+.amr-blush {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse 80% 70% at 50% 42%, transparent 55%, rgba(80, 40, 20, 0.07) 100%);
+}
+
+/* ---- the sun ---- */
+.amr-rise {
+  transform: translateY(calc((1 - var(--amr-rise)) * var(--amr-r) * 1.04));
+}
+.amr-sun-scale {
+  transform: scale(1);
+  transition: transform 0.95s cubic-bezier(0.55, 0, 0.2, 1) 0.05s;
+}
+.amr-root[data-phase="bloom"] .amr-sun-scale { animation: amr-swell 1.1s cubic-bezier(0.3, 1.6, 0.4, 1) 0.1s; }
+.amr-root[data-phase="lift"] .amr-sun-scale { transform: scale(var(--amr-cover)); }
+.amr-sun { transition: filter 0.4s ease; }
+.amr-gate:hover .amr-sun { filter: brightness(1.04) saturate(1.05); }
+.amr-ring {
+  fill: none;
+  stroke: var(--amr-ink);
+  opacity: 0;
+}
+.amr-root[data-phase="bloom"] .amr-ring {
+  animation: amr-ring 1.8s cubic-bezier(0.15, 0.6, 0.3, 1) both;
+}
+.amr-ring-2 { animation-delay: 0.22s !important; }
+.amr-ring-3 { animation-delay: 0.44s !important; }
+
+/* ---- inside the sun ---- */
+.amr-count {
+  fill: none;
+  stroke: var(--amr-glow);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: opacity 0.35s ease, transform 0.5s cubic-bezier(0.5, 0, 0.75, 0);
+}
+.amr-root:not([data-phase="load"]) .amr-count { opacity: 0; transform: scale(0.4) rotate(-12deg); }
+.amr-heart {
+  filter: brightness(0) invert(1);
+  fill: var(--amr-glow);
+  fill-opacity: 0;
+  stroke: var(--amr-glow);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1 1;
+  stroke-dashoffset: 1;
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: 50% 60%;
+}
+.amr-root[data-phase="bloom"] .amr-heart,
+.amr-root[data-phase="hold"] .amr-heart,
+.amr-root[data-phase="lift"] .amr-heart {
+  opacity: 1;
+  animation: amr-ink 0.9s cubic-bezier(0.45, 0, 0.2, 1) 0.25s forwards, amr-fill 0.5s ease 1s forwards;
+}
+.amr-root[data-phase="hold"] .amr-heart {
+  stroke-dashoffset: 0;
+  fill-opacity: 1;
+  animation: amr-beat 1.1s cubic-bezier(0.3, 0, 0.3, 1) infinite;
+}
+.amr-root[data-phase="lift"] .amr-heart { stroke-dashoffset: 0; fill-opacity: 1; animation: none; }
+.amr-root[data-phase="set"] .amr-heart { opacity: 0; stroke-dashoffset: 0; fill-opacity: 1; transition: opacity 0.4s ease; }
+.amr-caption {
+  fill: var(--amr-glow);
+  font-family: var(--amr-serif);
+  font-style: italic;
+  letter-spacing: 0.04em;
+  opacity: 0.88;
+}
+.amr-hint {
+  fill: var(--amr-glow);
+  font-family: var(--amr-mono);
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+.amr-root[data-phase="hold"] .amr-hint { opacity: 0.62; animation: amr-blink 2.4s ease-in-out 0.6s infinite; }
+
+/* ---- the letters ---- */
+.amr-word path {
+  fill: none;
+  stroke: var(--amr-ink);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.amr-letter { cursor: pointer; }
+.amr-fly {
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.7, 0.4), opacity 0.5s ease 0.2s;
+}
+.amr-root[data-phase="lift"] .amr-fly { transform: translate(var(--fx), var(--fy)) rotate(var(--fr)); opacity: 0; }
+.amr-word .amr-hit { fill: none; stroke: transparent; }
+
+.amr-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@keyframes amr-swell {
+  0% { transform: scale(1); }
+  35% { transform: scale(1.045); }
+  100% { transform: scale(1); }
+}
+@keyframes amr-ring {
+  0% { opacity: 0; transform: scale(1); }
+  12% { opacity: 0.5; }
+  100% { opacity: 0; transform: scale(1.5); }
+}
+@keyframes amr-ink { to { stroke-dashoffset: 0; } }
+@keyframes amr-fill { to { fill-opacity: 1; } }
+@keyframes amr-beat {
+  0%, 100% { transform: scale(1); }
+  14% { transform: scale(1.14); }
+  28% { transform: scale(0.98); }
+  42% { transform: scale(1.08); }
+  70% { transform: scale(1); }
+}
+@keyframes amr-blink {
+  0%, 100% { opacity: 0.62; }
+  50% { opacity: 0.25; }
+}
+
+
+/* Let the counter finish fading before the crest appears. */
+.amr-root[data-phase="bloom"] .amr-heart { opacity: 0; animation: amr-crest-reveal .5s ease .35s forwards; }
+@keyframes amr-crest-reveal { to { opacity: 1; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .amr-rise { transform: none; }
+  .amr-root[data-phase="bloom"] .amr-sun-scale, .amr-root[data-phase="bloom"] .amr-ring { animation: none; }
+  .amr-root[data-phase="lift"] .amr-sun-scale { transform: none; }
+  .amr-sun-scale, .amr-fly, .amr-count { transition: opacity 0.4s ease; }
+  .amr-root[data-phase="lift"] .amr-fly { transform: none; }
+  .amr-root:not([data-phase="load"]) .amr-count { transform: none; }
+  .amr-root[data-phase="bloom"] .amr-heart, .amr-root[data-phase="hold"] .amr-heart {
+    animation: none;
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+  .amr-root[data-phase="hold"] .amr-hint { animation: none; }
+  .amr-gate { transition: opacity 0.5s ease 0.2s; }
+}
+</style><div class="amr-gate" role="progressbar" aria-label="AKASH VETIVER is loading" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="0%" tabindex="0"><div class="amr-blush"></div><svg class="amr-stage" viewBox="0 0 1280 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><radialGradient id="_R_0_-sun" cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5"><stop offset="0" stop-color="#153e29"></stop><stop offset="0.55" stop-color="#153e29" stop-opacity="0.55"></stop><stop offset="1" stop-color="#153e29" stop-opacity="0"></stop></radialGradient></defs><g transform="translate(640.0 809.6)"><g class="amr-rise"><g class="amr-sun-scale"><circle class="amr-ring" r="480" stroke-width="4.2707134020618565"></circle><circle class="amr-ring amr-ring-2" r="480" stroke-width="3.2030350515463923"></circle><circle class="amr-ring amr-ring-3" r="480" stroke-width="2.1353567010309282"></circle><g class="amr-sun"><circle r="480" fill="#52682e"></circle><circle r="480" fill="url(#_R_0_-sun)"></circle></g></g><path class="amr-count" d="M-58.4 -348.0 C-34.7 -348.0 -22.1 -322.7 -22.1 -288.0 C-22.1 -253.3 -34.7 -228.0 -58.4 -228.0 C-82.1 -228.0 -94.7 -253.3 -94.7 -288.0 C-94.7 -322.7 -82.1 -348.0 -58.4 -348.0Z M91.6 -344.8 L18.9 -231.2 M25.3 -338.5 L25.3 -333.8 M85.3 -242.2 L85.3 -237.5" stroke-width="28.799999999999997"></path><image class="amr-heart" href="/images/optimized/brand/intro-logo.webp" x="-81.60000000000001" y="-374.40000000000003" width="163.20000000000002" height="172.79999999999998" preserveAspectRatio="xMidYMid meet"></image><text class="amr-caption" x="0" y="-120" text-anchor="middle" font-size="36">Made with love.</text></g></g><g class="amr-word" stroke-width="35.59"><g class="amr-fly" style="--fx:-832.4px;--fy:-478.2px;--fr:-47.0deg"><g class="amr-letter"><path d="M114.0 601.2 C88.7 540.3 59.4 461.8 50.9 412.9 C87.4 444.7 136.0 512.8 175.2 565.2" pathLength="1" stroke-dasharray="1 1" style="stroke-dashoffset:1;opacity:0"></path><path d="M94.3 534.8 C105.8 523.4 117.0 516.1 130.6 515.6" pathLength="1" stroke-dasharray="1 1" style="stroke-dashoffset:1;opacity:0"></path><path class="amr-hit" d="M114.6 600.8 C88.2 538.8 58.4 460.9 49.5 412.7 C86.2 445.3 137.3 511.1 176.7 565.9" stroke-width="56.942845360824755"></path><path class="amr-hit" d="M95.6 534.6 C104.9 523.5 117.7 516.2 130.9 514.7" stroke-width="56.942845360824755"></path></g></g><g class="amr-fly" style="--fx:-661.3px;--fy:-695.9px;--fr:-33.7deg"><g class="amr-letter"><path d="M142.8 265.6 L211.9 448.1" pathLength="1" stroke-dasharray="1 1" style="stroke-dashoffset:1;opacity:0"></path><path d="M191.8 247.7 L184.1 368.7" pathLength="1" stroke-dasharray="1 1" style="stroke-dashoffset:1;opacity:0"></path><path d="M189.1 336.4 L266.8 429.1" pathLength="1" stroke-dasharray="1 1" style="stroke-dashoffset:1;opacity:0"></path><path class="amr-hit" d="M142.6 266.4 L213.1 449.2" stroke-width="56.942845360824755"></path><path class="amr-hit" d="M193.0 247.0 L184.8 369.0" stroke-width="56.942845360824755"></path><path class="amr-hit" d="M188.3 337.2 L265.7 428.9" stroke-width="56.942845360824755"></path></g></g><g class="amr-fly" style="--fx:-499.5px;--fy:-819.8px;--fr:-24.2deg"><g class="amr-letter"><path d="M297.9 366.7 C286.9 300.3 278.9 214.7 280.5 168.6 C309.4 209.4 342.3 285.0 365.6 348.0" pathLength="1" stroke-dasharray="1 1" style="stroke-dashoffset:1;opacity:0"></path><path d="M295.5 296.3 C308.5 287.2 320.8 284.9 336.1 286.6" pathLength="1" stroke-dasharray="1 1" style="stroke-dashoffset:1;opacity:0"></path><path class="amr-hit" d="M297.4 365.6 C287.0 299.0 277.3 216.2 280.6 167.3 C308.1 207.9 341.5 284.3 366.1 347.0" stroke-width="56.942845360824755"></path><path class="amr-hit" d="M295.3 296.8 C307.0 288.3 321.2 284.4 334.4 286.2" stroke-width="56.942845360824755"></path></g></g><g class="amr-fly" style="--fx:-350.5px;--fy:-893.7px;--fr:-16.4deg"><g class="amr-letter"><path d="M422.9 138.9 C412.7 122.9 400.5 118.0 389.3 119.6 C375.1 120.9 367.6 143.1 373.4 169.8 C376.5 197.7 393.0 208.7 409.6 214.9 C427.7 223.3 440.0 232.7 443.9 260.9 C448.2 291.1 439.6 307.8 425.9 313.0 C414.4 315.2 401.5 305.1 390.8 285.0" pathLength="1" stroke-dasharray="1 1" style="stroke-dashoffset:1;opacity:0"></path><path class="amr-hit" d="M421.8 139.1 C411.4 122.6 401.5 116.5 390.7 118.5 C375.0 121.3 367.7 143.6 372.3 168.9 C377.8 199.4 391.7 207.3 408.0 214.9 C426.8 222.0 438.7 232.9 443.8 260.8 C449.2 291.2 439.9 308.6 425.4 311.2 C413.3 313.4 400.6 305.2 390.9 286.0" stroke-width="56.942845360824755"></path></g></g><g class="amr-fly" style="--fx:-205.1px;--fy:-937.8px;--fr:-9.4deg"><g class="amr-letter"><path d="M464.3 92.7 L484.5 288.7" pathLength="1" stroke-dasharray="1 1" style="stroke-dashoffset:1;opacity:0"></path><path d="M524.8 86.6 L543.9 281.5" pathLength="1" stroke-dasharray="1 1" style="stroke-dashoffset:1;opacity:0"></path><path d="M472.6 189.9 L533.6 185.4" pathLength="1" stroke-dasharray="1 1" style="stroke-dashoffset:1;opacity:0"></path><path class="amr-hit" d="M463.3 92.5 L483.3 287.3" stroke-width="56.942845360824755"></path><path class="amr-hit" d="M524.3 86.2 L544.3 281.1" stroke-width="56.942845360824755"></path><path class="amr-hit" d="M473.3 189.9 L534.3 183.7" stroke-width="56.942845360824755"></path></g></g><g class="amr-fly" style="--fx:-83.7px;--fy:-956.3px;--fr:-3.8deg"><g class="amr-letter"></g></g><g class="amr-fly" style="--fx:39.1px;--fy:-959.2px;--fr:1.8deg"><g class="amr-letter"><path d="M632.4 77.1 C645.5 150.5 655.2 219.4 665.0 274.5 C675.1 218.5 689.7 151.5 701.8 78.1" pathLength="1" stroke-dasharray="1 1" style="stroke-dashoffset:1;opacity:0"></path><path class="amr-hit" d="M633.3 78.6 C644.2 150.9 655.2 218.2 663.9 275.0 C674.8 218.5 688.4 151.8 702.0 79.9" stroke-width="56.942845360824755"></path></g></g><g class="amr-fly" style="--fx:181.6px;--fy:-942.7px;--fr:8.3deg"><g class="amr-letter"><path d="M795.0 91.4 L749.4 84.6 L733.6 280.4 L779.5 286.4" pathLength="1" stroke-dasharray="1 1" style="stroke-dashoffset:1;opacity:0"></path><path d="M740.9 180.8 L778.6 184.2" pathLength="1" stroke-dasharray="1 1" style="stroke-dashoffset:1;opacity:0"></path><path class="amr-hit" d="M796.0 90.0 L749.5 85.8 L731.9 280.9 L779.6 285.2" stroke-width="56.942845360824755"></path><path class="amr-hit" d="M740.9 180.8 L777.6 184.1" stroke-width="56.942845360824755"></path></g></g><g class="amr-fly" style="--fx:318.9px;--fy:-905.5px;--fr:14.8deg"><g class="amr-letter"><path d="M836.0 111.3 C854.8 110.2 875.9 115.4 897.5 120.7" pathLength="1" stroke-dasharray="1 1" style="stroke-dashoffset:1;opacity:0"></path><path d="M868.0 116.8 L836.6 303.7" pathLength="1" stroke-dasharray="1 1" style="stroke-dashoffset:1;opacity:0"></path><path class="amr-hit" d="M835.7 110.1 C855.5 110.7 877.3 114.3 898.7 120.3" stroke-width="56.942845360824755"></path><path class="amr-hit" d="M867.2 115.2 L836.6 303.4" stroke-width="56.942845360824755"></path></g></g><g class="amr-fly" style="--fx:433.5px;--fy:-856.6px;--fr:20.4deg"><g class="amr-letter"><path d="M948.7 149.7 L902.7 339.8" pathLength="1" stroke-dasharray="1 1" style="stroke-dashoffset:1;opacity:0"></path><path class="amr-hit" d="M947.5 149.1 L904.4 340.1" stroke-width="56.942845360824755"></path></g></g><g class="amr-fly" style="--fx:543.1px;--fy:-791.6px;--fr:26.6deg"><g class="amr-letter"><path d="M995.5 178.1 C988.4 252.3 980.0 317.8 973.8 376.9 C998.9 325.5 1029.8 264.6 1063.2 199.4" pathLength="1" stroke-dasharray="1 1" style="stroke-dashoffset:1;opacity:0"></path><path class="amr-hit" d="M997.1 178.3 C988.2 250.9 980.8 318.6 974.0 375.8 C999.6 324.2 1030.6 263.6 1063.0 197.9" stroke-width="56.942845360824755"></path></g></g><g class="amr-fly" style="--fx:692.8px;--fy:-664.5px;--fr:35.7deg"><g class="amr-letter"><path d="M1160.3 292.3 L1116.0 275.4 L1042.3 453.6 L1085.6 473.5" pathLength="1" stroke-dasharray="1 1" style="stroke-dashoffset:1;opacity:0"></path><path d="M1079.0 363.2 L1112.1 376.7" pathLength="1" stroke-dasharray="1 1" style="stroke-dashoffset:1;opacity:0"></path><path class="amr-hit" d="M1158.6 291.4 L1115.5 273.7 L1041.2 454.9 L1085.5 473.1" stroke-width="56.942845360824755"></path><path class="amr-hit" d="M1079.3 361.9 L1113.4 375.9" stroke-width="56.942845360824755"></path></g></g><g class="amr-fly" style="--fx:846.5px;--fy:-452.8px;--fr:48.2deg"><g class="amr-letter"><path d="M1116.4 588.7 L1214.8 417.7 L1235.7 427.9 C1251.9 438.9 1248.7 466.8 1232.6 492.0 C1218.7 522.2 1197.0 532.1 1181.2 522.6 L1163.4 513.3" pathLength="1" stroke-dasharray="1 1" style="stroke-dashoffset:1;opacity:0"></path><path d="M1182.6 523.8 C1178.5 551.8 1173.0 584.6 1165.1 615.1" pathLength="1" stroke-dasharray="1 1" style="stroke-dashoffset:1;opacity:0"></path><path class="amr-hit" d="M1117.2 588.0 L1215.4 418.5 L1234.5 429.6 C1252.5 440.1 1248.1 467.3 1233.9 491.8 C1217.1 520.8 1197.2 533.1 1180.2 523.2 L1163.2 513.4" stroke-width="56.942845360824755"></path><path class="amr-hit" d="M1182.3 524.5 C1179.0 552.3 1174.1 585.2 1166.0 616.3" stroke-width="56.942845360824755"></path></g></g></g></svg><svg class="amr-grain" aria-hidden="true"><filter id="_R_0_-grain"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter><rect width="100%" height="100%" filter="url(#_R_0_-grain)"></rect></svg><div class="amr-frame"></div><span class="amr-sr" aria-live="polite"></span></div></div></div><!-- INTRO:END -->
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header" id="navbar">
     <div class="header-inner wrap">
-      <a class="hero-brand" href="#home" aria-label="Akash Vetiver Export home"><svg class="hero-logo" viewBox="245 65 540 640" role="img" aria-label="Akash Vetiver Export crest"><defs><filter id="brand-invert" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0"/></filter><mask id="brand-ink" maskUnits="userSpaceOnUse" x="0" y="0" width="1024" height="1024" style="mask-type:luminance"><image href="logo.png" width="1024" height="1024" filter="url(#brand-invert)"/></mask></defs><rect width="1024" height="1024" fill="currentColor" mask="url(#brand-ink)"/></svg><span aria-hidden="true">AKASH VETIVER<span>EXPORT</span></span></a>
+      <a class="hero-brand" href="#home" aria-label="Akash Vetiver Export home"><svg class="hero-logo" viewBox="260 75 510 625" role="img" aria-label="Akash Vetiver Export crest"><defs><filter id="brand-invert" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0"/></filter><mask id="brand-ink" maskUnits="userSpaceOnUse" x="0" y="0" width="1024" height="1024" style="mask-type:luminance"><image href="images/optimized/brand/crest-512.webp" width="1024" height="1024" filter="url(#brand-invert)"/></mask></defs><rect width="1024" height="1024" fill="currentColor" mask="url(#brand-ink)"/></svg><span aria-hidden="true">AKASH VETIVER <span>EXPORT</span></span></a>
       <nav class="desktop-nav" aria-label="Main navigation"><a href="#home" class="is-active" aria-current="location">Home</a><a href="#products">Products</a><a href="#contact">Bulk orders</a><a href="#about">About</a><a href="#reviews">Reviews</a></nav>
       <a class="button button-small header-contact" href="#contact">Let’s talk <img src="assets/icons/arrow-up-right.svg" alt="" width="18" height="18"></a>
       <button class="menu-toggle" id="hamburger" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation"><span></span><span></span></button>
     </div>
   </header>
   <dialog class="mobile-menu" id="mobile-menu" aria-label="Navigation">
-    <div class="mobile-menu-top"><span class="wordmark">Vettiver.</span><button class="icon-button" data-close-menu aria-label="Close navigation"><img src="assets/icons/x.svg" alt="" width="24" height="24"></button></div>
+    <div class="mobile-menu-top"><span class="menu-brand">AKASH VETIVER<span>EXPORT</span></span><button class="icon-button" data-close-menu aria-label="Close navigation"><img src="assets/icons/x.svg" alt="" width="24" height="24"></button></div>
     <nav aria-label="Mobile navigation"><a href="#home">Home</a><a href="#products">Products</a><a href="#contact">Bulk orders</a><a href="#about">About</a><a href="#reviews">Reviews</a></nav>
     <p>Natural roots. Thoughtful hands.<br>Made with care in Tamil Nadu.</p>
   </dialog>
   <main id="main">
     <section class="hero hero-cinematic" id="home" aria-labelledby="hero-title">
-      <div class="hero-atmosphere"><img src="images/hero/vetiver-dawn.png" alt="Golden vetiver roots on stone with a rural craft scene in the morning light" width="1806" height="871" fetchpriority="high"><video id="hero-video" muted loop playsinline preload="none" data-src="images/hero/vetiver-harvest-loop.mp4" poster="images/hero/vetiver-dawn.png" aria-hidden="true" tabindex="-1"></video></div>
+      <div class="hero-atmosphere"><picture><source media="(max-width: 700px)" srcset="images/optimized/hero/vetiver-golden-hour-mobile-480.webp 480w, images/optimized/hero/vetiver-golden-hour-mobile-940.webp 940w" sizes="100vw"><img src="images/optimized/hero/vetiver-dawn.webp" alt="Golden vetiver roots resting on stone in the morning light" width="1806" height="871" fetchpriority="high"></picture><video id="hero-video" muted loop playsinline preload="none" data-src="images/hero/vetiver-harvest-loop.mp4" aria-hidden="true" tabindex="-1"></video></div>
       <div class="hero-copy">
         <h1 id="hero-title"><span class="headline-line"><span>Rooted in</span></span><span class="headline-line headline-light"><span>nature.</span></span></h1>
-        <p class="hero-description">Handcrafted vetiver garlands and home pieces, shaped by our family in Tamil Nadu.</p>
+        <p class="hero-description">Handcrafted vettiver malai, door hangings and home pieces from our family in Cuddalore, Tamil Nadu. Direct from the source.</p>
         <div class="hero-actions"><a class="button hero-cta" href="products.html">Explore the collection <img src="assets/icons/arrow-up-right.svg" alt="" width="22" height="22"></a><a class="hero-story-link" href="#contact">Bulk orders <img src="assets/icons/arrow-right.svg" alt="" width="20" height="20"></a></div>
       </div>
-      <div class="hero-bottom"><div class="hero-values" aria-label="Our craft"><span><img src="assets/icons/hand-heart.svg" width="24" height="24" alt="">Made by hand</span><span><img src="assets/icons/plant.svg" width="24" height="24" alt="">Rooted in Tamil tradition</span><span><img src="assets/icons/truck.svg" width="24" height="24" alt="">Delivered across India</span></div><a class="hero-scroll" href="#products" aria-label="Scroll to the collection"><span>Discover the craft</span><img src="assets/icons/arrow-right.svg" width="20" height="20" alt=""></a></div>
+      <div class="hero-bottom"><a class="hero-scroll" href="#products" aria-label="Discover the craft"><span>Discover the craft</span><img src="assets/icons/arrow-right.svg" width="20" height="20" alt=""></a></div>
     </section>
 
     <section id="products" class="vettiver-react product-showcase section" aria-labelledby="showcase-title">
-      <div id="product-showcase-root"><div class="wrap"><h2 id="showcase-title">Nature, thoughtfully made.</h2><p>Discover handcrafted vetiver pieces for celebrations and everyday spaces.</p><a class="button" href="products.html">View all pieces</a></div></div>
+      <div id="product-showcase-root"><div class="wrap showcase-placeholder"><div><h2 id="showcase-title">Nature, thoughtfully made.</h2><p>Discover handcrafted vetiver pieces for celebrations and everyday spaces.</p><a class="button" href="products.html">View all pieces</a></div><div class="skeleton-surface section-placeholder placeholder-feature" aria-hidden="true"></div><div class="section-placeholder placeholder-strip" aria-hidden="true"><div class="skeleton-surface"></div><div class="skeleton-surface"></div><div class="skeleton-surface"></div></div></div></div>
     </section>
 
     <section id="contact" class="vettiver-react bulk-order-section" aria-label="Bulk orders">
-      <div id="bulk-order-root"><div class="wrap section"><h2>More pieces.<br>One thoughtful gesture.</h2><p>Planning a celebration, gifting or a larger order? Tell us what you have in mind.</p><button type="button" class="button" data-bulk-enquiry>Request a bulk quote</button></div></div>
+      <div id="bulk-order-root"><div class="wrap section"><h2>More pieces.<br>One thoughtful gesture.</h2><p>Planning a celebration, gifting or a larger order? Tell us what you have in mind.</p><button type="button" class="button" data-bulk-enquiry>Request a bulk quote</button><div class="section-placeholder placeholder-strip" aria-hidden="true"><div class="skeleton-surface"></div><div class="skeleton-surface"></div><div class="skeleton-surface"></div></div></div></div>
     </section>
 
     <section class="craft-journey section" id="about" aria-labelledby="story-title">
       <div class="wrap">
         <header class="craft-intro" data-reveal>
           <h2 id="story-title">From the land<br>to quality <span>vetiver.</span></h2>
-          <p>A thoughtful journey from natural soil to carefully harvested and cleaned roots, resulting in premium quality vetiver.</p>
+          <p>From Tamil Nadu’s soil to your home, every step is handled with care. Our vetiver is also known as vilamichai, ramacham and khus in Tamil tradition. No coir mixing. 100% pure vetiver roots, handcrafted by Avinash and Mathivanan’s family in Cuddalore.</p>
         </header>
         <div class="craft-flow">
           <svg class="craft-ribbon" viewBox="0 0 1200 2500" preserveAspectRatio="none" aria-hidden="true"><defs><path id="craft-trail" d="M 1180 30 C 1280 350 1150 410 650 460 C 80 510 -80 500 30 750 C 60 930 400 930 650 980 C 1160 1030 1230 1060 1190 1210 C 1150 1420 550 1450 100 1480 C -30 1500 -30 1620 30 1750 C 60 1930 400 1930 650 1980 C 1160 2030 1230 2060 1190 2210 C 1150 2420 550 2450 100 2480"/></defs><use href="#craft-trail" class="craft-ribbon-edge"/><use href="#craft-trail" class="craft-ribbon-paper"/></svg>
           <div class="craft-ribbon-words" aria-hidden="true"><span>From the land…</span><span>…through caring hands…</span><span>…to something lasting.</span></div>
           <ol class="craft-stages">
             <li class="craft-stage craft-land">
-              <div class="craft-photo craft-photo-land" role="img" aria-label="Illustrative image of upright vetiver grass clumps growing in soil"></div>
-              <div class="craft-stage-copy" data-reveal><span class="craft-step" aria-hidden="true">01</span><h3>The Land</h3><p>Vetiver begins in fertile, natural soil, thriving in the rich lands of Tamil Nadu.</p><span class="craft-quality">Grown in natural soil</span></div>
+              <div class="craft-photo craft-photo-land" role="img" aria-label="Illustrative image of upright vetiver grass clumps growing in soil"><img src="images/optimized/craft-land-v5.webp" srcset="images/optimized/craft-land-v5-480.webp 480w, images/optimized/craft-land-v5-800.webp 800w, images/optimized/craft-land-v5.webp 1200w" sizes="(max-width: 700px) 50vw, (max-width: 1200px) 50vw, 600px" loading="lazy" width="1200" height="800" alt="" decoding="async"><noscript><img src="images/optimized/craft-land-v5.webp" width="1200" height="800" alt="" loading="lazy"></noscript></div>
+              <div class="craft-stage-copy" data-reveal><span class="craft-step" aria-hidden="true">01</span><h3>The Land</h3><p>Grown in Tamil Nadu, where our vetiver journey begins.</p></div>
             </li>
             <li class="craft-stage craft-harvest">
-              <div class="craft-photo craft-photo-harvest" role="img" aria-label="Illustrative image of hands washing the fibrous roots of a harvested vetiver clump"></div>
-              <div class="craft-stage-copy" data-reveal><span class="craft-step" aria-hidden="true">02</span><h3>Harvest &amp; Clean</h3><p>Roots are carefully harvested by hand and thoroughly cleaned to preserve their natural quality.</p><span class="craft-quality">Harvested with care</span></div>
+              <div class="craft-photo craft-photo-harvest" role="img" aria-label="Illustrative image of hands washing the fibrous roots of a harvested vetiver clump"><img src="images/optimized/craft-harvest-v6.webp" srcset="images/optimized/craft-harvest-v6-480.webp 480w, images/optimized/craft-harvest-v6-800.webp 800w, images/optimized/craft-harvest-v6.webp 1200w" sizes="(max-width: 700px) 50vw, (max-width: 1200px) 50vw, 600px" loading="lazy" width="1200" height="800" alt="" decoding="async"><noscript><img src="images/optimized/craft-harvest-v6.webp" width="1200" height="800" alt="" loading="lazy"></noscript></div>
+              <div class="craft-stage-copy" data-reveal><span class="craft-step" aria-hidden="true">02</span><h3>Harvest &amp; Clean</h3><p>Hand-harvested and cleaned, ready to become your chosen piece.</p></div>
             </li>
             <li class="craft-stage craft-finish">
-              <div class="craft-photo craft-photo-finish" role="img" aria-label="Illustrative image of cleaned tan vetiver roots gathered on cotton cloth"></div>
-              <div class="craft-stage-copy" data-reveal><span class="craft-step" aria-hidden="true">03</span><h3>Quality Vetiver</h3><p>Clean, fragrant and high-quality vetiver roots, ready for use, gifting or supply.</p><span class="craft-quality">Premium quality roots</span></div>
+              <div class="craft-photo craft-photo-finish" role="img" aria-label="Illustrative image of cleaned vetiver roots on a wooden table"><img src="images/optimized/craft-quality-v7.webp" srcset="images/optimized/craft-quality-v7-480.webp 480w, images/optimized/craft-quality-v7-800.webp 800w, images/optimized/craft-quality-v7.webp 1200w" sizes="(max-width: 700px) 50vw, (max-width: 1200px) 50vw, 600px" loading="lazy" width="1200" height="800" alt="" decoding="async"><noscript><img src="images/optimized/craft-quality-v7.webp" width="1200" height="800" alt="" loading="lazy"></noscript></div>
+              <div class="craft-stage-copy" data-reveal><span class="craft-step" aria-hidden="true">03</span><h3>Quality Vetiver</h3><p>Naturally fragrant roots for your home and celebrations.</p></div>
             </li>
             <li class="craft-stage craft-packing">
-              <div class="craft-photo craft-photo-packing" role="img" aria-label="Illustrative image of hands carefully packing vetiver roots in a box"></div>
-              <div class="craft-stage-copy" data-reveal><span class="craft-step" aria-hidden="true">04</span><h3>Packed with care</h3></div>
+              <div class="craft-photo craft-photo-packing" role="img" aria-label="Illustrative image of hands carefully packing vetiver roots in a box"><img src="images/optimized/craft-packing.webp" srcset="images/optimized/craft-packing-480.webp 480w, images/optimized/craft-packing-800.webp 800w, images/optimized/craft-packing.webp 1200w" sizes="(max-width: 700px) 50vw, (max-width: 1200px) 50vw, 600px" loading="lazy" width="1200" height="800" alt="" decoding="async"><noscript><img src="images/optimized/craft-packing.webp" width="1200" height="800" alt="" loading="lazy"></noscript></div>
+              <div class="craft-stage-copy" data-reveal><span class="craft-step" aria-hidden="true">04</span><h3>Packed with care</h3><p>Carefully packed to protect your piece on its journey.</p></div>
             </li>
             <li class="craft-stage craft-delivered">
-              <div class="craft-photo craft-photo-delivered" role="img" aria-label="Illustrative image of a parcel being handed to a customer at their doorway"></div>
-              <div class="craft-stage-copy" data-reveal><span class="craft-step" aria-hidden="true">05</span><h3>Delivered to you</h3></div>
+              <div class="craft-photo craft-photo-delivered" role="img" aria-label="Illustrative image of a parcel being handed to a customer at their doorway"><img src="images/optimized/craft-delivery.webp" srcset="images/optimized/craft-delivery-480.webp 480w, images/optimized/craft-delivery-800.webp 800w, images/optimized/craft-delivery.webp 1200w" sizes="(max-width: 700px) 50vw, (max-width: 1200px) 50vw, 600px" loading="lazy" width="1200" height="800" alt="" decoding="async"><noscript><img src="images/optimized/craft-delivery.webp" width="1200" height="800" alt="" loading="lazy"></noscript></div>
+              <div class="craft-stage-copy" data-reveal><span class="craft-step" aria-hidden="true">05</span><h3>Delivered to you</h3><p>From our family to your doorstep, ready to enjoy or gift.</p></div>
             </li>
           </ol>
         </div>
@@ -100,56 +374,49 @@
 
 
     <section id="reviews" aria-label="Customer stories">
-      <div id="testimonials-root" class="vettiver-react"><div class="section wrap"><h2>Customer stories.</h2><p>Approved customer feedback will appear here. No reviews have been published yet.</p><p>The feedback form is unavailable until the interactive section loads.</p></div></div>
+      <div id="testimonials-root" class="vettiver-react"><div class="section wrap"><h2>Customer stories.</h2><p>Approved customer feedback will appear here. No reviews have been published yet.</p><p>Loading customer stories…</p><div class="section-placeholder review-skeleton" aria-hidden="true"><div class="skeleton-line skeleton-title"></div><div class="skeleton-line"></div><div class="skeleton-line skeleton-meta"></div></div></div></div>
     </section>
     <section class="questions section wrap" aria-labelledby="questions-title">
       <div class="questions-intro"><h2 id="questions-title">Good to know.</h2><p>A few things before you choose.</p></div>
       <div class="question-list">
-        <details><summary>What are the products made from?<img src="assets/icons/plus.svg" alt="" width="22" height="22"></summary><div><p>Our crafts are made using real vetiver roots, also known as khus or vettiver. Depending on the design, pieces include decorative thread, flowers, ribbon, beads or bells.</p></div></details>
-        <details><summary>How do I place an order?<img src="assets/icons/plus.svg" alt="" width="22" height="22"></summary><div><p>Choose a product from our collection and select “Request this piece”. Add your quantity, WhatsApp number and delivery location. We’ll discuss availability, pricing and delivery with you before you confirm. For now, the form prepares an email request—you must send it from your email app to reach us.</p></div></details>
-        <details><summary>Can I place a bulk order?<img src="assets/icons/plus.svg" alt="" width="22" height="22"></summary><div><p>For celebrations, gifting or larger quantities, select “Request a bulk quote” in the Bulk orders section. Share the pieces you’re interested in, quantities, occasion date and delivery location. We’ll discuss the options and quote with you. An enquiry does not confirm an order.</p></div></details>
-        <details><summary>How can I find out the price?<img src="assets/icons/plus.svg" alt="" width="22" height="22"></summary><div><p>Request the piece you like and tell us the quantity and any design preferences. We’ll confirm the price and applicable delivery charges with you before you decide to order.</p></div></details>
-        <details><summary>When do I pay?<img src="assets/icons/plus.svg" alt="" width="22" height="22"></summary><div><p>You do not pay when you send an order request or bulk enquiry. First, we’ll discuss the product, availability, total cost and delivery arrangements with you. Payment details will be shared directly when you’re ready to confirm.</p></div></details>
-        <details><summary>Can I request a custom piece?<img src="assets/icons/plus.svg" alt="" width="22" height="22"></summary><div><p>Tell us about the design, size, colours or occasion you have in mind. We’ll discuss what is possible, the price and the time needed before you confirm.</p></div></details>
-        <details><summary>Do you deliver to my location?<img src="assets/icons/plus.svg" alt="" width="22" height="22"></summary><div><p>Share your city and PIN code with your request. We’ll confirm whether delivery is available to your location, along with the charges and expected timing, before you confirm your order.</p></div></details>
-        <details><summary>How long will my order take?<img src="assets/icons/plus.svg" alt="" width="22" height="22"></summary><div><p>Timing depends on the piece, quantity, custom requirements and delivery location. If you need it for a particular occasion, include the date in your enquiry so we can discuss whether it can be met before you order.</p></div></details>
+        <details><summary>What are the products made from?<img src="assets/icons/plus.svg" alt="" width="22" height="22"></summary><div><p>Our crafts are made using 100% real vetiver roots, also known as khus, vettiver, vilamichai or ramacham in Tamil tradition. We never mix coir or synthetic materials. Depending on the design, pieces include decorative thread, flowers, ribbon, beads or bells.</p></div></details>
+        <details><summary>How do I place an order?<img src="assets/icons/plus.svg" alt="" width="22" height="22"></summary><div><p>Choose a piece, then add your quantity, name and WhatsApp number. We’ll confirm the details on WhatsApp before payment.</p></div></details>
+        <details><summary>Can I place a bulk order?<img src="assets/icons/plus.svg" alt="" width="22" height="22"></summary><div><p>Select “Bulk orders”, choose your pieces and quantities, and leave your WhatsApp number. We’ll discuss the quote and delivery.</p></div></details>
+        <details><summary>When do I pay?<img src="assets/icons/plus.svg" alt="" width="22" height="22"></summary><div><p>No payment is taken on this website. We’ll share payment details after confirming your order on WhatsApp.</p></div></details>
+        <details><summary>Can I request a custom piece?<img src="assets/icons/plus.svg" alt="" width="22" height="22"></summary><div><p>Yes. We can discuss your preferred size, colours and design on WhatsApp before confirming what is possible.</p></div></details>
+        <details><summary>Do you deliver to my location?<img src="assets/icons/plus.svg" alt="" width="22" height="22"></summary><div><p>We’ll ask for your city and PIN code on WhatsApp, then confirm availability and delivery charges.</p></div></details>
+        <details><summary>How long will my order take?<img src="assets/icons/plus.svg" alt="" width="22" height="22"></summary><div><p>We’ll confirm the timing on WhatsApp. Tell us your event date during that conversation.</p></div></details>
         <details id="reviews-faq"><summary>Where can I read customer reviews?<img src="assets/icons/plus.svg" alt="" width="22" height="22"></summary><div><p>Visit Customer Stories on this page for customer feedback. If no reviews are available yet, the section will let you know.</p></div></details>
       </div>
     </section>
   </main>
-  <div id="footer-root" class="vettiver-react"><footer class="site-footer"><div class="wrap"><div class="footer-top"><p>Natural roots.<br>Thoughtful hands.</p><a class="text-link" href="#home">Back to the beginning <img src="assets/icons/arrow-up-right.svg" width="21" height="21" alt=""></a></div><a class="footer-wordmark" href="#home" aria-label="Vettiver home">Vettiver.</a><div class="footer-bottom"><span>© <span id="year">2026</span> Vettiver</span><span>Pure Vetiver, Pure Wellness</span><span>Handcrafted in Tamil Nadu</span></div></div></footer></div>
+  <div id="footer-root" class="vettiver-react"><footer class="site-footer"><div class="wrap"><div class="footer-top"><p>Natural roots.<br>Thoughtful hands.</p><a class="text-link" href="#home">Back to the beginning <img src="assets/icons/arrow-up-right.svg" width="21" height="21" alt=""></a></div><a class="footer-wordmark" href="#home" aria-label="Akash Vetiver Export home">AKASH VETIVER</a><div class="footer-bottom"><span>© <span id="year">2026</span> Akash Vetiver Export</span><span>Pure Vetiver, Pure Wellness</span><span>Handcrafted in Tamil Nadu</span><span>Cuddalore, Tamil Nadu 608801</span><a href="legal.html">Privacy &amp; customer information</a></div></div></footer></div>
   <dialog class="product-dialog" id="product-dialog" aria-labelledby="dialog-title">
     <button class="icon-button dialog-close" id="close-product" aria-label="Close product details"><img src="assets/icons/x.svg" alt="" width="24" height="24"></button>
-    <div class="dialog-layout"><div class="dialog-image"><img id="dialog-image" src="images/products/studio-v1/malai-pair.png" alt="" width="1024" height="1024"></div><div class="dialog-content"><p class="dialog-category" id="dialog-category"></p><h2 id="dialog-title"></h2><p id="dialog-description"></p><p class="dialog-price">Price confirmed on enquiry.</p><p class="dialog-note">Handmade with real vetiver roots. Please ask us about size, availability and delivery when you enquire.</p><button class="button" id="dialog-enquire">Request this piece <img src="assets/icons/arrow-up-right.svg" alt="" width="20" height="20"></button></div></div>
+    <div class="dialog-layout"><div class="dialog-image"><img id="dialog-image" alt="" width="1024" height="1024"></div><div class="dialog-content"><p class="dialog-category" id="dialog-category"></p><h2 id="dialog-title"></h2><details class="dialog-more" open><summary>About this piece</summary><p id="dialog-description"></p></details><button class="button" id="dialog-enquire">Reserve this piece <img src="assets/icons/arrow-up-right.svg" alt="" width="20" height="20"></button></div></div>
   </dialog>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <dialog id="bulk-enquiry-dialog" class="bulk-enquiry-dialog" aria-labelledby="bulk-enquiry-title" aria-describedby="request-intro">
     <button type="button" class="bulk-enquiry-close" aria-label="Close request">×</button>
     <form class="enquiry-form request-form" id="enquiry-form">
       <h3 id="bulk-enquiry-title">Let’s plan your order.</h3>
-      <p id="request-intro">Choose your pieces. We’ll discuss availability, pricing and delivery with you on WhatsApp before you pay.</p>
-      <ol class="request-steps" aria-label="How ordering works"><li>Share your choices</li><li>Talk with us</li><li>Confirm, then pay</li></ol>
+      <p id="request-intro">We’ll confirm the details on WhatsApp. No payment now.</p>
       <p class="request-availability" id="request-availability" role="status">Online submission is not connected yet. You can prepare a request and send it using your email app.</p>
       <fieldset id="request-fields">
         <legend class="sr-only">Your request and contact details</legend>
         <div id="request-items">
           <div class="request-item">
-            <div><label for="enquiry-product">Your piece</label><select id="enquiry-product" name="product"><option value="">Help me choose</option><option data-product-id="product-malai-pair">Wedding Garland Pair</option><option data-product-id="product-malai-royal">Royal Vetiver Garland</option><option data-product-id="product-malai-green">Green &amp; Gold Garland</option><option data-product-id="product-malai-neon">Neon Vetiver Garland</option><option data-product-id="product-malai-flowers">Flower Vetiver Garland</option><option data-product-id="product-peacock">Vetiver Peacock (Mayil)</option><option data-product-id="product-toran-fringe">Vetiver Door Curtain</option><option data-product-id="product-toran-flowers">Flower Toran</option><option data-product-id="product-hanging-bells">Vetiver Bell Hanging</option><option data-product-id="product-vel">Vetiver Vel (Spear)</option><option data-product-id="product-flag">Vetiver Kodi (Flag)</option><option data-product-id="product-toran-auspicious">Auspicious Toran</option><option data-product-id="custom">A custom vetiver piece</option></select></div>
+            <div><label for="enquiry-product">Your piece</label><select id="enquiry-product" name="product"><option value="">Help me choose</option><option data-product-id="product-malai-pair">Wedding Garland Pair</option><option data-product-id="product-malai-royal">Royal Vetiver Garland</option><option data-product-id="product-malai-green">Green &amp; Gold Garland</option><option data-product-id="product-malai-neon">Neon Vetiver Garland</option><option data-product-id="product-malai-flowers">Flower Vetiver Garland</option><option data-product-id="product-peacock">Vetiver Peacock (Mayil)</option><option data-product-id="product-toran-fringe">Vetiver Door Curtain</option><option data-product-id="product-toran-flowers">Flower Toran</option><option data-product-id="product-hanging-bells">Vetiver Bell Hanging</option><option data-product-id="product-vel">Vetiver Vel (Spear)</option><option data-product-id="product-flag">Vetiver Kodi (Flag)</option><option data-product-id="product-toran-auspicious">Auspicious Toran</option><option data-product-id="product-vetiver-ganesha">Vetiver Ganesha</option><option data-product-id="product-scrubbers-pack-3">Vetiver Scrubbers (Pack of 3)</option><option data-product-id="custom">A custom vetiver piece</option></select></div>
             <div><label for="enquiry-quantity">Quantity</label><input id="enquiry-quantity" name="quantity" type="number" inputmode="numeric" min="1" max="9999" step="1" value="1" required></div>
           </div>
         </div>
         <button class="text-link request-add" type="button" id="request-add">Add another piece <img src="assets/icons/plus.svg" alt="" width="18" height="18"></button>
         <div class="request-contact-grid">
           <div><label for="request-name">Your name</label><input id="request-name" name="customerName" autocomplete="name" maxlength="80" required></div>
-          <div><label for="request-phone">WhatsApp number</label><input id="request-phone" name="whatsapp" type="tel" autocomplete="tel" inputmode="tel" maxlength="24" aria-describedby="request-phone-hint" required><span class="request-hint" id="request-phone-hint">Include your country code, for example +91.</span></div>
-          <div><label for="request-city">Delivery city</label><input id="request-city" name="city" autocomplete="address-level2" maxlength="100" required></div>
-          <div><label for="request-pin">Delivery PIN code</label><input id="request-pin" name="postalCode" autocomplete="postal-code" inputmode="numeric" pattern="[1-9][0-9]{5}" maxlength="6" aria-describedby="request-pin-hint" required><span class="request-hint" id="request-pin-hint">Your six-digit Indian delivery PIN.</span></div>
+          <div><label for="request-phone">WhatsApp number</label><input id="request-phone" placeholder="98765 43210" name="whatsapp" type="tel" autocomplete="tel" inputmode="tel" maxlength="24" aria-describedby="request-phone-hint" required><span class="request-hint" id="request-phone-hint">Outside India? Include your country code.</span></div>
         </div>
-        <label for="enquiry-message">Anything you’d like us to know? <span>(optional)</span></label>
-        <textarea id="enquiry-message" name="message" rows="3" maxlength="1500" placeholder="Your occasion, preferred design or timing"></textarea>
         <div class="request-trap" aria-hidden="true"><label for="request-company">Leave this field empty</label><input id="request-company" name="website" type="text" tabindex="-1" autocomplete="off"></div>
-        <label class="request-consent" for="request-consent"><input type="checkbox" id="request-consent" name="consentToContact" required><span>Akash Vetiver Export may contact me on WhatsApp about this request.</span></label>
-        <p class="order-note" id="order-note">No payment is collected here. Submitting a request does not confirm availability or place a paid order.</p>
+        <p class="request-contact-notice">By reserving, you agree to a WhatsApp reply.</p>
       </fieldset>
       <p id="request-status" class="request-status" role="status" aria-live="polite" tabindex="-1"></p>
       <button class="button enquiry-submit" type="submit"><span id="enquiry-submit-label">Prepare email request</span><img src="assets/icons/arrow-up-right.svg" alt="" width="21" height="21"></button>
@@ -159,7 +426,6 @@
         <p id="copy-status" role="status" aria-live="polite"></p>
       </div>
       <div id="request-success" class="request-success" hidden tabindex="-1"><h4 id="request-success-title">Request received.</h4><p id="request-receipt"></p><p>We’ll contact you on WhatsApp to discuss availability, pricing and delivery. Your order is not confirmed and no payment has been taken.</p><button type="button" class="text-link" id="request-new">Start a new request</button></div>
-      <p class="request-support">Questions? <a href="mailto:akashvetiverexport@gmail.com">akashvetiverexport@gmail.com</a></p>
       <noscript><p>JavaScript is needed for this form. Please email us to discuss your order.</p></noscript>
     </form>
   </dialog>

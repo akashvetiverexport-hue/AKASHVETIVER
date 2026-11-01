@@ -1,6 +1,6 @@
 const { chromium } = require(process.env.PLAYWRIGHT_PATH || 'C:/Users/avina/AppData/Local/npm-cache/_npx/e41f203b7505f1fb/node_modules/playwright-core');
 const assert = require('node:assert/strict');
-const origin = 'http://127.0.0.1:4178';
+const origin = process.env.TEST_ORIGIN || 'http://127.0.0.1:4178';
 (async () => {
   const browser = await chromium.launch({ headless: true });
   try {
@@ -21,6 +21,7 @@ const origin = 'http://127.0.0.1:4178';
       await page.waitForURL(url => url.searchParams.get('q') === 'Royal');
       assert.equal(new URL(page.url()).searchParams.get('q'), 'Royal');
       await page.reload();
+      await page.waitForFunction(() => document.querySelector('#product-search')?.value === 'Royal', null, { timeout: 15000 });
       assert.equal(await page.locator('#product-search').inputValue(), 'Royal');
       assert.equal(await page.locator('.product-card:visible').count(), 1);
       await page.locator('.product-card:visible [data-product-open]').first().click();
@@ -84,7 +85,7 @@ const origin = 'http://127.0.0.1:4178';
       await page.goBack();
       assert.equal(new URL(page.url()).hash, '');
       await page.locator('.hero-cta').click();
-      await page.waitForURL('**/products.html');
+      await page.waitForURL(url => /^\/products(?:\.html)?$/.test(url.pathname));
       assert.equal(await page.locator('main>section').count(), 1);
       assert.deepEqual(errors, []);
       console.log(`PASS ${width}px: filter/search URL, reload, product links, Back/Forward, sharing/fallback/cancel, enquiry, invalid input, hero navigation`);

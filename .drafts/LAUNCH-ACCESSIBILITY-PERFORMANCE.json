@@ -1,0 +1,148 @@
+{
+  "accessibility": [
+    {
+      "width": 390,
+      "route": "/",
+      "violations": [],
+      "incomplete": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ],
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "/products",
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ],
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "/legal",
+      "violations": [],
+      "incomplete": [],
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "/",
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ],
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "/products",
+      "violations": [],
+      "incomplete": [],
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "/legal",
+      "violations": [],
+      "incomplete": [],
+      "overflow": false
+    }
+  ],
+  "performance": [
+    {
+      "metrics": {
+        "lcp": 2452,
+        "cls": 0.01069784699700919
+      },
+      "domContentLoaded": 3799.5,
+      "bytes": 1502718,
+      "largest": [
+        {
+          "url": "https://akashvetiver.akashvetiverexport.workers.dev/images/optimized/products/studio-v1/toran-fringe.webp",
+          "bytes": 171354
+        },
+        {
+          "url": "https://akashvetiver.akashvetiverexport.workers.dev/images/optimized/products/studio-v1/malai-royal.webp",
+          "bytes": 125266
+        },
+        {
+          "url": "https://akashvetiver.akashvetiverexport.workers.dev/images/optimized/products/studio-v1/peacock.webp",
+          "bytes": 122354
+        },
+        {
+          "url": "https://akashvetiver.akashvetiverexport.workers.dev/images/optimized/products/studio-v1/malai-flowers.webp",
+          "bytes": 106598
+        },
+        {
+          "url": "https://akashvetiver.akashvetiverexport.workers.dev/images/optimized/hero/vetiver-golden-hour-mobile-480.webp",
+          "bytes": 99718
+        }
+      ],
+      "introVisible": false
+    },
+    {
+      "metrics": {
+        "lcp": 2168,
+        "cls": 0.010973602776909081
+      },
+      "domContentLoaded": 3584.7000000001863,
+      "bytes": 1502476,
+      "largest": [
+        {
+          "url": "https://akashvetiver.akashvetiverexport.workers.dev/images/optimized/products/studio-v1/toran-fringe.webp",
+          "bytes": 171354
+        },
+        {
+          "url": "https://akashvetiver.akashvetiverexport.workers.dev/images/optimized/products/studio-v1/malai-royal.webp",
+          "bytes": 125266
+        },
+        {
+          "url": "https://akashvetiver.akashvetiverexport.workers.dev/images/optimized/products/studio-v1/peacock.webp",
+          "bytes": 122354
+        },
+        {
+          "url": "https://akashvetiver.akashvetiverexport.workers.dev/images/optimized/products/studio-v1/malai-flowers.webp",
+          "bytes": 106598
+        },
+        {
+          "url": "https://akashvetiver.akashvetiverexport.workers.dev/images/optimized/hero/vetiver-golden-hour-mobile-480.webp",
+          "bytes": 99718
+        }
+      ],
+      "introVisible": false
+    },
+    {
+      "metrics": {
+        "lcp": 2256,
+        "cls": 0.01069784699700919
+      },
+      "domContentLoaded": 3360.600000000093,
+      "bytes": 1502711,
+      "largest": [
+        {
+          "url": "https://akashvetiver.akashvetiverexport.workers.dev/images/optimized/products/studio-v1/toran-fringe.webp",
+          "bytes": 171354
+        },
+        {
+          "url": "https://akashvetiver.akashvetiverexport.workers.dev/images/optimized/products/studio-v1/malai-royal.webp",
+          "bytes": 125266
+        },
+        {
+          "url": "https://akashvetiver.akashvetiverexport.workers.dev/images/optimized/products/studio-v1/peacock.webp",
+          "bytes": 122354
+        },
+        {
+          "url": "https://akashvetiver.akashvetiverexport.workers.dev/images/optimized/products/studio-v1/malai-flowers.webp",
+          "bytes": 106598
+        },
+        {
+          "url": "https://akashvetiver.akashvetiverexport.workers.dev/images/optimized/hero/vetiver-golden-hour-mobile-480.webp",
+          "bytes": 99718
+        }
+      ],
+      "introVisible": false
+    }
+  ]
+}

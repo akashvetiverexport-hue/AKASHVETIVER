@@ -1,0 +1,386 @@
+[
+  {
+    "width": 390,
+    "route": "/products.html",
+    "ready": 37400.89999999851,
+    "errors": [],
+    "lcp": 35208,
+    "cls": 0.1838825039569484,
+    "longTasks": 377,
+    "paint": [
+      {
+        "name": "first-paint",
+        "ms": 11380
+      },
+      {
+        "name": "first-contentful-paint",
+        "ms": 11380
+      }
+    ],
+    "resources": [
+      {
+        "name": "malai-pair.webp",
+        "ms": 30537,
+        "bytes": 149058,
+        "start": 4650
+      },
+      {
+        "name": "arrow-right.svg",
+        "ms": 29904,
+        "bytes": 483,
+        "start": 4649
+      },
+      {
+        "name": "gsap.min.js",
+        "ms": 29814,
+        "bytes": 30021,
+        "start": 4643
+      },
+      {
+        "name": "ScrollTrigger.min.js",
+        "ms": 29814,
+        "bytes": 18979,
+        "start": 4643
+      },
+      {
+        "name": "Flip.min.js",
+        "ms": 29814,
+        "bytes": 10522,
+        "start": 4643
+      },
+      {
+        "name": "site-config.js",
+        "ms": 29814,
+        "bytes": 708,
+        "start": 4644
+      },
+      {
+        "name": "catalog-data.js",
+        "ms": 29814,
+        "bytes": 1531,
+        "start": 4644
+      },
+      {
+        "name": "catalog.js",
+        "ms": 29813,
+        "bytes": 2331,
+        "start": 4644
+      },
+      {
+        "name": "script.js",
+        "ms": 29813,
+        "bytes": 6446,
+        "start": 4645
+      },
+      {
+        "name": "request-flow.js",
+        "ms": 29813,
+        "bytes": 4459,
+        "start": 4645
+      },
+      {
+        "name": "x.svg",
+        "ms": 29812,
+        "bytes": 497,
+        "start": 4646
+      },
+      {
+        "name": "arrow-up-right.svg",
+        "ms": 29811,
+        "bytes": 474,
+        "start": 4646
+      }
+    ],
+    "bytes": 1746907,
+    "overflow": false,
+    "missingAlt": 0
+  },
+  {
+    "width": 390,
+    "route": "/",
+    "ready": 4019.10000000149,
+    "errors": [],
+    "lcp": 2400,
+    "cls": 0.00037132003798670467,
+    "longTasks": 399,
+    "paint": [
+      {
+        "name": "first-paint",
+        "ms": 956
+      },
+      {
+        "name": "first-contentful-paint",
+        "ms": 956
+      }
+    ],
+    "resources": [
+      {
+        "name": "plus.svg",
+        "ms": 2731,
+        "bytes": 300,
+        "start": 385
+      },
+      {
+        "name": "ScrollTrigger.min.js",
+        "ms": 2516,
+        "bytes": 300,
+        "start": 381
+      },
+      {
+        "name": "x.svg",
+        "ms": 2326,
+        "bytes": 300,
+        "start": 384
+      },
+      {
+        "name": "truck.svg",
+        "ms": 2325,
+        "bytes": 627,
+        "start": 385
+      },
+      {
+        "name": "request-flow.js",
+        "ms": 2248,
+        "bytes": 300,
+        "start": 383
+      },
+      {
+        "name": "catalog-data.js",
+        "ms": 2234,
+        "bytes": 300,
+        "start": 382
+      },
+      {
+        "name": "script.js",
+        "ms": 2218,
+        "bytes": 300,
+        "start": 382
+      },
+      {
+        "name": "catalog.js",
+        "ms": 2211,
+        "bytes": 300,
+        "start": 382
+      },
+      {
+        "name": "vetiver-dawn.webp",
+        "ms": 1989,
+        "bytes": 273838,
+        "start": 376
+      },
+      {
+        "name": "site-config.js",
+        "ms": 1907,
+        "bytes": 708,
+        "start": 381
+      },
+      {
+        "name": "Flip.min.js",
+        "ms": 1564,
+        "bytes": 300,
+        "start": 381
+      },
+      {
+        "name": "outfit-light.ttf",
+        "ms": 1447,
+        "bytes": 26478,
+        "start": 824
+      }
+    ],
+    "bytes": 310515,
+    "overflow": false,
+    "missingAlt": 0
+  },
+  {
+    "width": 1440,
+    "route": "/products.html",
+    "ready": 23532.60000000149,
+    "errors": [],
+    "lcp": 7984,
+    "cls": 0.18743894843374914,
+    "longTasks": 375,
+    "paint": [
+      {
+        "name": "first-paint",
+        "ms": 3932
+      },
+      {
+        "name": "first-contentful-paint",
+        "ms": 3932
+      }
+    ],
+    "resources": [
+      {
+        "name": "toran-flowers.webp",
+        "ms": 21037,
+        "bytes": 177542,
+        "start": 3924
+      },
+      {
+        "name": "toran-fringe.webp",
+        "ms": 20676,
+        "bytes": 171354,
+        "start": 3923
+      },
+      {
+        "name": "peacock.webp",
+        "ms": 19845,
+        "bytes": 122354,
+        "start": 3922
+      },
+      {
+        "name": "malai-flowers.webp",
+        "ms": 19333,
+        "bytes": 106598,
+        "start": 3922
+      },
+      {
+        "name": "products?select=id,category,name,image,thumbnail,alt,description,status,sort_order,featured_order&status=eq.published&order=sort_order.asc,id.asc&limit=500&offset=0",
+        "ms": 11252,
+        "bytes": 0,
+        "start": 12174
+      },
+      {
+        "name": "arrow-right.svg",
+        "ms": 9708,
+        "bytes": 483,
+        "start": 2698
+      },
+      {
+        "name": "request-flow.js",
+        "ms": 9653,
+        "bytes": 4459,
+        "start": 2693
+      },
+      {
+        "name": "script.js",
+        "ms": 9633,
+        "bytes": 6362,
+        "start": 2693
+      },
+      {
+        "name": "x.svg",
+        "ms": 9600,
+        "bytes": 497,
+        "start": 2694
+      },
+      {
+        "name": "catalog.js",
+        "ms": 9478,
+        "bytes": 2331,
+        "start": 2692
+      },
+      {
+        "name": "catalog-data.js",
+        "ms": 5909,
+        "bytes": 1531,
+        "start": 2692
+      },
+      {
+        "name": "malai-pair.webp",
+        "ms": 5398,
+        "bytes": 149058,
+        "start": 2698
+      }
+    ],
+    "bytes": 1529165,
+    "overflow": false,
+    "missingAlt": 0
+  },
+  {
+    "width": 1440,
+    "route": "/",
+    "ready": 4067.7999999970198,
+    "errors": [],
+    "lcp": 1104,
+    "cls": 0.00033055555555555556,
+    "longTasks": 470,
+    "paint": [
+      {
+        "name": "first-paint",
+        "ms": 1104
+      },
+      {
+        "name": "first-contentful-paint",
+        "ms": 1104
+      }
+    ],
+    "resources": [
+      {
+        "name": "vetiver-dawn.webp",
+        "ms": 5561,
+        "bytes": 273838,
+        "start": 425
+      },
+      {
+        "name": "script.js",
+        "ms": 3167,
+        "bytes": 300,
+        "start": 432
+      },
+      {
+        "name": "plus.svg",
+        "ms": 3002,
+        "bytes": 300,
+        "start": 440
+      },
+      {
+        "name": "request-flow.js",
+        "ms": 2583,
+        "bytes": 300,
+        "start": 433
+      },
+      {
+        "name": "x.svg",
+        "ms": 2453,
+        "bytes": 300,
+        "start": 435
+      },
+      {
+        "name": "catalog.js",
+        "ms": 2379,
+        "bytes": 300,
+        "start": 431
+      },
+      {
+        "name": "catalog-data.js",
+        "ms": 2285,
+        "bytes": 300,
+        "start": 430
+      },
+      {
+        "name": "Flip.min.js",
+        "ms": 1877,
+        "bytes": 300,
+        "start": 429
+      },
+      {
+        "name": "site-config.js",
+        "ms": 1815,
+        "bytes": 708,
+        "start": 430
+      },
+      {
+        "name": "outfit-light.ttf",
+        "ms": 1478,
+        "bytes": 26564,
+        "start": 905
+      },
+      {
+        "name": "ScrollTrigger.min.js",
+        "ms": 1457,
+        "bytes": 300,
+        "start": 429
+      },
+      {
+        "name": "products?select=id,category,name,image,thumbnail,alt,description,status,sort_order,featured_order&status=eq.published&order=sort_order.asc,id.asc&limit=500&offset=0",
+        "ms": 1150,
+        "bytes": 0,
+        "start": 2817
+      }
+    ],
+    "bytes": 310001,
+    "overflow": false,
+    "missingAlt": 0
+  }
+]

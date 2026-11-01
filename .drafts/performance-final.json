@@ -1,0 +1,386 @@
+[
+  {
+    "width": 390,
+    "route": "/products.html",
+    "ready": 4730.9000000059605,
+    "errors": [],
+    "lcp": 2696,
+    "cls": 0.0005102568059512503,
+    "longTasks": 146,
+    "paint": [
+      {
+        "name": "first-paint",
+        "ms": 2696
+      },
+      {
+        "name": "first-contentful-paint",
+        "ms": 2696
+      }
+    ],
+    "resources": [
+      {
+        "name": "malai-flowers-thumb.webp",
+        "ms": 2436,
+        "bytes": 8434,
+        "start": 2691
+      },
+      {
+        "name": "hanging-bells-thumb.webp",
+        "ms": 2326,
+        "bytes": 12670,
+        "start": 2693
+      },
+      {
+        "name": "vel-thumb.webp",
+        "ms": 2262,
+        "bytes": 3128,
+        "start": 2693
+      },
+      {
+        "name": "malai-royal-thumb.webp",
+        "ms": 2225,
+        "bytes": 9452,
+        "start": 1333
+      },
+      {
+        "name": "arrow-right.svg",
+        "ms": 2223,
+        "bytes": 483,
+        "start": 1335
+      },
+      {
+        "name": "toran-flowers-thumb.webp",
+        "ms": 2125,
+        "bytes": 11366,
+        "start": 2692
+      },
+      {
+        "name": "catalog",
+        "ms": 1856,
+        "bytes": 1462,
+        "start": 2774
+      },
+      {
+        "name": "toran-fringe-thumb.webp",
+        "ms": 1752,
+        "bytes": 12870,
+        "start": 2692
+      },
+      {
+        "name": "gsap.min.js",
+        "ms": 1654,
+        "bytes": 30043,
+        "start": 1286
+      },
+      {
+        "name": "script.js",
+        "ms": 1544,
+        "bytes": 6476,
+        "start": 1287
+      },
+      {
+        "name": "outfit-semibold.ttf",
+        "ms": 1467,
+        "bytes": 27260,
+        "start": 1279
+      },
+      {
+        "name": "sections.js",
+        "ms": 1462,
+        "bytes": 1236,
+        "start": 1284
+      }
+    ],
+    "bytes": 317331,
+    "overflow": false,
+    "missingAlt": 0
+  },
+  {
+    "width": 390,
+    "route": "/",
+    "ready": 2165.89999999851,
+    "errors": [],
+    "lcp": 1004,
+    "cls": 0.0001708641975308642,
+    "longTasks": 322,
+    "paint": [
+      {
+        "name": "first-paint",
+        "ms": 1004
+      },
+      {
+        "name": "first-contentful-paint",
+        "ms": 1004
+      }
+    ],
+    "resources": [
+      {
+        "name": "plus.svg",
+        "ms": 1686,
+        "bytes": 300,
+        "start": 633
+      },
+      {
+        "name": "x.svg",
+        "ms": 1656,
+        "bytes": 300,
+        "start": 630
+      },
+      {
+        "name": "request-flow.js",
+        "ms": 1439,
+        "bytes": 300,
+        "start": 628
+      },
+      {
+        "name": "script.js",
+        "ms": 1409,
+        "bytes": 300,
+        "start": 628
+      },
+      {
+        "name": "main-CVyjmOvB.js",
+        "ms": 1265,
+        "bytes": 74381,
+        "start": 1005
+      },
+      {
+        "name": "product-showcase-DKjLXpGH.js",
+        "ms": 942,
+        "bytes": 12785,
+        "start": 2447
+      },
+      {
+        "name": "use-reduced-motion-KxDlvywK.js",
+        "ms": 876,
+        "bytes": 10076,
+        "start": 2452
+      },
+      {
+        "name": "outfit-light.ttf",
+        "ms": 859,
+        "bytes": 26564,
+        "start": 926
+      },
+      {
+        "name": "hand-heart.svg",
+        "ms": 750,
+        "bytes": 828,
+        "start": 632
+      },
+      {
+        "name": "plant.svg",
+        "ms": 727,
+        "bytes": 834,
+        "start": 632
+      },
+      {
+        "name": "truck.svg",
+        "ms": 718,
+        "bytes": 627,
+        "start": 632
+      },
+      {
+        "name": "arrow-up-right.svg",
+        "ms": 703,
+        "bytes": 300,
+        "start": 630
+      }
+    ],
+    "bytes": 136934,
+    "overflow": false,
+    "missingAlt": 0
+  },
+  {
+    "width": 1440,
+    "route": "/products.html",
+    "ready": 6479.29999999702,
+    "errors": [],
+    "lcp": 3308,
+    "cls": 0.0006208401485071587,
+    "longTasks": 118,
+    "paint": [
+      {
+        "name": "first-paint",
+        "ms": 2428
+      },
+      {
+        "name": "first-contentful-paint",
+        "ms": 2428
+      }
+    ],
+    "resources": [
+      {
+        "name": "toran-auspicious-thumb.webp",
+        "ms": 4336,
+        "bytes": 9660,
+        "start": 2420
+      },
+      {
+        "name": "hanging-bells-thumb.webp",
+        "ms": 4009,
+        "bytes": 12670,
+        "start": 2419
+      },
+      {
+        "name": "vel-thumb.webp",
+        "ms": 3700,
+        "bytes": 3128,
+        "start": 2420
+      },
+      {
+        "name": "flag-thumb.webp",
+        "ms": 3684,
+        "bytes": 3882,
+        "start": 2420
+      },
+      {
+        "name": "arrow-right.svg",
+        "ms": 3516,
+        "bytes": 483,
+        "start": 1432
+      },
+      {
+        "name": "script.js",
+        "ms": 3493,
+        "bytes": 6556,
+        "start": 1425
+      },
+      {
+        "name": "toran-flowers-thumb.webp",
+        "ms": 3436,
+        "bytes": 11366,
+        "start": 2418
+      },
+      {
+        "name": "gsap.min.js",
+        "ms": 3384,
+        "bytes": 29985,
+        "start": 1424
+      },
+      {
+        "name": "catalog.js",
+        "ms": 3371,
+        "bytes": 2803,
+        "start": 1424
+      },
+      {
+        "name": "site-config.js",
+        "ms": 3329,
+        "bytes": 715,
+        "start": 1423
+      },
+      {
+        "name": "ScrollTrigger.min.js",
+        "ms": 3293,
+        "bytes": 19028,
+        "start": 1424
+      },
+      {
+        "name": "request-flow.js",
+        "ms": 3230,
+        "bytes": 4535,
+        "start": 1425
+      }
+    ],
+    "bytes": 330826,
+    "overflow": false,
+    "missingAlt": 0
+  },
+  {
+    "width": 1440,
+    "route": "/",
+    "ready": 2686.2000000029802,
+    "errors": [],
+    "lcp": 1036,
+    "cls": 0.00033055555555555556,
+    "longTasks": 423,
+    "paint": [
+      {
+        "name": "first-paint",
+        "ms": 1036
+      },
+      {
+        "name": "first-contentful-paint",
+        "ms": 1036
+      }
+    ],
+    "resources": [
+      {
+        "name": "vetiver-dawn.webp",
+        "ms": 3403,
+        "bytes": 273838,
+        "start": 420
+      },
+      {
+        "name": "x.svg",
+        "ms": 2252,
+        "bytes": 300,
+        "start": 429
+      },
+      {
+        "name": "plus.svg",
+        "ms": 2206,
+        "bytes": 300,
+        "start": 468
+      },
+      {
+        "name": "request-flow.js",
+        "ms": 2069,
+        "bytes": 300,
+        "start": 427
+      },
+      {
+        "name": "script.js",
+        "ms": 2055,
+        "bytes": 300,
+        "start": 426
+      },
+      {
+        "name": "proxy-7vwdGGbW.js",
+        "ms": 1608,
+        "bytes": 47153,
+        "start": 2647
+      },
+      {
+        "name": "main-CVyjmOvB.js",
+        "ms": 1373,
+        "bytes": 74400,
+        "start": 1046
+      },
+      {
+        "name": "outfit-light.ttf",
+        "ms": 1223,
+        "bytes": 26308,
+        "start": 899
+      },
+      {
+        "name": "plant.svg",
+        "ms": 1025,
+        "bytes": 834,
+        "start": 430
+      },
+      {
+        "name": "truck.svg",
+        "ms": 1025,
+        "bytes": 627,
+        "start": 431
+      },
+      {
+        "name": "hand-heart.svg",
+        "ms": 1009,
+        "bytes": 828,
+        "start": 430
+      },
+      {
+        "name": "arrow-right.svg",
+        "ms": 947,
+        "bytes": 300,
+        "start": 430
+      }
+    ],
+    "bytes": 457688,
+    "overflow": false,
+    "missingAlt": 0
+  }
+]

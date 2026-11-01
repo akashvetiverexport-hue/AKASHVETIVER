@@ -1,0 +1,40 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const {chromium}=require(process.env.PLAYWRIGHT_PATH||'C:/Users/avina/AppData/Local/npm-cache/_npx/e41f203b7505f1fb/node_modules/playwright-core');
+const origin=process.argv[2]||'http://127.0.0.1:4178';
+const products=JSON.parse(fs.readFileSync(path.join(__dirname,'../data/products.json'),'utf8'));
+(async()=>{const browser=await chromium.launch();try{
+ for(const width of [1440,390]){
+  const context=await browser.newContext({viewport:{width,height:900},hasTouch:width===390,isMobile:width===390,reducedMotion:'no-preference'});
+  const page=await context.newPage(),errors=[];page.on('pageerror',error=>errors.push(error.message));
+  await page.route('**/site-config.js',route=>route.fulfill({contentType:'application/javascript',body:'window.VETTIVER_CONFIG='+JSON.stringify({catalogSource:'supabase',catalogEndpoint:'/api/catalog',supabaseUrl:'https://lgkkjubwdxdfpmoxkrmd.supabase.co',supabasePublishableKey:'sb_publishable_test',reviewsEndpoint:'/api/reviews',feedbackEndpoint:'/api/feedback'})}));
+  let release,fail=false;
+  await page.route('**/api/catalog',async route=>{await new Promise(resolve=>release=resolve);await route.fulfill({status:fail?503:200,contentType:'application/json',body:JSON.stringify(fail?{}:products)})});
+  await page.route('**/api/reviews',route=>route.fulfill({contentType:'application/json',body:'[]'}));
+  await page.goto(origin+'/products.html',{waitUntil:'domcontentloaded'});
+  await page.locator('.site-progress').waitFor();assert.equal(await page.locator('.catalog-skeleton').count(),12);
+  assert.equal(await page.locator('#product-grid').getAttribute('aria-busy'),'true');assert.equal(await page.locator('#product-search').isDisabled(),true);
+  await page.screenshot({path:`C:/Users/avina/vettiver-skeleton-${width}.png`});
+  release();await page.evaluate(async()=>await window.VETTIVER_CATALOG.ready);
+  assert.equal(await page.locator('.catalog-skeleton').count(),0);assert.equal(await page.locator('#product-search').isDisabled(),false);await page.locator('.site-progress').waitFor({state:'hidden'});
+  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+  await page.emulateMedia({reducedMotion:'reduce'});await page.evaluate(()=>sessionStorage.clear());
+  fail=true;await page.reload({waitUntil:'domcontentloaded'});await page.locator('.catalog-skeleton').first().waitFor();
+  assert.equal(await page.locator('.skeleton-surface').first().evaluate(e=>getComputedStyle(e,'::after').animationName),'none');
+  release();await page.getByRole('alert').waitFor();await page.locator('.site-progress').waitFor({state:'hidden'});assert.equal(await page.locator('.catalog-skeleton').count(),0);
+  assert.deepEqual(errors,[]);await context.close();console.log(`PASS ${width}: real-request skeletons, progress, disabled pending controls, successful reveal, failed-request cleanup, reduced motion, no overflow.`);
+ }
+ const page=await browser.newPage({viewport:{width:1440,height:900},reducedMotion:'no-preference'});
+ await page.route('**/site-config.js',route=>route.fulfill({contentType:'application/javascript',body:'window.VETTIVER_CONFIG={catalogSource:"local"}'}));
+ await page.goto(origin+'/products.html',{waitUntil:'domcontentloaded'});await page.waitForFunction(()=>Boolean(window.VETTIVER_SCROLL));
+ await page.mouse.move(1100,500);await page.mouse.wheel(0,700);
+ const samples=await page.evaluate(()=>new Promise(resolve=>{const values=[];const sample=()=>{values.push(scrollY);if(values.length<45)requestAnimationFrame(sample);else resolve(values)};requestAnimationFrame(sample)}));
+ assert.ok(samples.at(-1)>100);assert.ok(samples.some((value,index)=>index>0&&value>samples[index-1]));
+ assert.ok(samples.every((value,index)=>index===0||value>=samples[index-1]-2),'Wheel scroll jumped backwards');
+ assert.ok(Math.max(...samples.slice(1).map((value,index)=>value-samples[index]))<400,'Wheel scroll jumped all at once');
+ await page.locator('.product-card').first().locator('[data-product-open]').first().click();
+ await page.waitForFunction(()=>document.documentElement.classList.contains('lenis-stopped'));
+ const before=await page.evaluate(()=>scrollY);await page.mouse.move(10,300);await page.mouse.wheel(0,500);await page.waitForTimeout(250);assert.equal(await page.evaluate(()=>scrollY),before);
+ await page.locator('#close-product').click();await page.waitForFunction(()=>!document.documentElement.classList.contains('lenis-stopped'));
+ await page.emulateMedia({reducedMotion:'reduce'});await page.waitForFunction(()=>!window.VETTIVER_SCROLL&&!document.documentElement.classList.contains('lenis'));
+ console.log('PASS desktop motion: progressive wheel movement without backward snaps, modal background lock, resume on close and native reduced-motion fallback.');await page.close();
+}finally{await browser.close()}})().catch(error=>{console.error(error);process.exitCode=1});

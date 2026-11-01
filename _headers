@@ -1,0 +1,19 @@
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Cross-Origin-Opener-Policy: same-origin-allow-popups
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-Dy2u06DdmjC0AKKnbCi4/u6CajgOqt8XI+UW3MIsOPg=' 'sha256-UYVYAsQmwITe0zwMkIPNNOMSL6zEdiv/ecMtVpSQMIc='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://lgkkjubwdxdfpmoxkrmd.supabase.co; media-src 'self'; font-src 'self'; connect-src 'self' https://lgkkjubwdxdfpmoxkrmd.supabase.co; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; form-action 'self'
+/admin.html
+  Cache-Control: no-store
+  X-Robots-Tag: noindex, nofollow
+/images/optimized/*
+  Cache-Control: public, max-age=86400
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/admin
+  Cache-Control: no-store
+  X-Robots-Tag: noindex, nofollow

@@ -1,0 +1,32 @@
+﻿{
+  "url": ".drafts/tamil-seo/home.html",
+  "score": 46,
+  "questions": [],
+  "direct_answers": [],
+  "definitions": [
+    "Our crafts are made using real vetiver roots, also known as khus or vettiver. Depending on the design, pieces include decorative thread, flowers, ribbon, beads or bells.",
+    "Visit Customer Stories on this page for customer feedback. If no reviews are available yet, the section will let you know.",
+    "We\u00e2\u0080\u0099ll contact you on WhatsApp to discuss availability, pricing and delivery. Your order is not confirmed and no payment has been taken."
+  ],
+  "lists": [
+    {
+      "type": "ol",
+      "items": 5,
+      "sample": [
+        "01 The Land Grown in Tamil Nadu, where our vetiver journey begins.",
+        "02 Harvest & Clean Hand-harvested and cleaned, ready to become your chosen piece.",
+        "03 Quality Vetiver Naturally fragrant roots for your home and celebrations.",
+        "04 Packed with care Carefully packed to protect your piece on its journey.",
+        "05 Delivered to you From our family to your doorstep, ready to enjoy or gift."
+      ]
+    }
+  ],
+  "tables": [],
+  "issues": [
+    {
+      "severity": "info",
+      "message": "No 20-70 word answer paragraph immediately follows a question heading."
+    }
+  ],
+  "fetch_error": null
+}

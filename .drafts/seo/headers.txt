@@ -1,0 +1,31 @@
+{
+  "url": "https://akashvetiver.akashvetiverexport.workers.dev",
+  "score": 80,
+  "https": true,
+  "headers_present": {
+    "Content-Security-Policy (CSP)": "default-src 'self'; script-src 'self' 'sha256-Dy2u06DdmjC0AKKnbCi4/u6CajgOqt8XI+UW3MIsOPg=' 'sha256-UYVYAsQmwITe0zwMkIPNNOMSL6zEdiv/ecMtVpSQMIc='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://lgkkjubwdxdfpmoxkrmd.supabase.co; media-src 'self'; font-src 'self'; connect-src 'self' https://lgkkjubwdxdfpmoxkrmd.supabase.co; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; form-action 'self'",
+    "X-Frame-Options": "DENY",
+    "X-Content-Type-Options": "nosniff",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Permissions-Policy": "camera=(), microphone=(), geolocation=()"
+  },
+  "headers_missing": {
+    "HSTS (Strict-Transport-Security)": "Forces browsers to use HTTPS. Prevents downgrade attacks."
+  },
+  "header_values": {
+    "content-security-policy": "default-src 'self'; script-src 'self' 'sha256-Dy2u06DdmjC0AKKnbCi4/u6CajgOqt8XI+UW3MIsOPg=' 'sha256-UYVYAsQmwITe0zwMkIPNNOMSL6zEdiv/ecMtVpSQMIc='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://lgkkjubwdxdfpmoxkrmd.supabase.co; media-src 'self'; font-src 'self'; connect-src 'self' https://lgkkjubwdxdfpmoxkrmd.supabase.co; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; form-action 'self'",
+    "x-frame-options": "DENY",
+    "x-content-type-options": "nosniff",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "permissions-policy": "camera=(), microphone=(), geolocation=()"
+  },
+  "issues": [
+    "\u26a0\ufe0f 1 security header(s) missing"
+  ],
+  "recommendations": [
+    "HSTS (Strict-Transport-Security): Add header: Strict-Transport-Security: max-age=31536000; includeSubDomains"
+  ],
+  "error": null
+}
+
+STDERR:

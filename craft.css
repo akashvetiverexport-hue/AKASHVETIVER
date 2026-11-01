@@ -10,11 +10,11 @@
 .craft-stage{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(48px,6.667vw,96px);align-items:center;position:relative;padding-bottom:clamp(40px,4.445vw,64px)}
 .craft-stage:last-child{padding-bottom:0}
 .craft-photo{width:100%;margin-left:0;aspect-ratio:1.5;position:relative;z-index:0;background-repeat:no-repeat;background-size:contain;background-position:center}
-.craft-photo-land{background-image:url('images/craft-land-v2.png')}
-.craft-photo-harvest{background-image:url('images/craft-harvest-v2.png')}
-.craft-photo-finish{background-image:url('images/craft-quality-v2.png')}
-.craft-photo-packing{background-image:url('images/craft-packing.png')}
-.craft-photo-delivered{background-image:url('images/craft-delivery.png')}
+
+
+
+
+
 .craft-stage-copy{position:relative;z-index:2;max-width:370px;padding:24px 0}
 .craft-stage-copy h3{font:400 clamp(30px,3.5vw,48px)/1.12 var(--font-display);letter-spacing:-.03em;margin:18px 0 22px}
 .craft-stage-copy p{font-size:15px;line-height:1.9}
@@ -38,6 +38,34 @@
 .craft-closing{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:24px;margin-top:32px}
 .craft-closing>p{font:400 25px/1.3 var(--font-display);color:#023616}
 @media(max-width:900px){.craft-intro{gap:32px}.craft-stage{gap:40px;padding-bottom:48px}.craft-stage-copy p{font-size:14px}.craft-ribbon text{font-size:21px}.craft-stage-copy h3{font-size:34px}}
-@media(max-width:700px){.craft-journey{scroll-margin-top:92px}.craft-intro{display:block;margin-bottom:40px}.craft-intro h2{font-size:clamp(40px,9vw,58px)}.craft-intro>p{margin-top:24px;font-size:14px;max-width:420px}.craft-stages{padding-left:24px;border-left:1px solid #bccbb0}.craft-stage,.craft-harvest{display:flex;flex-direction:column;align-items:stretch;gap:0;padding-bottom:48px}.craft-stage:last-child{padding-bottom:0}.craft-stage-copy,.craft-harvest .craft-stage-copy{padding:24px 0 0;max-width:none}.craft-photo{aspect-ratio:1.5}.craft-stage-copy h3{font-size:33px;margin:13px 0 16px}.craft-quality{margin-top:16px}.craft-step{position:relative}.craft-step::before{content:'';position:absolute;width:9px;height:9px;border-radius:50%;background:#52682e;left:-29px}.craft-ribbon{display:none}.craft-closing{margin-top:40px;align-items:flex-start;flex-direction:column;gap:14px}.craft-closing>p{font-size:23px}}
+@media(max-width:700px){.craft-journey{scroll-margin-top:80px}.craft-intro{display:block;margin-bottom:32px}.craft-intro h2{font-size:clamp(36px,8.5vw,52px)}.craft-intro>p{margin-top:20px;font-size:14px;line-height:1.8;max-width:420px}.craft-stages{padding-left:22px;border-left:1px solid #bccbb0}.craft-stage,.craft-harvest{display:flex;flex-direction:column;align-items:stretch;gap:0;padding-bottom:40px}.craft-stage:last-child{padding-bottom:0}.craft-stage-copy,.craft-harvest .craft-stage-copy{padding:16px 0 0;max-width:none}.craft-photo{aspect-ratio:1.4;border-radius:8px}.craft-stage-copy h3{font-size:30px;margin:12px 0 14px}.craft-stage-copy p{font-size:14px;line-height:1.8}.craft-quality{margin-top:14px;font-size:12px}.craft-step{position:relative;font-size:15px}.craft-step::before{content:'';position:absolute;width:9px;height:9px;border-radius:50%;background:#52682e;left:-27px}.craft-step::after{width:36px}.craft-ribbon{display:none}.craft-closing{margin-top:28px;align-items:flex-start;flex-direction:column;gap:12px}.craft-closing>p{font-size:22px}}
 @media print{.craft-ribbon{display:none}.craft-stage{break-inside:avoid;padding-bottom:35px}}
-@media(max-width:700px){.craft-intro{margin-bottom:32px}.craft-stage{padding-bottom:40px}.craft-stage-copy,.craft-harvest .craft-stage-copy{padding-top:16px}.craft-closing{margin-top:24px}}
+
+/* Preserve the desktop's alternating story composition on phones. */
+@media(max-width:700px){
+ .craft-intro{margin-bottom:32px}
+ .craft-intro h2{font-size:34px}
+ .craft-stages{padding-left:0;border-left:0}
+ .craft-stage,.craft-harvest{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);align-items:center;gap:18px;padding-bottom:40px}
+ .craft-stage:nth-child(even){grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)}
+ .craft-photo{aspect-ratio:.9;border-radius:0}
+ .craft-stage-copy,.craft-harvest .craft-stage-copy{padding:0;min-width:0}
+ .craft-stage:nth-child(even) .craft-stage-copy{justify-self:stretch}
+ .craft-stage-copy h3{font-size:25px;line-height:1.15;margin:10px 0}
+ .craft-stage-copy p{font-size:14px;line-height:1.65}
+ .craft-step{font-size:13px;gap:10px}
+ .craft-step::before{display:none}
+ .craft-step::after{width:24px}
+ .craft-quality{font-size:11px;line-height:1.6;margin-top:12px}
+ .craft-ribbon{display:block;opacity:.65}
+}
+
+/* Space below the final curve; the path stays outside copy throughout each row. */
+.craft-flow{padding-bottom:24px}
+
+/* Images sit above the continuous image-to-image dotted ribbon. */
+.craft-photo{z-index:2}
+
+.craft-photo>img{display:block;width:100%;height:100%;object-fit:contain}
+.craft-photo>img[data-src]{visibility:hidden;position:absolute;inset:0}.craft-photo noscript img{display:block;width:100%;height:100%;object-fit:contain}
+

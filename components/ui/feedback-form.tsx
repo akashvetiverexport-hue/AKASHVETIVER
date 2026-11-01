@@ -6,6 +6,7 @@ export const FEEDBACK_DRAFT_KEY = "vettiver-feedback-draft-v1"
 export function FeedbackForm({ endpoint = "" }: { endpoint?: string }) {
   const dialogRef = useRef<HTMLDialogElement>(null)
   const submittingRef = useRef(false)
+  const retryRef = useRef({ payload: "", key: "" })
   const requestRef = useRef<AbortController | null>(null)
   const mountedRef = useRef(true)
   useEffect(() => {
@@ -47,6 +48,11 @@ export function FeedbackForm({ endpoint = "" }: { endpoint?: string }) {
       if (target.origin !== window.location.origin || !["https:", "http:"].includes(target.protocol) || target.username || target.password || target.hash) throw new Error("Invalid endpoint")
     } catch { fail("Feedback submission is not configured correctly. Your feedback remains here; please try again later."); return }
     submittingRef.current = true
+    const serialized = JSON.stringify({ ...draft, consentToPublish: consent, website })
+    if (retryRef.current.payload !== serialized || !retryRef.current.key) {
+      if (!globalThis.crypto?.randomUUID) { submittingRef.current = false; fail("Open the secure HTTPS website before submitting feedback."); return }
+      retryRef.current = { payload: serialized, key: crypto.randomUUID() }
+    }
     setBusy(true)
     const controller = new AbortController()
     requestRef.current = controller
@@ -55,7 +61,7 @@ export function FeedbackForm({ endpoint = "" }: { endpoint?: string }) {
     try {
       // The honeypot and client validation are NOT server protection. The future
       // endpoint must independently validate these fields and enforce spam limits.
-      const response = await fetch(target.href, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify({ ...draft, consentToPublish: consent, website }), credentials: "same-origin", redirect: "error", signal: controller.signal })
+      const response = await fetch(target.href, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json", "Idempotency-Key": retryRef.current.key }, body: serialized, credentials: "same-origin", redirect: "error", signal: controller.signal })
       if (!mountedRef.current) return
       if (!response.ok) {
         fail(response.status === 429 ? "Too many attempts. Please wait a few minutes before trying again. Your feedback is still here." : response.status === 400 || response.status === 422 ? "The service could not accept these details. Check your name, rating, feedback and consent, then try again." : "The feedback service is unavailable. Your feedback is still here; please try again later.")
@@ -94,7 +100,7 @@ export function FeedbackForm({ endpoint = "" }: { endpoint?: string }) {
     if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) event.currentTarget.close()
   }}>
     <button type="button" className="vt-feedback-close" aria-label="Close feedback" onClick={() => dialogRef.current?.close()}><X size={22} aria-hidden="true" /></button>
-    <div className="vt-feedback-heading"><h2 id="feedback-dialog-title">A few words mean a lot.</h2><p id="feedback-dialog-description">Tell us about your Vettiver experience.</p></div>
+    <div className="vt-feedback-heading"><h2 id="feedback-dialog-title">A few words mean a lot.</h2><p id="feedback-dialog-description">Tell us about your Akash Vetiver experience.</p></div>
     <form id="feedback-form" className="vt-feedback-form" onSubmit={submit} aria-label="Share customer feedback" aria-busy={busy} aria-describedby="feedback-status">
       {/* Hidden from assistive technology and keyboard navigation, not a real customer field. */}
       <div aria-hidden="true" style={{ position: "absolute", width: 1, height: 1, overflow: "hidden", clipPath: "inset(50%)", whiteSpace: "nowrap" }}>

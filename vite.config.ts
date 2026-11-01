@@ -4,6 +4,7 @@ import tailwindcss from "@tailwindcss/vite"
 import { fileURLToPath, URL } from "node:url"
 
 export default defineConfig({
+  base: "./",
   plugins: [react(), tailwindcss()],
   publicDir: false,
   define: { "process.env.NODE_ENV": JSON.stringify("production") },
@@ -11,11 +12,11 @@ export default defineConfig({
   build: {
     outDir: "assets/react",
     emptyOutDir: false,
-    lib: {
-      entry: "ui/main.tsx",
-      formats: ["es"],
-      fileName: () => "sections.js",
-      cssFileName: "sections"
+    minify: "esbuild",
+    cssCodeSplit: false,
+    rollupOptions: {
+      input: { intro: "ui/intro.tsx", sections: "ui/bootstrap.ts", admin: "ui/admin.ts" },
+      output: { entryFileNames: "[name].js", chunkFileNames: "[name]-[hash].js", assetFileNames: "sections.[ext]" }
     }
   }
 })

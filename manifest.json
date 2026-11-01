@@ -1,0 +1,20 @@
+﻿{
+  "name": "Akash Vetiver Export",
+  "short_name": "Akash Vetiver",
+  "description": "Handcrafted vetiver garlands (vettiver malai), door hangings and ceremonial crafts from Cuddalore, Tamil Nadu.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#f6fbf3",
+  "theme_color": "#023616",
+  "lang": "en-IN",
+  "icons": [
+    {
+      "src": "/assets/icons/plant.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["shopping", "lifestyle"],
+  "related_applications": []
+}

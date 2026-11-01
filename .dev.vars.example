@@ -1,0 +1,10 @@
+# Copy to .dev.vars locally. Never commit the filled file or paste secrets into chat.
+SUPABASE_SERVER_KEY=
+RATE_LIMIT_SECRET=
+RESEND_API_KEY=
+# Only enable after migrations, account access and controlled acceptance tests pass.
+SUPABASE_PUBLISHABLE_KEY=
+ENABLE_CATALOG=false
+ENABLE_SUBMISSIONS=false
+ENABLE_NOTIFICATIONS=false
+RESEND_FROM="Akash Vetiver Export <notifications@akashvetiverexport.in>"

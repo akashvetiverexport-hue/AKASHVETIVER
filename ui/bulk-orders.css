@@ -1,9 +1,9 @@
-.bulk-order-section{scroll-margin-top:104px;background:#e4eedf}
+﻿.bulk-order-section{scroll-margin-top:104px;background:#e4eedf}
 .bulk-marquee{position:relative;overflow:hidden;text-align:center;padding:clamp(32px,5svh,48px) 0 24px;color:#023616}
 .bulk-copy{position:relative;z-index:1;margin-inline:auto;padding-inline:24px;max-width:850px}
 .bulk-copy h2{font:400 clamp(38px,4.8vw,68px)/1.08 var(--font-display);letter-spacing:-.035em;margin:0 0 20px}
 .bulk-copy>p{max-width:560px;margin:0 auto;font-size:16px;line-height:1.8;color:#414e41}
-.bulk-cta{display:inline-flex;align-items:center;gap:28px;margin-top:24px;min-height:54px;padding:15px 26px;background:#023616;color:#fff;border:0;border-radius:30px;font-weight:600;cursor:pointer}
+.bulk-cta{display:inline-flex;align-items:center;gap:20px;margin-top:24px;min-height:54px;padding:15px 26px;background:#023616;color:#fff;border:0;border-radius:30px;font-weight:600;cursor:pointer}
 .bulk-cta:hover{background:#1e4d2b}
 .bulk-note{display:block;margin-top:12px;font-size:12px;color:#414e41}
 .bulk-image-window{margin-top:16px;padding:16px 0;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
@@ -21,3 +21,21 @@ body:has(.bulk-enquiry-dialog[open]){overflow:hidden}
 .bulk-enquiry-dialog :focus-visible{outline:3px solid #52682e;outline-offset:3px}
 @media(max-width:700px){.bulk-copy{padding-inline:var(--gutter)}.bulk-copy>p{font-size:14px}.bulk-image{width:145px}.bulk-image-group{gap:18px;padding-right:18px}.bulk-copy h2{font-size:40px}.bulk-enquiry-dialog .enquiry-form{padding:46px 22px 24px}}
 @media(prefers-reduced-motion:reduce){.bulk-image-track{animation:none}.bulk-copy{transform:none!important}}
+
+@media(max-width:700px){
+ .bulk-marquee{padding:36px 0 24px}
+ .bulk-copy h2{font-size:34px;margin-bottom:16px}
+ .bulk-copy>p{font-size:14px;line-height:1.65}
+ .bulk-cta{margin-top:18px;min-height:48px;padding:12px 20px;border-radius:8px}
+ .bulk-note{margin-top:10px}
+ .bulk-image-window{margin-top:10px;padding-block:12px}
+ .bulk-image{width:clamp(120px,17svh,144px);border-radius:8px}
+ .bulk-image-group{gap:16px;padding-right:16px}
+}
+
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+ .bulk-image img{transition:transform .6s cubic-bezier(.16,1,.3,1)}
+ .bulk-image:hover img{transform:scale(1.06)}
+ .bulk-image-window:hover .bulk-image-track{animation-play-state:paused}
+}
+

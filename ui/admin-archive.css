@@ -1,0 +1,27 @@
+.sales-archive { margin-block-start:48px; padding-block-start:32px; border-top:1px solid var(--studio-line,#d7e0cf); }
+.archive-heading {display:flex;align-items:flex-start;gap:14px;margin-bottom:24px;}
+.archive-heading svg {flex:none;margin-top:6px;}
+.archive-heading h3 {margin:0 0 8px;}
+.archive-heading p,.archive-open p,.archive-note,.archive-delete p {max-width:68ch;color:var(--studio-muted,#5b705b);font-size:14px;line-height:1.6;}
+.archive-filters {display:grid;grid-template-columns:1.4fr 1fr 1fr auto;gap:16px;align-items:end;}
+.archive-filters label {display:grid;gap:8px;font-size:14px;min-width:0;}
+.archive-filters input,.archive-filters select {min-width:0;width:100%;min-height:48px;}
+.archive-actions {display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-block:16px;}
+.archive-prepared {margin-top:24px;padding-block:16px;border-block:1px solid var(--studio-line,#d7e0cf);}
+.archive-open {margin-top:28px;max-width:660px;}
+.archive-open>label {display:flex;align-items:center;gap:8px;margin-bottom:12px;font-weight:600;}
+.archive-open input {max-width:100%;}
+.archive-status {min-height:24px;margin-block:16px;}
+.archive-delete {padding:20px;background:#f1ece4;border-radius:12px;}
+.archive-delete>label {display:flex;gap:12px;align-items:flex-start;max-width:65ch;margin-bottom:20px;line-height:1.6;}
+.archive-delete input {width:20px;height:20px;flex:none;margin-top:3px;}
+.archive-delete button {color:#803728;border-color:#b88a79;}
+.archive-view {margin-top:24px;}
+.archive-view summary {cursor:pointer;padding-block:16px;font-weight:600;line-height:1.6;}
+.archive-record {display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:16px;border-bottom:1px solid var(--studio-line,#d7e0cf);}
+.archive-record>div {min-width:0;overflow-wrap:anywhere;}
+.archive-record small {display:block;margin-top:6px;color:var(--studio-muted,#5b705b);}
+.archive-record button {flex:none;}
+.archive-note {margin-top:24px;}
+@media(max-width:1000px){.archive-filters {grid-template-columns:1fr 1fr;}.archive-filters>label:first-child {grid-column:1/-1;}}
+@media(max-width:520px){.archive-filters{grid-template-columns:1fr}.archive-filters>label:first-child{grid-column:auto}.archive-actions>*{width:100%}.archive-record{align-items:flex-start;flex-direction:column;gap:8px}.archive-delete{padding:16px}}

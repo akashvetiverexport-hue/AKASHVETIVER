@@ -1,0 +1,9 @@
+# Akash Vetiver Export
+
+> Handcrafted vetiver garlands (vettiver malai), door hangings and ceremonial crafts from our family business in Cuddalore, Tamil Nadu.
+
+## Public pages
+- [Home](https://akashvetiver.akashvetiverexport.workers.dev/): Brand, craftsmanship, bulk orders and contact.
+- [Collection](https://akashvetiver.akashvetiverexport.workers.dev/products): Current published pieces, prices and enquiries.
+
+Customers send their details through the enquiry form. The business receives the enquiry and contacts the customer to confirm products, availability, price and delivery. Submitting an enquiry does not confirm an order. No payment is collected on the website. Contact: akashvetiverexport@gmail.com.

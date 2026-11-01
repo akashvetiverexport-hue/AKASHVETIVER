@@ -8,6 +8,15 @@
 @theme inline {
   --color-primary: var(--vt-primary);
   --color-muted: var(--vt-muted);
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #e4eedf;
+  --color-secondary-foreground: #153d24;
+  --color-background: #f7faf3;
+  --color-accent: #e4eedf;
+  --color-accent-foreground: #153d24;
+  --color-muted-foreground: #586853;
+  --color-ring: #64884f;
+  --color-input: #cbd8c5;
   --color-border: var(--vt-border);
 }
 .vettiver-react{--vt-primary:#023616;--vt-muted:#e4eedf;--vt-border:#cbd8c5;font-family:'Plus Jakarta Sans',sans-serif}
@@ -76,6 +85,22 @@ body:has(#feedback-dialog[open]){overflow:hidden}
 .vt-primary-button:hover:not(:disabled){background:#1e4d2b}
 .vt-feedback-status{font-size:13px;min-height:24px;margin-top:13px;color:#023616}
 .vt-feedback-status.is-error{color:#8a2d21}
+
+@media(max-width:700px){
+ .vt-testimonials.vt-testimonials{padding:36px 0}
+ .vt-testimonials>.vt-section-inner{gap:24px}
+ .vt-testimonial-intro h2{font-size:30px;margin-bottom:12px}
+ .vt-testimonial-intro>p{font-size:14px;line-height:1.65}
+ .vt-testimonial-intro .vt-add-feedback{margin-top:16px}
+ .vt-review-stage .vt-review-empty,.vt-review-stage .vt-review-card{padding:20px}
+ .vt-review-empty>svg{width:26px;height:26px;margin-bottom:12px}
+ .vt-review-empty h3{font-size:23px;margin-bottom:10px}
+ .vt-review-empty p{font-size:13px;line-height:1.65}
+ .vt-review-empty>span{margin-top:12px}
+ .vt-review-card .vt-quote-mark{margin:16px 0 8px}
+ .vt-feedback-heading{margin-bottom:20px}
+ .vt-feedback-form .vt-feedback-fields{gap:16px}
+}
 #testimonials-root{background:#eef4e9}
 .vt-demo-notice{padding:16px 24px;background:#f5e7b9;color:#403117;font-size:14px;font-weight:600;text-align:center}
 /* Beam footer: supplied interaction adapted to the botanical palette. */
@@ -115,5 +140,7 @@ body:has(#feedback-dialog[open]){overflow:hidden}
 .bwf-l.is-hop{animation:bwf-hop .65s cubic-bezier(.2,.8,.2,1)}
 @keyframes bwf-hop{0%,100%{transform:translateY(0)}45%{transform:translateY(-.08em)}}
 .bwf-foot{position:absolute;inset:auto 0 0;height:25%;pointer-events:none;background:linear-gradient(transparent,var(--bwf-bg))}
-@media(max-width:760px){.vt-testimonials{padding:var(--section-half) 0 var(--section-space)}.vt-feedback-wrap{grid-template-columns:1fr;gap:28px;padding-bottom:55px}.vt-feedback-fields{grid-template-columns:1fr;gap:20px}.vt-review-card,.vt-review-empty{padding:28px}.vt-testimonial-intro h2{font-size:40px}.bwf-inner{grid-template-columns:1fr 1fr;gap:32px;padding-top:var(--section-space)}.bwf-col:first-child{grid-column:1/-1}.bwf-brand-line{font-size:32px}.bwf-word{margin-top:40px}.bwf-link{font-size:13px}}
+@media(max-width:760px){.vt-testimonials{padding:var(--section-half) 0 var(--section-space)}.vt-feedback-wrap{grid-template-columns:1fr;gap:28px;padding-bottom:55px}.vt-feedback-fields{grid-template-columns:1fr;gap:20px}.vt-review-card,.vt-review-empty{padding:24px}.vt-testimonial-intro h2{font-size:clamp(32px,8vw,40px)}.vt-testimonial-intro>p{font-size:14px}.vt-review-card blockquote{font-size:clamp(19px,4.5vw,26px)}.vt-review-empty h3{font-size:26px}.vt-review-empty p{font-size:14px}.vt-feedback-dialog{width:min(620px,calc(100% - 24px));max-height:calc(100dvh - 24px);padding:clamp(20px,4vw,36px)}.vt-feedback-heading h2{font-size:clamp(24px,5vw,30px)}.bwf-inner{grid-template-columns:1fr;gap:28px;padding-top:var(--section-space)}.bwf-col:first-child{grid-column:auto}.bwf-brand-line{font-size:28px}.bwf-word{margin-top:32px}.bwf-link{font-size:13px}.bwf-label{font-size:11px}}
 @media(prefers-reduced-motion:reduce){.vettiver-react *, .vettiver-react *::before,.vettiver-react *::after{animation:none!important;transition:none!important}.bwf[data-in=false] .bwf-col{opacity:1;translate:0}.bwf[data-in=false] .bwf-lw{translate:0}.bwf-l:hover{transform:none}}
+
+@media(max-width:700px){.bwf .bwf-inner{grid-template-columns:1fr 1fr;gap:28px;padding-top:40px}.bwf .bwf-col:first-child{grid-column:1/-1}.bwf .bwf-brand-line{font-size:26px;padding:16px 0 12px}.bwf .bwf-word{margin-top:20px}.bwf .bwf-label{padding-bottom:10px}.bwf .bwf-links{margin-top:8px!important}}

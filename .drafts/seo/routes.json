@@ -1,0 +1,71 @@
+[
+  {
+    "path": "/robots.txt",
+    "status": 200,
+    "final_url": "https://akashvetiver.akashvetiverexport.workers.dev/robots.txt",
+    "content_type": "text/plain; charset=utf-8",
+    "redirects": [],
+    "body_start": "# As a condition of accessing this website, you agree to abide by the following\n# content signals:\n\n# (a)  If a content-signal = yes, you may collect content for the corresponding\n",
+    "x_robots_tag": null
+  },
+  {
+    "path": "/sitemap.xml",
+    "status": 404,
+    "final_url": "https://akashvetiver.akashvetiverexport.workers.dev/sitemap.xml",
+    "content_type": null,
+    "redirects": [],
+    "body_start": "",
+    "x_robots_tag": null
+  },
+  {
+    "path": "/llms.txt",
+    "status": 404,
+    "final_url": "https://akashvetiver.akashvetiverexport.workers.dev/llms.txt",
+    "content_type": null,
+    "redirects": [],
+    "body_start": "",
+    "x_robots_tag": null
+  },
+  {
+    "path": "/admin.html",
+    "status": 200,
+    "final_url": "https://akashvetiver.akashvetiverexport.workers.dev/admin",
+    "content_type": "text/html",
+    "redirects": [
+      {
+        "status": 307,
+        "location": "/admin"
+      }
+    ],
+    "body_start": "<!doctype html>\n<html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta name=\"robots\" content=\"noindex,nofollow\"><title",
+    "x_robots_tag": null
+  },
+  {
+    "path": "/products.html",
+    "status": 200,
+    "final_url": "https://akashvetiver.akashvetiverexport.workers.dev/products",
+    "content_type": "text/html",
+    "redirects": [
+      {
+        "status": 307,
+        "location": "/products"
+      }
+    ],
+    "body_start": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <meta name=\"theme-color\" content=\"#f6fbf3\"",
+    "x_robots_tag": null
+  },
+  {
+    "path": "/index.html",
+    "status": 200,
+    "final_url": "https://akashvetiver.akashvetiverexport.workers.dev/",
+    "content_type": "text/html",
+    "redirects": [
+      {
+        "status": 307,
+        "location": "/"
+      }
+    ],
+    "body_start": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <meta name=\"theme-color\" content=\"#f6fbf3\"",
+    "x_robots_tag": null
+  }
+]

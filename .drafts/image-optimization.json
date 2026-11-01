@@ -1,0 +1,360 @@
+[
+  {
+    "source": "images/craft-delivery.png",
+    "output": "images/optimized/craft-delivery.webp",
+    "originalBytes": 2239127,
+    "bytes": 188024,
+    "originalWidth": 1536,
+    "originalHeight": 1024
+  },
+  {
+    "source": "images/craft-harvest-v2.png",
+    "output": "images/optimized/craft-harvest-v2.webp",
+    "originalBytes": 2992209,
+    "bytes": 328926,
+    "originalWidth": 1536,
+    "originalHeight": 1024
+  },
+  {
+    "source": "images/craft-harvest.png",
+    "output": "images/optimized/craft-harvest.webp",
+    "originalBytes": 3252246,
+    "bytes": 400904,
+    "originalWidth": 1536,
+    "originalHeight": 1024
+  },
+  {
+    "source": "images/craft-journey.png",
+    "output": "images/optimized/craft-journey.webp",
+    "originalBytes": 2341341,
+    "bytes": 171146,
+    "originalWidth": 1448,
+    "originalHeight": 1086
+  },
+  {
+    "source": "images/craft-land-v2.png",
+    "output": "images/optimized/craft-land-v2.webp",
+    "originalBytes": 3086533,
+    "bytes": 388390,
+    "originalWidth": 1536,
+    "originalHeight": 1024
+  },
+  {
+    "source": "images/craft-land.png",
+    "output": "images/optimized/craft-land.webp",
+    "originalBytes": 3131526,
+    "bytes": 387286,
+    "originalWidth": 1536,
+    "originalHeight": 1024
+  },
+  {
+    "source": "images/craft-packing.png",
+    "output": "images/optimized/craft-packing.webp",
+    "originalBytes": 2691480,
+    "bytes": 252000,
+    "originalWidth": 1536,
+    "originalHeight": 1024
+  },
+  {
+    "source": "images/craft-quality-v2.png",
+    "output": "images/optimized/craft-quality-v2.webp",
+    "originalBytes": 3175290,
+    "bytes": 346378,
+    "originalWidth": 1536,
+    "originalHeight": 1024
+  },
+  {
+    "source": "images/craft-quality.png",
+    "output": "images/optimized/craft-quality.webp",
+    "originalBytes": 3144138,
+    "bytes": 363142,
+    "originalWidth": 1536,
+    "originalHeight": 1024
+  },
+  {
+    "source": "images/hero/botanical-atelier.png",
+    "output": "images/optimized/hero/botanical-atelier.webp",
+    "originalBytes": 2258810,
+    "bytes": 180196,
+    "originalWidth": 1672,
+    "originalHeight": 941
+  },
+  {
+    "source": "images/hero/roots-cash-scale.png",
+    "output": "images/optimized/hero/roots-cash-scale.webp",
+    "originalBytes": 2108528,
+    "bytes": 271578,
+    "originalWidth": 1536,
+    "originalHeight": 1024
+  },
+  {
+    "source": "images/hero/vetiver-dawn.png",
+    "output": "images/optimized/hero/vetiver-dawn.webp",
+    "originalBytes": 2635803,
+    "bytes": 273538,
+    "originalWidth": 1806,
+    "originalHeight": 871
+  },
+  {
+    "source": "images/hero/vetiver-still-life.png",
+    "output": "images/optimized/hero/vetiver-still-life.webp",
+    "originalBytes": 2639336,
+    "bytes": 256916,
+    "originalWidth": 1672,
+    "originalHeight": 941
+  },
+  {
+    "source": "images/hero-bg.png",
+    "output": "images/optimized/hero-bg.webp",
+    "originalBytes": 837559,
+    "bytes": 141332,
+    "originalWidth": 1024,
+    "originalHeight": 1024
+  },
+  {
+    "source": "images/hero-product.png",
+    "output": "images/optimized/hero-product.webp",
+    "originalBytes": 911699,
+    "bytes": 179004,
+    "originalWidth": 1024,
+    "originalHeight": 1024
+  },
+  {
+    "source": "images/products/flag.png",
+    "output": "images/optimized/products/flag.webp",
+    "originalBytes": 545964,
+    "bytes": 56148,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
+    "thumbnail": "images/optimized/products/flag-thumb.webp",
+    "thumbnailBytes": 5466
+  },
+  {
+    "source": "images/products/hanging-bells.png",
+    "output": "images/optimized/products/hanging-bells.webp",
+    "originalBytes": 3003380,
+    "bytes": 178912,
+    "originalWidth": 2066,
+    "originalHeight": 761,
+    "thumbnail": "images/optimized/products/hanging-bells-thumb.webp",
+    "thumbnailBytes": 12370
+  },
+  {
+    "source": "images/products/malai-flowers.png",
+    "output": "images/optimized/products/malai-flowers.webp",
+    "originalBytes": 589276,
+    "bytes": 75280,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
+    "thumbnail": "images/optimized/products/malai-flowers-thumb.webp",
+    "thumbnailBytes": 7712
+  },
+  {
+    "source": "images/products/malai-green.png",
+    "output": "images/optimized/products/malai-green.webp",
+    "originalBytes": 663780,
+    "bytes": 122456,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
+    "thumbnail": "images/optimized/products/malai-green-thumb.webp",
+    "thumbnailBytes": 11312
+  },
+  {
+    "source": "images/products/malai-neon.png",
+    "output": "images/optimized/products/malai-neon.webp",
+    "originalBytes": 605716,
+    "bytes": 78948,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
+    "thumbnail": "images/optimized/products/malai-neon-thumb.webp",
+    "thumbnailBytes": 7988
+  },
+  {
+    "source": "images/products/malai-pair.png",
+    "output": "images/optimized/products/malai-pair.webp",
+    "originalBytes": 644684,
+    "bytes": 101852,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
+    "thumbnail": "images/optimized/products/malai-pair-thumb.webp",
+    "thumbnailBytes": 10088
+  },
+  {
+    "source": "images/products/malai-royal.png",
+    "output": "images/optimized/products/malai-royal.webp",
+    "originalBytes": 665309,
+    "bytes": 86994,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
+    "thumbnail": "images/optimized/products/malai-royal-thumb.webp",
+    "thumbnailBytes": 8778
+  },
+  {
+    "source": "images/products/peacock.png",
+    "output": "images/optimized/products/peacock.webp",
+    "originalBytes": 631067,
+    "bytes": 88688,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
+    "thumbnail": "images/optimized/products/peacock-thumb.webp",
+    "thumbnailBytes": 9444
+  },
+  {
+    "source": "images/products/studio-v1/flag.png",
+    "output": "images/optimized/products/studio-v1/flag.webp",
+    "originalBytes": 1481019,
+    "bytes": 46538,
+    "originalWidth": 1254,
+    "originalHeight": 1254,
+    "thumbnail": "images/optimized/products/studio-v1/flag-thumb.webp",
+    "thumbnailBytes": 3582
+  },
+  {
+    "source": "images/products/studio-v1/malai-flowers.png",
+    "output": "images/optimized/products/studio-v1/malai-flowers.webp",
+    "originalBytes": 1836806,
+    "bytes": 106298,
+    "originalWidth": 1254,
+    "originalHeight": 1254,
+    "thumbnail": "images/optimized/products/studio-v1/malai-flowers-thumb.webp",
+    "thumbnailBytes": 8134
+  },
+  {
+    "source": "images/products/studio-v1/malai-green.png",
+    "output": "images/optimized/products/studio-v1/malai-green.webp",
+    "originalBytes": 2029226,
+    "bytes": 122062,
+    "originalWidth": 1254,
+    "originalHeight": 1254,
+    "thumbnail": "images/optimized/products/studio-v1/malai-green-thumb.webp",
+    "thumbnailBytes": 8656
+  },
+  {
+    "source": "images/products/studio-v1/malai-neon.png",
+    "output": "images/optimized/products/studio-v1/malai-neon.webp",
+    "originalBytes": 2123677,
+    "bytes": 144122,
+    "originalWidth": 1254,
+    "originalHeight": 1254,
+    "thumbnail": "images/optimized/products/studio-v1/malai-neon-thumb.webp",
+    "thumbnailBytes": 9606
+  },
+  {
+    "source": "images/products/studio-v1/malai-pair.png",
+    "output": "images/optimized/products/studio-v1/malai-pair.webp",
+    "originalBytes": 2163285,
+    "bytes": 148758,
+    "originalWidth": 1254,
+    "originalHeight": 1254,
+    "thumbnail": "images/optimized/products/studio-v1/malai-pair-thumb.webp",
+    "thumbnailBytes": 11620
+  },
+  {
+    "source": "images/products/studio-v1/malai-royal.png",
+    "output": "images/optimized/products/studio-v1/malai-royal.webp",
+    "originalBytes": 1855445,
+    "bytes": 124966,
+    "originalWidth": 1254,
+    "originalHeight": 1254,
+    "thumbnail": "images/optimized/products/studio-v1/malai-royal-thumb.webp",
+    "thumbnailBytes": 9152
+  },
+  {
+    "source": "images/products/studio-v1/peacock.png",
+    "output": "images/optimized/products/studio-v1/peacock.webp",
+    "originalBytes": 2036653,
+    "bytes": 122054,
+    "originalWidth": 1254,
+    "originalHeight": 1254,
+    "thumbnail": "images/optimized/products/studio-v1/peacock-thumb.webp",
+    "thumbnailBytes": 8102
+  },
+  {
+    "source": "images/products/studio-v1/toran-auspicious.png",
+    "output": "images/optimized/products/studio-v1/toran-auspicious.webp",
+    "originalBytes": 2244965,
+    "bytes": 148236,
+    "originalWidth": 1254,
+    "originalHeight": 1254,
+    "thumbnail": "images/optimized/products/studio-v1/toran-auspicious-thumb.webp",
+    "thumbnailBytes": 9360
+  },
+  {
+    "source": "images/products/studio-v1/toran-flowers.png",
+    "output": "images/optimized/products/studio-v1/toran-flowers.webp",
+    "originalBytes": 2105517,
+    "bytes": 177242,
+    "originalWidth": 1254,
+    "originalHeight": 1254,
+    "thumbnail": "images/optimized/products/studio-v1/toran-flowers-thumb.webp",
+    "thumbnailBytes": 11066
+  },
+  {
+    "source": "images/products/studio-v1/toran-fringe.png",
+    "output": "images/optimized/products/studio-v1/toran-fringe.webp",
+    "originalBytes": 2319341,
+    "bytes": 171054,
+    "originalWidth": 1254,
+    "originalHeight": 1254,
+    "thumbnail": "images/optimized/products/studio-v1/toran-fringe-thumb.webp",
+    "thumbnailBytes": 12570
+  },
+  {
+    "source": "images/products/studio-v1/vel.png",
+    "output": "images/optimized/products/studio-v1/vel.webp",
+    "originalBytes": 1147062,
+    "bytes": 38122,
+    "originalWidth": 1254,
+    "originalHeight": 1254,
+    "thumbnail": "images/optimized/products/studio-v1/vel-thumb.webp",
+    "thumbnailBytes": 2828
+  },
+  {
+    "source": "images/products/toran-auspicious.png",
+    "output": "images/optimized/products/toran-auspicious.webp",
+    "originalBytes": 2672634,
+    "bytes": 168988,
+    "originalWidth": 1672,
+    "originalHeight": 941,
+    "thumbnail": "images/optimized/products/toran-auspicious-thumb.webp",
+    "thumbnailBytes": 13644
+  },
+  {
+    "source": "images/products/toran-flowers.png",
+    "output": "images/optimized/products/toran-flowers.webp",
+    "originalBytes": 622838,
+    "bytes": 90830,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
+    "thumbnail": "images/optimized/products/toran-flowers-thumb.webp",
+    "thumbnailBytes": 7760
+  },
+  {
+    "source": "images/products/toran-fringe.png",
+    "output": "images/optimized/products/toran-fringe.webp",
+    "originalBytes": 675031,
+    "bytes": 108006,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
+    "thumbnail": "images/optimized/products/toran-fringe-thumb.webp",
+    "thumbnailBytes": 14404
+  },
+  {
+    "source": "images/products/vel.png",
+    "output": "images/optimized/products/vel.webp",
+    "originalBytes": 538188,
+    "bytes": 47256,
+    "originalWidth": 1024,
+    "originalHeight": 1024,
+    "thumbnail": "images/optimized/products/vel-thumb.webp",
+    "thumbnailBytes": 4594
+  },
+  {
+    "source": "images/vetiver-roots.png",
+    "output": "images/optimized/vetiver-roots.webp",
+    "originalBytes": 855084,
+    "bytes": 154220,
+    "originalWidth": 1024,
+    "originalHeight": 1024
+  }
+]

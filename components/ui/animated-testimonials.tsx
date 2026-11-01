@@ -54,7 +54,7 @@ export function AnimatedTestimonials({
             <Quote size={38} strokeWidth={1.2} className="vt-quote-mark" aria-hidden="true" /><blockquote>{review.content}</blockquote>
             <Separator className="vt:my-6" /><p className="vt-review-name">{review.name}</p>
           </motion.article>)}
-        </div> : <div className="vt-review-empty"><Leaf size={38} strokeWidth={1.2} aria-hidden="true" /><h3>Your story belongs here.</h3><p>Our customer stories are just beginning. Once feedback has been reviewed and approved, you can read it here.</p><span>No published reviews yet.</span></div>}
+        </div> : <div className="vt-review-empty"><Leaf size={38} strokeWidth={1.2} aria-hidden="true" /><h3>No reviews yet.</h3><p>Purchased from us? Share your experience.</p></div>}
         {testimonials.length > 1 && <div className="vt-review-dots">{testimonials.map((review, i) => <button type="button" key={review.id} onClick={() => choose(i)} aria-label={"Read review by " + review.name} aria-pressed={i === index}><span /></button>)}</div>}
       </div>
     </div>

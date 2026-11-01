@@ -3,10 +3,7 @@ const assert = require('node:assert/strict');
 const origin = 'http://127.0.0.1:4178';
 const fill = async page => {
   await page.locator('#request-name').fill('Test Customer');
-  await page.locator('#request-phone').fill('+91 90000 00000');
-  await page.locator('#request-city').fill('Chennai');
-  await page.locator('#request-pin').fill('600001');
-  await page.locator('#request-consent').check();
+  await page.locator('#request-phone').fill('90000 00000');
 };
 (async () => {
   const browser = await chromium.launch();
@@ -17,17 +14,19 @@ const fill = async page => {
       page.on('pageerror', e => errors.push(e.message));
       await page.goto(origin + '/products.html');
       await page.locator('[data-enquire]').first().click();
-      assert.match(await page.locator('#bulk-enquiry-title').textContent(), /plan your order/);
+      assert.match(await page.locator('#bulk-enquiry-title').textContent(), /Reserve your piece/);
       assert.equal(await page.locator('#enquiry-product').inputValue(), 'Wedding Garland Pair');
       await fill(page);
       await page.locator('#enquiry-quantity').fill('2');
-      await page.locator('#request-add').click();
-      await page.locator('.request-item-extra select').selectOption({ label: 'Royal Vetiver Garland' });
+      await page.locator('#request-company').evaluate(e => { e.value = 'accidental autofill'; });
+      await page.locator('.enquiry-submit').click();
+      assert.match(await page.locator('#request-status').textContent(), /cleared it/);
+      assert.equal(await page.locator('#request-company').inputValue(), '');
+      assert.equal(await page.locator('#enquiry-preview').isVisible(), false);
       await page.locator('.enquiry-submit').click();
       assert.equal(await page.locator('#enquiry-preview').isVisible(), true);
       assert.match(await page.locator('#request-status').textContent(), /not sent/);
       assert.match(await page.locator('#prepared-message').inputValue(), /Wedding Garland Pair — quantity: 2/);
-      assert.match(await page.locator('#prepared-message').inputValue(), /Royal Vetiver Garland/);
       assert.match(await page.locator('#request-email').getAttribute('href'), /^mailto:akashvetiverexport@gmail.com/);
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
       await page.screenshot({ path: `C:/Users/avina/order-request-${width}.png` });
@@ -39,7 +38,10 @@ const fill = async page => {
       await page.locator('[data-bulk-enquiry]').first().click();
       assert.match(await page.locator('#bulk-enquiry-title').textContent(), /bulk order/);
       await fill(page);
+      await page.locator('#request-add').click();
+      await page.locator('.request-item-extra select').selectOption({ label: 'Royal Vetiver Garland' });
       await page.locator('.enquiry-submit').click();
+      assert.match(await page.locator('#prepared-message').inputValue(), /Royal Vetiver Garland/);
       assert.match(await page.locator('#prepared-message').inputValue(), /bulk-order quote/);
       await page.close();
       assert.deepEqual(errors, []);
@@ -63,6 +65,10 @@ const fill = async page => {
     await page.waitForFunction(() => document.querySelector('#request-status').textContent.includes('couldn’t confirm'));
     assert.equal(await page.locator('#request-name').inputValue(), 'Test Customer');
     assert.equal(await page.locator('#request-success').isVisible(), false);
+    assert.equal(await page.locator('#enquiry-preview').isVisible(), true);
+    assert.match(await page.locator('label[for="prepared-message"]').innerText(), /receipt not confirmed/);
+    assert.match(await page.locator('#request-email').getAttribute('href'), /^mailto:akashvetiverexport@gmail.com/);
+    assert.match(await page.locator('#prepared-message').inputValue(), /check before creating a duplicate/);
     mode = 'invalid';
     await page.locator('.enquiry-submit').click();
     await page.waitForFunction(() => !document.querySelector('#enquiry-form').hasAttribute('aria-busy'));
@@ -85,7 +91,8 @@ const fill = async page => {
     await page.locator('#request-company').evaluate(el => el.value = 'spam');
     await page.locator('.enquiry-submit').click();
     assert.equal(attempts.length, 3);
-    assert.match(await page.locator('#request-status').textContent(), /could not process/);
+    assert.match(await page.locator('#request-status').textContent(), /cleared it/);
+    assert.equal(await page.locator('#request-company').inputValue(), '');
     console.log('PASS mocked API: failure preservation, acknowledgement validation, duplicate-submit guard, stable retry key, receipt, reset, honeypot');
     await page.close();
   } finally { await browser.close(); }

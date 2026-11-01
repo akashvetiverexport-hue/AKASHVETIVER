@@ -1,0 +1,64 @@
+{
+  "site": "https://akashvetiver.akashvetiverexport.workers.dev/",
+  "sitemaps_checked": [
+    {
+      "url": "https://akashvetiver.akashvetiverexport.workers.dev/sitemap.xml",
+      "status": 404,
+      "final_url": "https://akashvetiver.akashvetiverexport.workers.dev/sitemap.xml",
+      "redirects": [],
+      "type": null,
+      "url_count": 0,
+      "sitemap_count": 0,
+      "error": null
+    },
+    {
+      "url": "https://akashvetiver.akashvetiverexport.workers.dev/sitemap_index.xml",
+      "status": 404,
+      "final_url": "https://akashvetiver.akashvetiverexport.workers.dev/sitemap_index.xml",
+      "redirects": [],
+      "type": null,
+      "url_count": 0,
+      "sitemap_count": 0,
+      "error": null
+    },
+    {
+      "url": "https://akashvetiver.akashvetiverexport.workers.dev/sitemap-index.xml",
+      "status": 404,
+      "final_url": "https://akashvetiver.akashvetiverexport.workers.dev/sitemap-index.xml",
+      "redirects": [],
+      "type": null,
+      "url_count": 0,
+      "sitemap_count": 0,
+      "error": null
+    }
+  ],
+  "urls": [],
+  "summary": {
+    "sitemaps": 3,
+    "urls": 0,
+    "indexes": 0,
+    "issues": 3
+  },
+  "issues": [
+    {
+      "severity": "error",
+      "message": "Sitemap returned HTTP 404",
+      "url": "https://akashvetiver.akashvetiverexport.workers.dev/sitemap.xml",
+      "evidence": null
+    },
+    {
+      "severity": "error",
+      "message": "Sitemap returned HTTP 404",
+      "url": "https://akashvetiver.akashvetiverexport.workers.dev/sitemap_index.xml",
+      "evidence": null
+    },
+    {
+      "severity": "error",
+      "message": "Sitemap returned HTTP 404",
+      "url": "https://akashvetiver.akashvetiverexport.workers.dev/sitemap-index.xml",
+      "evidence": null
+    }
+  ]
+}
+
+STDERR:

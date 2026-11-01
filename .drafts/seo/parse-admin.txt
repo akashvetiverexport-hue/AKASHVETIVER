@@ -1,0 +1,75 @@
+{
+  "title": "Workshop | Akash Vetiver Export",
+  "meta_description": null,
+  "meta_robots": "noindex,nofollow",
+  "x_robots_tag": null,
+  "canonical": null,
+  "lang": "en",
+  "charset": "utf-8",
+  "viewport": "width=device-width,initial-scale=1",
+  "favicon": null,
+  "h1": [
+    "Product studio."
+  ],
+  "h2": [
+    "Your pieces",
+    "Add a product"
+  ],
+  "h3": [],
+  "h4": [],
+  "h5": [],
+  "h6": [],
+  "images": [
+    {
+      "src": "",
+      "alt": "Product photo preview",
+      "width": null,
+      "height": null,
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "",
+      "alt": "Current free gift",
+      "width": null,
+      "height": null,
+      "is_responsive_fill": false,
+      "loading": null
+    }
+  ],
+  "links": {
+    "internal": [
+      {
+        "href": "https://akashvetiver.akashvetiverexport.workers.dev/index.html",
+        "text": "AKASH VETIVER EXPORT",
+        "rel": []
+      },
+      {
+        "href": "https://akashvetiver.akashvetiverexport.workers.dev/products.html",
+        "text": "View collection",
+        "rel": [
+          "noopener"
+        ]
+      }
+    ],
+    "external": []
+  },
+  "pagination": {
+    "prev": null,
+    "next": null
+  },
+  "resource_hints": {
+    "preload": [],
+    "preconnect": [],
+    "dns-prefetch": [],
+    "prefetch": [],
+    "prerender": []
+  },
+  "schema": [],
+  "open_graph": {},
+  "twitter_card": {},
+  "word_count": 217,
+  "hreflang": []
+}
+
+STDERR:

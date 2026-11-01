@@ -1,0 +1,14 @@
+{
+  "url": "https://akashvetiver.akashvetiverexport.workers.dev",
+  "strategy": "mobile",
+  "performance_score": null,
+  "metrics": {},
+  "opportunities": [],
+  "diagnostics": [],
+  "field_data_available": false,
+  "error": "Rate limited by Google API. Wait a few minutes or add an API key."
+}
+
+STDERR:
+  [pagespeed] Rate limited by API. Retrying in 3s...
+  [pagespeed] Rate limited by API. Retrying in 6s...

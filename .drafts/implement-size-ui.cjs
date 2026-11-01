@@ -1,0 +1,25 @@
+const fs=require('fs');let s=fs.readFileSync('commerce.js','utf8');s=s.replace("const active=p=>!!p?.offers_enabled", "const active=p=>!p?.size_options?.length&&!!p?.offers_enabled");s=s.replace("products().find(x=>x.id===p.combo_product_id):null", "products().find(x=>x.id===p.combo_product_id&&!x.size_options?.length):null");s=s.replace(' const price=p=>', ' const legacyPrice=p=>');const marker=' const badge=';s=s.replace(marker,` const sizeList=p=>Array.isArray(p?.size_options)?p.size_options:[];
+ const selections=new Map();
+ const selected=p=>sizeList(p).find(o=>o.id===selections.get(p.id));
+ const unit=p=>p?.pricing_unit?' / '+p.pricing_unit:'';
+ const price=p=>sizeList(p).length?'<span class="piece-price">From '+money(Math.min(...sizeList(p).map(o=>o.price)))+'</span>':legacyPrice(p)+(p?.price>0?'<span class="price-unit">'+escape(unit(p))+'</span>':'');
+${marker}`);
+s=s.replace("  document.getElementById('enquire-combo')",`  if(sizeList(p).length){
+   const group=document.createElement('fieldset');group.className='size-choices';const legend=document.createElement('legend');legend.textContent='Choose size / weight';group.append(legend);
+   const output=document.createElement('p');output.className='size-price-output';output.setAttribute('aria-live','polite');
+   const update=()=>{const o=selected(p);area.querySelector('.piece-price').textContent=o?money(o.price)+' for '+o.label:'From '+money(Math.min(...sizeList(p).map(x=>x.price)));output.textContent=o?'Selected: '+o.label:'Select a size to see its price.';group.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.sizeId===o?.id)))};
+   for(const o of sizeList(p)){const button=document.createElement('button');button.type='button';button.textContent=o.label;button.dataset.sizeId=o.id;button.onclick=()=>{selections.set(p.id,o.id);update()};group.append(button)}
+   area.append(group,output);update();
+  }
+  document.getElementById('enquire-combo')`);
+s=s.replace("  const other=combo?partner(p):null;", "  const other=combo?partner(p):null;\n  if(sizeList(p).length){const o=selected(p);return o?money(o.price)+' for '+o.label:'From '+money(Math.min(...sizeList(p).map(x=>x.price)))+' - choose a size';}");s=s.replace("+(other?'", "+(!other?unit(p):'')+(other?'");s=s.replace('money,describe};','money,describe,sizeList,selections,selected};');fs.writeFileSync('commerce.js',s);
+s=fs.readFileSync('request-flow.js','utf8');const start=s.indexOf('  const refreshOfferSummary=');const end=s.indexOf('  items.addEventListener',start);s=s.slice(0,start)+`  const syncSizes=(row,fromPopup=false)=>{
+    const choice=row.querySelector('select');const p=window.VETTIVER_CATALOG?.products.find(p=>p.id===choice.selectedOptions[0]?.dataset.productId);const sizes=window.VETTIVER_COMMERCE?.sizeList(p)||[];
+    let group=row.querySelector('.request-size-group');
+    if(!sizes.length){group?.remove();return;}
+    if(!group||group.dataset.productId!==p.id){group?.remove();group=document.createElement('div');group.className='request-size-group';group.dataset.productId=p.id;const label=document.createElement('label');const select=document.createElement('select');select.className='request-size';select.id=choice.id+'-size';label.htmlFor=select.id;label.textContent='Size / weight';select.required=true;select.add(new Option('Choose a size / weight',''));for(const o of sizes)select.add(new Option(o.label+' - '+window.VETTIVER_COMMERCE.money(o.price),o.id));group.append(label,select);row.append(group);}
+    if(fromPopup)group.querySelector('select').value=window.VETTIVER_COMMERCE.selections.get(p.id)||'';
+  };
+  const refreshOfferSummary=()=>{const summaries=[];for(const row of items.children){syncSizes(row);const option=row.querySelector('select').selectedOptions[0];const product=window.VETTIVER_CATALOG?.products.find(p=>p.id===option?.dataset.productId);if(!product)continue;const size=product.size_options?.find(o=>o.id===row.querySelector('.request-size')?.value);const qty=Number(row.querySelector('input').value)||1;summaries.push(size?size.label+': '+window.VETTIVER_COMMERCE.money(size.price)+' each; '+qty+' = '+window.VETTIVER_COMMERCE.money(size.price*qty):window.VETTIVER_COMMERCE.describe(product,option.dataset.offerType==='combo'));}offerSummary.textContent=summaries.join('\\n');};
+`+s.slice(end);
+s=s.replace("    firstSelect.required = kind === 'order';", "    firstSelect.required = kind === 'order';\n    syncSizes(items.firstElementChild,true);");s=s.replace("      lines.push({ productId:", "      const product=window.VETTIVER_CATALOG?.products.find(p=>p.id===option.id);const sizes=product?.size_options||[];const size=sizes.find(o=>o.id===row.querySelector('.request-size')?.value);if(sizes.length&&!size)return invalid(row.querySelector('.request-size'),'Choose a size / weight.');\n      lines.push({ ...(size?{optionId:size.id}:{}), productId:");s=s.replace("name: option.name || 'Help me choose', quantity", "name: (option.name || 'Help me choose')+(size?' - '+size.label:''), quantity");fs.writeFileSync('request-flow.js',s);

@@ -1,0 +1,6 @@
+project_id = "akashvetiver"
+
+[auth]
+site_url = "https://akashvetiver.akashvetiverexport.workers.dev"
+additional_redirect_urls = ["https://akashvetiver.akashvetiverexport.workers.dev/admin.html"]
+enable_signup = false

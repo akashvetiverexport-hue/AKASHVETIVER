@@ -24,10 +24,10 @@ const ICONS: Record<SocialIcon, React.ReactNode> = {
 }
 const DEFAULT_COLUMNS: FooterColumn[] = [
   { title: "Explore", links: [{ label: "Our collection", href: "#products" }, { label: "Our roots", href: "#about" }, { label: "Customer stories", href: "#reviews" }] },
-  { title: "Let's talk", links: [{ label: "Make an enquiry", href: "#contact" }, { label: "Share feedback", href: "#feedback-form" }, { label: "Good to know", href: "#questions-title" }, { label: "Back to the top", href: "#home" }] }
+  { title: "Let's talk", links: [{ label: "Reserve a piece", href: "#contact" }, { label: "Share feedback", href: "#feedback-form" }, { label: "Good to know", href: "#questions-title" }, { label: "Privacy & customer information", href: "legal.html" }, { label: "Back to the top", href: "#home" }] }
 ]
 export default function BeamWordmarkFooter({
-  brand = "Vettiver", wordmark, company = "Akash Vetiver Export", year = new Date().getFullYear(),
+  brand = "Akash Vetiver Export", wordmark = "AKASH VETIVER", company = "Akash Vetiver Export", year = new Date().getFullYear(),
   socials = [], credits = [{ label: "Natural roots. Thoughtful hands." }, { lead: "Handcrafted in ", label: "Tamil Nadu, India" }],
   columns = DEFAULT_COLUMNS, onLinkClick, cut = .1, background = "#08170f", ink = "#f4f8ef",
   muted = "#bacbb5", accent = "#b1cd8b", wordTop = "#668b54", wordFoot = "#152d1c",

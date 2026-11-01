@@ -1,0 +1,382 @@
+{
+  "title": "Akash Vetiver Export | Handcrafted Vetiver",
+  "meta_description": "Discover family-made vetiver garlands, door hangings and sacred crafts from Tamil Nadu. Explore the Akash Vetiver collection and enquire about delivery across India.",
+  "meta_robots": null,
+  "x_robots_tag": null,
+  "canonical": null,
+  "lang": "en",
+  "charset": "utf-8",
+  "viewport": "width=device-width, initial-scale=1",
+  "favicon": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/plant.svg",
+  "h1": [
+    "Rooted innature."
+  ],
+  "h2": [
+    "Nature, thoughtfully made.",
+    "More pieces.One thoughtful gesture.",
+    "From the landto qualityvetiver.",
+    "Customer stories.",
+    "Good to know."
+  ],
+  "h3": [
+    "The Land",
+    "Harvest & Clean",
+    "Quality Vetiver",
+    "Packed with care",
+    "Delivered to you",
+    "Let\u00e2\u0080\u0099s plan your order."
+  ],
+  "h4": [
+    "Request received."
+  ],
+  "h5": [],
+  "h6": [],
+  "images": [
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/logo-transparent.png",
+      "alt": "",
+      "width": "60",
+      "height": "72",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/arrow-up-right.svg",
+      "alt": "",
+      "width": "18",
+      "height": "18",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/x.svg",
+      "alt": "",
+      "width": "24",
+      "height": "24",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/images/optimized/hero/vetiver-dawn.webp",
+      "alt": "Golden vetiver roots resting on stone in the morning light",
+      "width": "1806",
+      "height": "871",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/arrow-up-right.svg",
+      "alt": "",
+      "width": "22",
+      "height": "22",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/arrow-right.svg",
+      "alt": "",
+      "width": "20",
+      "height": "20",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/arrow-right.svg",
+      "alt": "",
+      "width": "20",
+      "height": "20",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "",
+      "alt": "",
+      "width": "1200",
+      "height": "800",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/images/optimized/craft-land-v2.webp",
+      "alt": "",
+      "width": "1200",
+      "height": "800",
+      "is_responsive_fill": false,
+      "loading": "lazy"
+    },
+    {
+      "src": "",
+      "alt": "",
+      "width": "1200",
+      "height": "800",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/images/optimized/craft-harvest-v2.webp",
+      "alt": "",
+      "width": "1200",
+      "height": "800",
+      "is_responsive_fill": false,
+      "loading": "lazy"
+    },
+    {
+      "src": "",
+      "alt": "",
+      "width": "1200",
+      "height": "800",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/images/optimized/craft-quality-v2.webp",
+      "alt": "",
+      "width": "1200",
+      "height": "800",
+      "is_responsive_fill": false,
+      "loading": "lazy"
+    },
+    {
+      "src": "",
+      "alt": "",
+      "width": "1200",
+      "height": "800",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/images/optimized/craft-packing.webp",
+      "alt": "",
+      "width": "1200",
+      "height": "800",
+      "is_responsive_fill": false,
+      "loading": "lazy"
+    },
+    {
+      "src": "",
+      "alt": "",
+      "width": "1200",
+      "height": "800",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/images/optimized/craft-delivery.webp",
+      "alt": "",
+      "width": "1200",
+      "height": "800",
+      "is_responsive_fill": false,
+      "loading": "lazy"
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/arrow-up-right.svg",
+      "alt": "",
+      "width": "20",
+      "height": "20",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/plus.svg",
+      "alt": "",
+      "width": "22",
+      "height": "22",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/plus.svg",
+      "alt": "",
+      "width": "22",
+      "height": "22",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/plus.svg",
+      "alt": "",
+      "width": "22",
+      "height": "22",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/plus.svg",
+      "alt": "",
+      "width": "22",
+      "height": "22",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/plus.svg",
+      "alt": "",
+      "width": "22",
+      "height": "22",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/plus.svg",
+      "alt": "",
+      "width": "22",
+      "height": "22",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/plus.svg",
+      "alt": "",
+      "width": "22",
+      "height": "22",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/plus.svg",
+      "alt": "",
+      "width": "22",
+      "height": "22",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/plus.svg",
+      "alt": "",
+      "width": "22",
+      "height": "22",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/arrow-up-right.svg",
+      "alt": "",
+      "width": "21",
+      "height": "21",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/x.svg",
+      "alt": "",
+      "width": "24",
+      "height": "24",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "",
+      "alt": "",
+      "width": "1024",
+      "height": "1024",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/arrow-up-right.svg",
+      "alt": "",
+      "width": "20",
+      "height": "20",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/plus.svg",
+      "alt": "",
+      "width": "18",
+      "height": "18",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/arrow-up-right.svg",
+      "alt": "",
+      "width": "21",
+      "height": "21",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/arrow-up-right.svg",
+      "alt": "",
+      "width": "18",
+      "height": "18",
+      "is_responsive_fill": false,
+      "loading": null
+    }
+  ],
+  "links": {
+    "internal": [
+      {
+        "href": "https://akashvetiver.akashvetiverexport.workers.dev/products.html",
+        "text": "Explore the collection",
+        "rel": []
+      },
+      {
+        "href": "https://akashvetiver.akashvetiverexport.workers.dev/products.html",
+        "text": "View all pieces",
+        "rel": []
+      },
+      {
+        "href": "https://akashvetiver.akashvetiverexport.workers.dev/products.html",
+        "text": "Find your piece",
+        "rel": []
+      }
+    ],
+    "external": [
+      {
+        "href": "mailto:akashvetiverexport@gmail.com",
+        "text": "Open email app",
+        "rel": []
+      }
+    ]
+  },
+  "pagination": {
+    "prev": null,
+    "next": null
+  },
+  "resource_hints": {
+    "preload": [
+      {
+        "href": "https://akashvetiver.akashvetiverexport.workers.dev/assets/fonts/outfit-regular.ttf",
+        "as": "font",
+        "type": "font/ttf",
+        "crossorigin": ""
+      },
+      {
+        "href": "https://akashvetiver.akashvetiverexport.workers.dev/assets/fonts/outfit-semibold.ttf",
+        "as": "font",
+        "type": "font/ttf",
+        "crossorigin": ""
+      },
+      {
+        "href": "https://akashvetiver.akashvetiverexport.workers.dev/images/optimized/hero/vetiver-dawn.webp",
+        "as": "image",
+        "type": null,
+        "crossorigin": null
+      },
+      {
+        "href": "https://akashvetiver.akashvetiverexport.workers.dev/images/optimized/hero/vetiver-golden-hour-mobile-940.webp",
+        "as": "image",
+        "type": null,
+        "crossorigin": null
+      }
+    ],
+    "preconnect": [],
+    "dns-prefetch": [],
+    "prefetch": [],
+    "prerender": []
+  },
+  "schema": [],
+  "open_graph": {
+    "og:title": "Akash Vetiver Export | Handcrafted Vetiver",
+    "og:description": "Natural roots. Thoughtful hands. Explore handcrafted vetiver garlands, home d\u00c3\u00a9cor and ceremonial pieces.",
+    "og:type": "website",
+    "og:image": "images/optimized/products/studio-v1/malai-pair.webp"
+  },
+  "twitter_card": {},
+  "word_count": 590,
+  "hreflang": []
+}
+
+STDERR:

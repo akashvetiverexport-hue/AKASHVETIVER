@@ -1,0 +1,534 @@
+{
+  "title": "All Vetiver Products | Akash Vetiver Export",
+  "meta_description": "Discover family-made vetiver garlands, door hangings and sacred crafts from Tamil Nadu. Explore the Akash Vetiver collection and enquire about delivery across India.",
+  "meta_robots": null,
+  "x_robots_tag": null,
+  "canonical": null,
+  "lang": "en",
+  "charset": "utf-8",
+  "viewport": "width=device-width, initial-scale=1",
+  "favicon": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/plant.svg",
+  "h1": [
+    "Our vetiver collection."
+  ],
+  "h2": [
+    "Pieces in this collection"
+  ],
+  "h3": [
+    "Wedding Garland Pair",
+    "Royal Vetiver Garland",
+    "Green & Gold Garland",
+    "Neon Vetiver Garland",
+    "Flower Vetiver Garland",
+    "Vetiver Peacock (Mayil)",
+    "Vetiver Door Curtain",
+    "Flower Toran",
+    "Vetiver Bell Hanging",
+    "Vetiver Vel (Spear)",
+    "Vetiver Kodi (Flag)",
+    "Auspicious Toran",
+    "No pieces found.",
+    "Let\u00e2\u0080\u0099s plan your order."
+  ],
+  "h4": [
+    "Request received."
+  ],
+  "h5": [],
+  "h6": [],
+  "images": [
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/arrow-up-right.svg",
+      "alt": "",
+      "width": "18",
+      "height": "18",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/x.svg",
+      "alt": "",
+      "width": "24",
+      "height": "24",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/magnifying-glass.svg",
+      "alt": "",
+      "width": "20",
+      "height": "20",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/arrow-up-right.svg",
+      "alt": "",
+      "width": "18",
+      "height": "18",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/images/optimized/products/studio-v1/malai-pair-thumb.webp",
+      "alt": "Vetiver wedding garland pair with purple and orange thread",
+      "width": "1200",
+      "height": "1200",
+      "is_responsive_fill": false,
+      "loading": "eager"
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/plus.svg",
+      "alt": "",
+      "width": "21",
+      "height": "21",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/arrow-up-right.svg",
+      "alt": "",
+      "width": "18",
+      "height": "18",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/images/optimized/products/studio-v1/malai-royal-thumb.webp",
+      "alt": "Vetiver garland with maroon thread and gold ornaments",
+      "width": "1200",
+      "height": "1200",
+      "is_responsive_fill": false,
+      "loading": "eager"
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/plus.svg",
+      "alt": "",
+      "width": "21",
+      "height": "21",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/arrow-up-right.svg",
+      "alt": "",
+      "width": "18",
+      "height": "18",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/images/optimized/products/studio-v1/malai-green-thumb.webp",
+      "alt": "Vetiver garland with green thread and gold roses",
+      "width": "1200",
+      "height": "1200",
+      "is_responsive_fill": false,
+      "loading": "lazy"
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/plus.svg",
+      "alt": "",
+      "width": "21",
+      "height": "21",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/arrow-up-right.svg",
+      "alt": "",
+      "width": "18",
+      "height": "18",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/images/optimized/products/studio-v1/malai-neon-thumb.webp",
+      "alt": "Vetiver garland with neon green and pink thread",
+      "width": "1200",
+      "height": "1200",
+      "is_responsive_fill": false,
+      "loading": "lazy"
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/plus.svg",
+      "alt": "",
+      "width": "21",
+      "height": "21",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/arrow-up-right.svg",
+      "alt": "",
+      "width": "18",
+      "height": "18",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/images/optimized/products/studio-v1/malai-flowers-thumb.webp",
+      "alt": "Vetiver garland with flower decorations",
+      "width": "1200",
+      "height": "1200",
+      "is_responsive_fill": false,
+      "loading": "lazy"
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/plus.svg",
+      "alt": "",
+      "width": "21",
+      "height": "21",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/arrow-up-right.svg",
+      "alt": "",
+      "width": "18",
+      "height": "18",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/images/optimized/products/studio-v1/peacock-thumb.webp",
+      "alt": "Vetiver root peacock sculpture",
+      "width": "1200",
+      "height": "1200",
+      "is_responsive_fill": false,
+      "loading": "lazy"
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/plus.svg",
+      "alt": "",
+      "width": "21",
+      "height": "21",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/arrow-up-right.svg",
+      "alt": "",
+      "width": "18",
+      "height": "18",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/images/optimized/products/studio-v1/toran-fringe-thumb.webp",
+      "alt": "Vetiver root door hanging with natural fringe",
+      "width": "1200",
+      "height": "1200",
+      "is_responsive_fill": false,
+      "loading": "lazy"
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/plus.svg",
+      "alt": "",
+      "width": "21",
+      "height": "21",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/arrow-up-right.svg",
+      "alt": "",
+      "width": "18",
+      "height": "18",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/images/optimized/products/studio-v1/toran-flowers-thumb.webp",
+      "alt": "Vetiver door hanging with flower decorations",
+      "width": "1200",
+      "height": "1200",
+      "is_responsive_fill": false,
+      "loading": "lazy"
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/plus.svg",
+      "alt": "",
+      "width": "21",
+      "height": "21",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/arrow-up-right.svg",
+      "alt": "",
+      "width": "18",
+      "height": "18",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/images/optimized/products/hanging-bells-thumb.webp",
+      "alt": "Vetiver circular hanging decoration with brass bells",
+      "width": "1200",
+      "height": "1200",
+      "is_responsive_fill": false,
+      "loading": "lazy"
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/plus.svg",
+      "alt": "",
+      "width": "21",
+      "height": "21",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/arrow-up-right.svg",
+      "alt": "",
+      "width": "18",
+      "height": "18",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/images/optimized/products/studio-v1/vel-thumb.webp",
+      "alt": "Vetiver root vel - Lord Murugan's spear",
+      "width": "1200",
+      "height": "1200",
+      "is_responsive_fill": false,
+      "loading": "lazy"
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/plus.svg",
+      "alt": "",
+      "width": "21",
+      "height": "21",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/arrow-up-right.svg",
+      "alt": "",
+      "width": "18",
+      "height": "18",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/images/optimized/products/studio-v1/flag-thumb.webp",
+      "alt": "Vetiver root ceremonial flag",
+      "width": "1200",
+      "height": "1200",
+      "is_responsive_fill": false,
+      "loading": "lazy"
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/plus.svg",
+      "alt": "",
+      "width": "21",
+      "height": "21",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/arrow-up-right.svg",
+      "alt": "",
+      "width": "18",
+      "height": "18",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/images/optimized/products/studio-v1/toran-auspicious-thumb.webp",
+      "alt": "Vetiver door hanging with auspicious symbols",
+      "width": "1200",
+      "height": "1200",
+      "is_responsive_fill": false,
+      "loading": "lazy"
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/plus.svg",
+      "alt": "",
+      "width": "21",
+      "height": "21",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/arrow-up-right.svg",
+      "alt": "",
+      "width": "18",
+      "height": "18",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/arrow-right.svg",
+      "alt": "",
+      "width": "20",
+      "height": "20",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/arrow-up-right.svg",
+      "alt": "",
+      "width": "20",
+      "height": "20",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/x.svg",
+      "alt": "",
+      "width": "24",
+      "height": "24",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "",
+      "alt": "",
+      "width": "1024",
+      "height": "1024",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/arrow-up-right.svg",
+      "alt": "",
+      "width": "20",
+      "height": "20",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/arrow-up-right.svg",
+      "alt": "",
+      "width": "18",
+      "height": "18",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/plus.svg",
+      "alt": "",
+      "width": "18",
+      "height": "18",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/arrow-up-right.svg",
+      "alt": "",
+      "width": "21",
+      "height": "21",
+      "is_responsive_fill": false,
+      "loading": null
+    },
+    {
+      "src": "https://akashvetiver.akashvetiverexport.workers.dev/assets/icons/arrow-up-right.svg",
+      "alt": "",
+      "width": "18",
+      "height": "18",
+      "is_responsive_fill": false,
+      "loading": null
+    }
+  ],
+  "links": {
+    "internal": [
+      {
+        "href": "https://akashvetiver.akashvetiverexport.workers.dev/index.html#home",
+        "text": "AKASH VETIVEREXPORT",
+        "rel": []
+      },
+      {
+        "href": "https://akashvetiver.akashvetiverexport.workers.dev/index.html#home",
+        "text": "Home",
+        "rel": []
+      },
+      {
+        "href": "https://akashvetiver.akashvetiverexport.workers.dev/index.html#contact",
+        "text": "Bulk orders",
+        "rel": []
+      },
+      {
+        "href": "https://akashvetiver.akashvetiverexport.workers.dev/index.html#about",
+        "text": "About",
+        "rel": []
+      },
+      {
+        "href": "https://akashvetiver.akashvetiverexport.workers.dev/index.html#reviews",
+        "text": "Reviews",
+        "rel": []
+      },
+      {
+        "href": "https://akashvetiver.akashvetiverexport.workers.dev/index.html#contact",
+        "text": "Let\u00e2\u0080\u0099s talk",
+        "rel": []
+      },
+      {
+        "href": "https://akashvetiver.akashvetiverexport.workers.dev/index.html#home",
+        "text": "Home",
+        "rel": []
+      },
+      {
+        "href": "https://akashvetiver.akashvetiverexport.workers.dev/index.html#contact",
+        "text": "Bulk orders",
+        "rel": []
+      },
+      {
+        "href": "https://akashvetiver.akashvetiverexport.workers.dev/index.html#about",
+        "text": "About",
+        "rel": []
+      },
+      {
+        "href": "https://akashvetiver.akashvetiverexport.workers.dev/index.html#reviews",
+        "text": "Reviews",
+        "rel": []
+      },
+      {
+        "href": "https://akashvetiver.akashvetiverexport.workers.dev/index.html",
+        "text": "Back home",
+        "rel": []
+      }
+    ],
+    "external": [
+      {
+        "href": "mailto:akashvetiverexport@gmail.com",
+        "text": "Open email app",
+        "rel": []
+      }
+    ]
+  },
+  "pagination": {
+    "prev": null,
+    "next": null
+  },
+  "resource_hints": {
+    "preload": [
+      {
+        "href": "https://akashvetiver.akashvetiverexport.workers.dev/assets/fonts/outfit-regular.ttf",
+        "as": "font",
+        "type": "font/ttf",
+        "crossorigin": ""
+      },
+      {
+        "href": "https://akashvetiver.akashvetiverexport.workers.dev/assets/fonts/outfit-semibold.ttf",
+        "as": "font",
+        "type": "font/ttf",
+        "crossorigin": ""
+      }
+    ],
+    "preconnect": [],
+    "dns-prefetch": [],
+    "prefetch": [],
+    "prerender": []
+  },
+  "schema": [],
+  "open_graph": {
+    "og:title": "Akash Vetiver Export | Handcrafted Vetiver",
+    "og:description": "Natural roots. Thoughtful hands. Explore handcrafted vetiver garlands, home d\u00c3\u00a9cor and ceremonial pieces.",
+    "og:type": "website",
+    "og:image": "images/optimized/products/studio-v1/malai-pair.webp"
+  },
+  "twitter_card": {},
+  "word_count": 502,
+  "hreflang": []
+}
+
+STDERR:

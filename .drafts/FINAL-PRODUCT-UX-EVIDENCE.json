@@ -1,0 +1,159 @@
+{
+  "origin": "https://akashvetiver.akashvetiverexport.workers.dev",
+  "checkedAt": "2026-10-31T08:22:32.607Z",
+  "pages": [
+    {
+      "width": 320,
+      "label": "catalogue",
+      "overflow": false,
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ]
+    },
+    {
+      "width": 320,
+      "label": "product details",
+      "overflow": false,
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ]
+    },
+    {
+      "width": 320,
+      "label": "uncertain enquiry fallback",
+      "overflow": false,
+      "violations": [],
+      "incomplete": [
+        "label-content-name-mismatch"
+      ]
+    },
+    {
+      "width": 320,
+      "label": "enquiry success",
+      "overflow": false,
+      "violations": [],
+      "incomplete": [
+        "color-contrast",
+        "label-content-name-mismatch"
+      ]
+    },
+    {
+      "width": 390,
+      "label": "catalogue",
+      "overflow": false,
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ]
+    },
+    {
+      "width": 390,
+      "label": "product details",
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "width": 390,
+      "label": "uncertain enquiry fallback",
+      "overflow": false,
+      "violations": [],
+      "incomplete": [
+        "label-content-name-mismatch"
+      ]
+    },
+    {
+      "width": 390,
+      "label": "enquiry success",
+      "overflow": false,
+      "violations": [],
+      "incomplete": [
+        "color-contrast",
+        "label-content-name-mismatch"
+      ]
+    },
+    {
+      "width": 1440,
+      "label": "catalogue",
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "width": 1440,
+      "label": "product details",
+      "overflow": false,
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ]
+    },
+    {
+      "width": 1440,
+      "label": "uncertain enquiry fallback",
+      "overflow": false,
+      "violations": [],
+      "incomplete": [
+        "label-content-name-mismatch"
+      ]
+    },
+    {
+      "width": 1440,
+      "label": "enquiry success",
+      "overflow": false,
+      "violations": [],
+      "incomplete": [
+        "label-content-name-mismatch"
+      ]
+    }
+  ],
+  "flows": [
+    {
+      "width": 320,
+      "passes": [
+        "catalogue count",
+        "empty search/reset",
+        "keyboard detail open/close/focus",
+        "invalid phone blocks submit",
+        "failure preserves details/email fallback",
+        "retry key stable",
+        "honest receipt"
+      ],
+      "errors": []
+    },
+    {
+      "width": 390,
+      "passes": [
+        "catalogue count",
+        "empty search/reset",
+        "keyboard detail open/close/focus",
+        "invalid phone blocks submit",
+        "failure preserves details/email fallback",
+        "retry key stable",
+        "honest receipt"
+      ],
+      "errors": []
+    },
+    {
+      "width": 1440,
+      "passes": [
+        "catalogue count",
+        "empty search/reset",
+        "keyboard detail open/close/focus",
+        "invalid phone blocks submit",
+        "failure preserves details/email fallback",
+        "retry key stable",
+        "honest receipt"
+      ],
+      "errors": []
+    }
+  ],
+  "health": {
+    "service": "vettiver",
+    "submissionsEnabled": true,
+    "notificationsConfigured": false
+  },
+  "catalogCount": 14
+}

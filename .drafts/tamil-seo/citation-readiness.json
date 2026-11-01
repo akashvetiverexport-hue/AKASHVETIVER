@@ -1,0 +1,41 @@
+﻿{
+  "url": ".drafts/tamil-seo/home.html",
+  "score": 25,
+  "factual_claims": 1,
+  "claim_samples": [
+    "Back to the beginning AKASH VETIVER \u00c2\u00a9 2026 Akash Vetiver Export Pure Vetiver, Pure Wellness Handcrafted in Tamil Nadu About this piece Reserve this piece \u00c3\u0097 Let\u00e2\u0080\u0099s plan your order."
+  ],
+  "citation_signals": {
+    "external_links": 0,
+    "trusted_external_links": 0,
+    "cite_or_blockquote_tags": 0,
+    "footnote_links": 0
+  },
+  "entity_signals": {
+    "types": [
+      "Organization",
+      "WebPage",
+      "WebSite"
+    ],
+    "names": [
+      "Akash Vetiver Export",
+      "Handcrafted Vetiver Garlands & Crafts | Akash Vetiver"
+    ],
+    "sameAs": []
+  },
+  "issues": [
+    {
+      "severity": "warning",
+      "message": "Factual claims outnumber visible citation/source signals."
+    },
+    {
+      "severity": "info",
+      "message": "No high-trust external source domains detected."
+    },
+    {
+      "severity": "info",
+      "message": "No sameAs entity links found in JSON-LD."
+    }
+  ],
+  "fetch_error": null
+}

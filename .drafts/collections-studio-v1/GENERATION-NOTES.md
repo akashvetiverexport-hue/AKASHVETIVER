@@ -82,3 +82,10 @@ Source: D:\Vettiver\vetiver collection\WhatsApp Image 2026-10-01 at 4.03.23 PM.j
 
 Additional prompt: Preserve spear's leaf head, blue/yellow edging, THREE white horizontal strips and pink center mark, long natural root shaft and binding. Upright studio presentation.
 
+
+
+## Approved additions - 31 October 2026
+Reused the Shared prompt above for both final images. Source photos: WhatsApp Image 2026-10-30 at 1.26.25 AM.jpeg (Ganesha) and 1.26.23 AM.jpeg (scrubber), in the owner's Downloads directory. The only pack-specific instruction was to show exactly three matching scrubbers together, as requested.
+Final generated source directory: C:/Users/avina/.codex/generated_images/01a16f76-5d8e-7701-9779-8f8f731982be/. Ganesha: exec-565236b6-683b-4962-a51f-a4e563b587d4.png. Scrubbers: exec-065529ca-bcda-4e41-b457-d405ef8ace2e.png. Earlier alternative prompts/results were not used.
+Stored as images/products/studio-v1/vetiver-ganesha.png and scrubbers-pack-3.png. Published WebP versions: 1200px, 179614/290482 bytes; 320px thumbnails: 14190/22418 bytes. AI editing is not an exact photographic reproduction.
+Owner-confirmed prices: Ganesha INR320; one pack of three scrubbers INR99. Quantity2 means two packs/six scrubbers. Both marked confirmed rather than guide prices; original12 products preserved.
